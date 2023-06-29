@@ -11,7 +11,7 @@ func _on_player_player_pos(pos):
 	playerPos = pos
 
 func _physics_process(delta):
-	var distToLion = get_distance_to_lion()
+	var distToLion = get_distance_to_player()
 	if distToLion >= 406:
 		lionDir == "left"
 		$AnimatedSprite2D.flip_h = false
@@ -19,7 +19,6 @@ func _physics_process(delta):
 	elif distToLion < -114:
 		lionDir == "right"
 		$AnimatedSprite2D.flip_h = true
-	# temporarily used for lion.gd since nodes don't work there for some reason
 	$AnimatedSprite2D.play("lion running")
 	var targetPos = (position - playerPos).normalized()
 	if isLionRunningAway:
@@ -32,9 +31,9 @@ func _physics_process(delta):
 	if compute_pythagoras_distance() <= 500:
 		playerKilled.emit()
 	emit_signal("lionDistance", compute_pythagoras_distance())
-	emit_signal("x_distance", get_distance_to_lion())
+	emit_signal("x_distance", get_distance_to_player())
 	
-func get_distance_to_lion() -> int:
+func get_distance_to_player() -> int:
 	return position.x - playerPos.x
 
 func compute_pythagoras_distance() -> int:
@@ -43,20 +42,20 @@ func compute_pythagoras_distance() -> int:
 	return int(sqrt(xDiff * xDiff + yDiff * yDiff))
 	
 func _on_torch_button_pressed():
-	#emit_signal("lionDistance", get_distance_to_lion())
+	#emit_signal("lionDistance", get_distance_to_player())
 	isLionRunningAway = true
 	await get_tree().create_timer(3).timeout
 	isLionRunningAway = false
 
 func _on_spray_button_pressed():
-	#emit_signal("lionDistance", get_distance_to_lion())
+	#emit_signal("lionDistance", get_distance_to_player())
 	await get_tree().create_timer(0.267).timeout
 	isLionRunningAway = true
 	await get_tree().create_timer(2.733).timeout
 	isLionRunningAway = false
 
 func _on_horn_button_pressed():
-	#emit_signal("lionDistance", get_distance_to_lion())
+	#emit_signal("lionDistance", get_distance_to_player())
 	isLionRunningAway = true
 	await get_tree().create_timer(3).timeout
 	isLionRunningAway = false
