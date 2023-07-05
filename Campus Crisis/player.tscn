@@ -309,7 +309,7 @@ scale_min = 0.5
 color_ramp = SubResource("GradientTexture1D_m2c11")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jleid"]
-radius = 52.0
+radius = 65.0
 height = 148.0
 
 [node name="player" type="CharacterBody2D" groups=["players"]]
@@ -354,7 +354,7 @@ volume_db = 2.24
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(31, 145)
+position = Vector2(16, 168)
 shape = SubResource("CapsuleShape2D_jleid")
 
 [node name="Camera2D" type="Camera2D" parent="."]

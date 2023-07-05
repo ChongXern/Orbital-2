@@ -47,7 +47,7 @@ func _on_score_timer_timeout():
 		$Score.text = "times up!"
 		$Coin.hide()
 		$blackRect.show()
-		get_tree().paused = true
+		get_tree().paused = false
 		$gameOverPanel.show()
 
 
@@ -76,6 +76,7 @@ func _on_backtohome_pressed():
 	get_tree().change_scene_to_file("res://start_menu.tscn")
 
 func _on_home_button_pressed():
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://start_menu.tscn")
 
 func _on_lion_lion_distance(distance):

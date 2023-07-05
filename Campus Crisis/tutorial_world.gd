@@ -21,7 +21,7 @@ func _ready():
 	$hud/gameOverPanel.hide()
 	score = 60
 
-#shows tag button on collition with any npc/ally
+#shows tag button on collision with any npc/ally
 func _on_ally_hit():
 	$hud/TagButton.show()
 

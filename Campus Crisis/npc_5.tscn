@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://b3uu02lp03w3"]
+[gd_scene load_steps=16 format=3 uid="uid://b3uu02lp03w3"]
 
+[ext_resource type="Script" path="res://npc_5.gd" id="1_hflxb"]
 [ext_resource type="Texture2D" uid="uid://defhubp485yha" path="res://sprite animations/npc 5/npc_5_1.png" id="1_kppqo"]
 [ext_resource type="Texture2D" uid="uid://c3mwhwmk4gyu" path="res://sprite animations/npc 5/npc_5_2.png" id="2_18ema"]
 [ext_resource type="Texture2D" uid="uid://b5yo4vl47kwpy" path="res://sprite animations/npc 5/npc_5_3.png" id="3_7tk4p"]
@@ -62,6 +63,7 @@ radius = 67.0
 height = 288.0
 
 [node name="npc 5" type="Area2D"]
+script = ExtResource("1_hflxb")
 metadata/_edit_horizontal_guides_ = [-186.0, 186.0]
 metadata/_edit_vertical_guides_ = [-186.0, 186.0]
 
@@ -72,3 +74,6 @@ sprite_frames = SubResource("SpriteFrames_3dk5j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-25, 17)
 shape = SubResource("CapsuleShape2D_r4wbg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

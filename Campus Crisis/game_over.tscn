@@ -48,6 +48,7 @@ offset_right = 1401.0
 offset_bottom = 471.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_163rp")
 
 [node name="game over label" type="Label" parent="Panel"]
@@ -75,6 +76,7 @@ offset_top = -400.0
 offset_right = 1221.0
 offset_bottom = -113.0
 grow_vertical = 0
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("2_gwt5m")
 theme_override_font_sizes/font_size = 100
 text = "TRY AGAIN"
@@ -89,6 +91,7 @@ offset_top = -399.0
 offset_right = 2255.0
 offset_bottom = -112.0
 grow_vertical = 0
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("2_gwt5m")
 theme_override_font_sizes/font_size = 100
 text = "QUIT"
