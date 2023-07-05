@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://du4s6ryvvfajd"]
+
+[sub_resource type="TileSet" id="TileSet_xgmb1"]
+tile_size = Vector2i(80, 80)
+
+[node name="PGP_world" type="Node2D"]
+metadata/_edit_vertical_guides_ = [26045.0]
+metadata/_edit_horizontal_guides_ = [3120.0, 880.0]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_xgmb1")
+format = 2
