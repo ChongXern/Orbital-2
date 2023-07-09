@@ -19,6 +19,7 @@ func _ready():
 	$hud/sprayButton.hide()
 	$hud/hornButton.hide()
 	$hud/gameOverPanel.hide()
+	
 	score = 60
 
 #shows tag button on collision with any npc/ally
@@ -34,9 +35,6 @@ func _on_ally_exit():
 
 func _on_hud_message_disappear():
 	$hud/Cross.hide()
-
-func _on_score_timer_timeout():
-	Global
 
 func _on_player_killed():
 	get_tree().paused = false
@@ -113,7 +111,11 @@ func _on_pick_up_spray_picked_up():
 	get_node("weapons to pick up/pick up spray").queue_free()
 	index_weapons("spray")
 	organise_weapons()
-	
+	get_tree().paused = true
+	$tutorial_instructions/"use weapons".show()
+	$tutorial_instructions/ColorRect.show()
+	$tutorial_instructions.next()
+
 func _on_pick_up_horn_picked_up():
 	get_node("weapons to pick up/pick up horn").queue_free()
 	index_weapons("horn")
@@ -131,3 +133,10 @@ func _on_spray_button_pressed():
 func _on_horn_button_pressed():
 	$hud/hornButton.queue_free()
 	reorganise_weapons("horn")
+
+
+func _on_pick_up_spray_tutorial_instruction():
+	get_tree().paused = true
+	$tutorial_instructions/ColorRect.show()
+	$tutorial_instructions/"pick up weapon".show()
+	$tutorial_instructions.next()
