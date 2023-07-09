@@ -63,6 +63,9 @@ radius = 67.0
 height = 288.0
 
 [node name="npc 5" type="Area2D"]
+y_sort_enabled = true
+collision_layer = 8
+collision_mask = 2
 script = ExtResource("1_hflxb")
 metadata/_edit_horizontal_guides_ = [-186.0, 186.0]
 metadata/_edit_vertical_guides_ = [-186.0, 186.0]
