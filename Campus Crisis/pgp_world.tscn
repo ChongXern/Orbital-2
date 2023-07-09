@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://du4s6ryvvfajd"]
+[gd_scene load_steps=15 format=3 uid="uid://du4s6ryvvfajd"]
 
-[ext_resource type="Texture2D" uid="uid://bj1xkf5jmivtm" path="res://pgp assets/canteen floor.png" id="1_k1v54"]
+[ext_resource type="Texture2D" path="res://pgp assets/canteen floor.png" id="1_k1v54"]
+[ext_resource type="PackedScene" uid="uid://cfqusdtmjtapf" path="res://player.tscn" id="1_oa4jf"]
 [ext_resource type="Texture2D" uid="uid://ftlgg240w7sq" path="res://pgp assets/canteen pillar.png" id="2_f8kai"]
 [ext_resource type="Texture2D" uid="uid://vxcul2xhwhm4" path="res://pgp assets/canteen wall.png" id="3_nxmn8"]
 [ext_resource type="Texture2D" uid="uid://dsqxq6sqfeebe" path="res://pgp assets/canteen stall ceiling.png" id="4_epjk0"]
-[ext_resource type="Texture2D" uid="uid://cjewkjihjkx8k" path="res://pgp assets/pioneer floor.png" id="5_ec053"]
+[ext_resource type="Texture2D" path="res://pgp assets/pioneer floor.png" id="5_ec053"]
 [ext_resource type="Texture2D" uid="uid://bqiwapenv2b8e" path="res://pgp assets/canteen table.png" id="6_yhjtu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tg35q"]
@@ -71,6 +72,9 @@ sources/6 = SubResource("TileSetAtlasSource_117hi")
 [node name="PGP_world" type="Node2D"]
 metadata/_edit_vertical_guides_ = [26001.0]
 metadata/_edit_horizontal_guides_ = [3120.0, 880.0]
+
+[node name="player" parent="." instance=ExtResource("1_oa4jf")]
+position = Vector2(24936, 2001)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xgmb1")

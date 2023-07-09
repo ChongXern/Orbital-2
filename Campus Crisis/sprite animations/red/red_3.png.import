@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjewkjihjkx8k"
-path="res://.godot/imported/pioneer floor.png-9818c15336fb1a6392b78c114cdb8885.ctex"
+uid="uid://d3y88dgieuntu"
+path="res://.godot/imported/red_3.png-cfdc9cff0cd6a4d4c3db232e8e8440b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/pioneer floor.png"
-dest_files=["res://.godot/imported/pioneer floor.png-9818c15336fb1a6392b78c114cdb8885.ctex"]
+source_file="res://sprite animations/red/red_3.png"
+dest_files=["res://.godot/imported/red_3.png-cfdc9cff0cd6a4d4c3db232e8e8440b3.ctex"]
 
 [params]
 

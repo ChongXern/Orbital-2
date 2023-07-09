@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj1xkf5jmivtm"
-path="res://.godot/imported/canteen floor.png-d058b7174c474b568773fc3f5bac7469.ctex"
+path="res://.godot/imported/canteen floor.png-f8a2d15c7ab275c66dd22077b97030c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/canteen floor.png"
-dest_files=["res://.godot/imported/canteen floor.png-d058b7174c474b568773fc3f5bac7469.ctex"]
+source_file="res://pgp assets/floors/canteen floor.png"
+dest_files=["res://.godot/imported/canteen floor.png-f8a2d15c7ab275c66dd22077b97030c2.ctex"]
 
 [params]
 

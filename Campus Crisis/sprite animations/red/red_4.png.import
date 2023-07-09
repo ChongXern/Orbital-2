@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnw4hsofaq2eg"
-path="res://.godot/imported/tv 3.png-29e87dd78a8c16ba11c48a1e84df9c07.ctex"
+uid="uid://cj4q43m0qmjfr"
+path="res://.godot/imported/red_4.png-fbdc674393ecb228e3f7bdecc3d4aa4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/tv 3.png"
-dest_files=["res://.godot/imported/tv 3.png-29e87dd78a8c16ba11c48a1e84df9c07.ctex"]
+source_file="res://sprite animations/red/red_4.png"
+dest_files=["res://.godot/imported/red_4.png-fbdc674393ecb228e3f7bdecc3d4aa4a.ctex"]
 
 [params]
 

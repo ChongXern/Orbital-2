@@ -1,0 +1,79 @@
+[gd_scene load_steps=15 format=3 uid="uid://c4dsx71fjr6j2"]
+
+[ext_resource type="Texture2D" uid="uid://brgokahxfit4x" path="res://sprite animations/red/red_1.png" id="1_dffh8"]
+[ext_resource type="Texture2D" uid="uid://xeokd5vrl0t0" path="res://sprite animations/red/red_2.png" id="2_sbh84"]
+[ext_resource type="Texture2D" uid="uid://d3y88dgieuntu" path="res://sprite animations/red/red_3.png" id="3_6gp5e"]
+[ext_resource type="Texture2D" uid="uid://cj4q43m0qmjfr" path="res://sprite animations/red/red_4.png" id="4_eje03"]
+[ext_resource type="Texture2D" uid="uid://e811hwl82iqm" path="res://sprite animations/red/red_5.png" id="5_l8j5l"]
+[ext_resource type="Texture2D" uid="uid://ch3fkmqoq2kqn" path="res://sprite animations/red/red_6.png" id="6_5ibuf"]
+[ext_resource type="Texture2D" uid="uid://cigic4i7h7uy" path="res://sprite animations/red/red_7.png" id="7_n1ewg"]
+[ext_resource type="Texture2D" uid="uid://bgik5ffftttg5" path="res://sprite animations/red/red_8.png" id="8_xtwif"]
+[ext_resource type="Texture2D" uid="uid://c8mka41p7bm7t" path="res://sprite animations/red/red_9.png" id="9_ngabd"]
+[ext_resource type="Texture2D" uid="uid://wjp768lmbo7s" path="res://sprite animations/red/red_10.png" id="10_su857"]
+[ext_resource type="Texture2D" uid="uid://csvskwn00behc" path="res://sprite animations/red/red_11.png" id="11_1phkj"]
+[ext_resource type="Texture2D" uid="uid://keb5emk0uh6s" path="res://sprite animations/red/red_12.png" id="12_k6r4x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q038u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dffh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sbh84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6gp5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eje03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l8j5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5ibuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n1ewg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xtwif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ngabd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_su857")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1phkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_k6r4x")
+}],
+"loop": true,
+"name": &"running",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0mt3k"]
+radius = 680.0
+height = 1360.0
+
+[node name="red tutorial npc" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+metadata/_edit_horizontal_guides_ = [-186.0, 186.0]
+metadata/_edit_vertical_guides_ = [-186.0, 186.0]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.499992, 0.500513)
+scale = Vector2(0.199248, 0.199248)
+sprite_frames = SubResource("SpriteFrames_q038u")
+animation = &"running"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-20, 3)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CapsuleShape2D_0mt3k")
