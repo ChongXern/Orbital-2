@@ -58,8 +58,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k0nyp"]
-radius = 59.0
-height = 272.0
+radius = 142.0
+height = 284.0
 
 [node name="npc 8" type="Area2D"]
 metadata/_edit_vertical_guides_ = [-186.0, 186.0]
