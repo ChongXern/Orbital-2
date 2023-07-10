@@ -1,0 +1,80 @@
+[gd_scene load_steps=16 format=3 uid="uid://cy13gbs4cpgw4"]
+
+[ext_resource type="Script" path="res://tutorial_ally.gd" id="1_20k1s"]
+[ext_resource type="Texture2D" uid="uid://c2g1rbmbt5sti" path="res://sprite animations/npc 7/npc_7_1.png" id="2_c3585"]
+[ext_resource type="Texture2D" uid="uid://b2xqlqwif7m46" path="res://sprite animations/npc 7/npc_7_2.png" id="3_mykes"]
+[ext_resource type="Texture2D" uid="uid://v6su0qeeq1rh" path="res://sprite animations/npc 7/npc_7_3.png" id="4_wnwed"]
+[ext_resource type="Texture2D" uid="uid://4wxtu50j4wbi" path="res://sprite animations/npc 7/npc_7_4.png" id="5_s3kwc"]
+[ext_resource type="Texture2D" uid="uid://cdgxankafk0bo" path="res://sprite animations/npc 7/npc_7_5.png" id="6_81eml"]
+[ext_resource type="Texture2D" uid="uid://c44aitfteeob6" path="res://sprite animations/npc 7/npc_7_6.png" id="7_ow2hu"]
+[ext_resource type="Texture2D" uid="uid://w6c7bxvj03ty" path="res://sprite animations/npc 7/npc_7_7.png" id="8_1blln"]
+[ext_resource type="Texture2D" uid="uid://wrodwg3dgmbi" path="res://sprite animations/npc 7/npc_7_8.png" id="9_0grsl"]
+[ext_resource type="Texture2D" uid="uid://bk6r0ua3k5mwe" path="res://sprite animations/npc 7/npc_7_9.png" id="10_54gi1"]
+[ext_resource type="Texture2D" uid="uid://dnargc78x45w7" path="res://sprite animations/npc 7/npc_7_10.png" id="11_nswmg"]
+[ext_resource type="Texture2D" uid="uid://bibmde6jdkvxf" path="res://sprite animations/npc 7/npc_7_11.png" id="12_eoc3w"]
+[ext_resource type="Texture2D" uid="uid://cg8ns5bi1iq5d" path="res://sprite animations/npc 7/npc_7_12.png" id="13_lp5ix"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqu6a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c3585")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mykes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wnwed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s3kwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_81eml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ow2hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1blln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0grsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_54gi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nswmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_eoc3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lp5ix")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4khf"]
+radius = 160.0
+height = 576.0
+
+[node name="tutorial_ally" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_20k1s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_pqu6a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-48, 0)
+shape = SubResource("CapsuleShape2D_g4khf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

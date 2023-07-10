@@ -1,6 +1,102 @@
-[gd_scene load_steps=2 format=3 uid="uid://1dwyt4rghb7h"]
+[gd_scene load_steps=20 format=3 uid="uid://1dwyt4rghb7h"]
 
 [ext_resource type="Script" path="res://tutorial_instructions.gd" id="1_vofgs"]
+[ext_resource type="Texture2D" uid="uid://bx7q50l0c1ooj" path="res://tutorial ui/timer/pixil-frame-0.png" id="2_7vki2"]
+[ext_resource type="Texture2D" uid="uid://d0x3nxpi7qn2h" path="res://tutorial ui/timer/pixil-frame-1.png" id="3_hri5t"]
+[ext_resource type="Texture2D" uid="uid://cms34akkn60nl" path="res://tutorial ui/find this ally/pixil-frame-0.png" id="4_lbwe3"]
+[ext_resource type="Texture2D" uid="uid://8tu4hkv3yb2" path="res://tutorial ui/find this ally/pixil-frame-1.png" id="5_vl52u"]
+[ext_resource type="Texture2D" uid="uid://b7lcsksvlej0b" path="res://tutorial ui/tag ally/pixil-frame-0.png" id="6_3o25l"]
+[ext_resource type="Texture2D" uid="uid://b7bca6iu4ilh" path="res://tutorial ui/tag ally/pixil-frame-1.png" id="7_lk1nm"]
+[ext_resource type="Texture2D" uid="uid://8t57gmb6snvk" path="res://tutorial ui/lion direction/pixil-frame-0.png" id="8_mu3yx"]
+[ext_resource type="Texture2D" uid="uid://bv83lag71vrtc" path="res://tutorial ui/lion direction/pixil-frame-1.png" id="9_cdbbk"]
+[ext_resource type="Texture2D" uid="uid://crkblwdgu131v" path="res://tutorial ui/pick up weapon/pixil-frame-0.png" id="10_5k3tu"]
+[ext_resource type="Texture2D" uid="uid://dr8h78w5gfbck" path="res://tutorial ui/pick up weapon/pixil-frame-1.png" id="11_12p7x"]
+[ext_resource type="Texture2D" uid="uid://dowrt6ryec618" path="res://tutorial ui/use weapons/pixil-frame-0 (2).png" id="12_ub44o"]
+[ext_resource type="Texture2D" uid="uid://d0opf6nbu8eys" path="res://tutorial ui/use weapons/pixil-frame-1 (2).png" id="13_baw68"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjx7m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7vki2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hri5t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mqtqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lbwe3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vl52u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eu3px"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3o25l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lk1nm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m6cix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_mu3yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cdbbk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r27gi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_5k3tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_12p7x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cfeav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ub44o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_baw68")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="tutorial_instructions" type="CanvasLayer"]
 script = ExtResource("1_vofgs")
@@ -24,56 +120,32 @@ theme_override_font_sizes/font_size = 200
 text = "use (keys) or \"wasd\" to move around
 (press enter to continue)"
 
-[node name="timerLabel" type="Label" parent="."]
-offset_left = 648.0
-offset_top = 632.0
-offset_right = 2517.0
-offset_bottom = 772.0
-theme_override_colors/font_color = Color(0, 0.0823529, 0.952941, 1)
-theme_override_font_sizes/font_size = 100
-text = "tag the ally before the timer reaches 0!"
+[node name="timerLabel" type="AnimatedSprite2D" parent="."]
+position = Vector2(1112, 472)
+scale = Vector2(15.57, 16.37)
+sprite_frames = SubResource("SpriteFrames_vjx7m")
 
-[node name="allyToTag" type="Label" parent="."]
-offset_left = 4728.0
-offset_top = 568.0
-offset_right = 5610.0
-offset_bottom = 776.0
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_font_sizes/font_size = 150
-text = "find this ally"
+[node name="allyToTag" type="AnimatedSprite2D" parent="."]
+position = Vector2(5302.5, 583.5)
+scale = Vector2(15.81, 17.61)
+sprite_frames = SubResource("SpriteFrames_mqtqq")
 
-[node name="tagLabel" type="Label" parent="."]
-offset_left = 6600.0
-offset_top = 2368.0
-offset_right = 7160.0
-offset_bottom = 2576.0
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_font_sizes/font_size = 150
-text = "tag ally!"
+[node name="tagLabel" type="AnimatedSprite2D" parent="."]
+position = Vector2(6992, 2320)
+scale = Vector2(15.38, 16.02)
+sprite_frames = SubResource("SpriteFrames_eu3px")
 
-[node name="lionDir" type="Label" parent="."]
-offset_left = 7376.0
-offset_top = 1176.0
-offset_right = 7647.0
-offset_bottom = 1384.0
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_font_sizes/font_size = 150
-text = "lion"
+[node name="lionDir" type="AnimatedSprite2D" parent="."]
+position = Vector2(6992, 1520)
+scale = Vector2(16.02, 13.22)
+sprite_frames = SubResource("SpriteFrames_m6cix")
 
-[node name="pick up weapon" type="Label" parent="."]
-offset_left = 4792.0
-offset_top = 1600.0
-offset_right = 5929.0
-offset_bottom = 1808.0
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_font_sizes/font_size = 150
-text = "pick up weapon"
+[node name="pick up weapon" type="AnimatedSprite2D" parent="."]
+position = Vector2(5304, 1536)
+scale = Vector2(17.61, 17.97)
+sprite_frames = SubResource("SpriteFrames_r27gi")
 
-[node name="use weapons" type="Label" parent="."]
-offset_left = 4752.0
-offset_top = 2352.0
-offset_right = 7461.0
-offset_bottom = 2560.0
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_font_sizes/font_size = 150
-text = "click weapon buttons to use weapons"
+[node name="use weapons" type="AnimatedSprite2D" parent="."]
+position = Vector2(6568, 2560)
+scale = Vector2(15.53, 14.89)
+sprite_frames = SubResource("SpriteFrames_cfeav")

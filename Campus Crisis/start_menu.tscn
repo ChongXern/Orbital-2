@@ -61,9 +61,19 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 4
 
+[node name="Label5" type="Label" parent="levels/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 500
+
+[node name="tutorial" type="Button" parent="levels/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_slonh")
+theme_override_font_sizes/font_size = 500
+text = "Tutorial"
+
 [node name="Sprite2D" type="Sprite2D" parent="levels/ScrollContainer/VBoxContainer"]
-position = Vector2(1197, 869)
-scale = Vector2(2.30296, 3.38613)
+position = Vector2(1333.35, 1787.5)
+scale = Vector2(2.52834, 2.72391)
 texture = ExtResource("2_wikjw")
 
 [node name="Label" type="Label" parent="levels/ScrollContainer/VBoxContainer"]
@@ -75,6 +85,7 @@ text = "
 [node name="CLB level 1" type="Button" parent="levels/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_slonh")
 theme_override_font_sizes/font_size = 500
 text = "CLB level 1"
 
@@ -87,11 +98,11 @@ text = "
 [node name="CLB level 6" type="Button" parent="levels/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_slonh")
 theme_override_font_sizes/font_size = 500
 text = "CLB level 6"
 
 [node name="Label3" type="Label" parent="levels/ScrollContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 500
 text = "
@@ -100,6 +111,7 @@ text = "
 [node name="PGP" type="Button" parent="levels/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_slonh")
 theme_override_font_sizes/font_size = 500
 text = "PGP"
 
@@ -110,7 +122,9 @@ theme_override_font_sizes/font_size = 500
 [node name="UTown" type="Button" parent="levels/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_slonh")
 theme_override_font_sizes/font_size = 500
 text = "UTown"
 
+[connection signal="pressed" from="levels/ScrollContainer/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="levels/ScrollContainer/VBoxContainer/CLB level 1" to="." method="_on_clb_level_1_pressed"]

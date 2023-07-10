@@ -15,3 +15,7 @@ func update_coins(Coins):
 
 func _on_clb_level_1_pressed():
 	get_tree().change_scene_to_file("res://loading_scene.tscn")
+
+
+func _on_tutorial_pressed():
+	get_tree().change_scene_to_file("res://tutorial_world.tscn")
