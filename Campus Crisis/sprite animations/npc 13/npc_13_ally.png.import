@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkvrhkrraen3o"
-path="res://.godot/imported/snack rack.png-770c9959c865fd39d27e41548f2c8119.ctex"
+uid="uid://duv20rj5jax8h"
+path="res://.godot/imported/npc_13_ally.png-0801ce0503326ce699226fd9f7f34c13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/snack rack.png"
-dest_files=["res://.godot/imported/snack rack.png-770c9959c865fd39d27e41548f2c8119.ctex"]
+source_file="res://sprite animations/npc 13/npc_13_ally.png"
+dest_files=["res://.godot/imported/npc_13_ally.png-0801ce0503326ce699226fd9f7f34c13.ctex"]
 
 [params]
 

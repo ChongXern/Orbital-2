@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkvrhkrraen3o"
-path="res://.godot/imported/snack rack.png-770c9959c865fd39d27e41548f2c8119.ctex"
+uid="uid://ds3tjitc1wdwx"
+path="res://.godot/imported/blue ally.png-33c7048676c47ce09838f4e83b03c47c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/snack rack.png"
-dest_files=["res://.godot/imported/snack rack.png-770c9959c865fd39d27e41548f2c8119.ctex"]
+source_file="res://sprite animations/blue/blue ally.png"
+dest_files=["res://.godot/imported/blue ally.png-33c7048676c47ce09838f4e83b03c47c.ctex"]
 
 [params]
 
