@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dajr0jlpv1gh5"]
+[gd_scene load_steps=73 format=3 uid="uid://dajr0jlpv1gh5"]
 
 [ext_resource type="Script" path="res://world_pgp_2.gd" id="1_jcdpa"]
 [ext_resource type="Texture2D" uid="uid://bnl18msi2kn3b" path="res://clb assets resized/ground floor tile 1.png" id="2_51kmo"]
@@ -35,6 +35,8 @@
 [ext_resource type="Texture2D" uid="uid://djswfb0ugmkio" path="res://pgp assets/gate railing.png" id="28_q6eoh"]
 [ext_resource type="Texture2D" uid="uid://cr0gog0ks64yr" path="res://pgp assets/gate.png" id="29_fu1b6"]
 [ext_resource type="Texture2D" uid="uid://c3shmwflnh4rf" path="res://pgp assets/floors/drain tile.png" id="30_250e7"]
+[ext_resource type="PackedScene" uid="uid://dd8qgse56k3ty" path="res://lion.tscn" id="36_vcocm"]
+[ext_resource type="PackedScene" uid="uid://qeitfgj53ewa" path="res://hud.tscn" id="37_picpn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5flyt"]
 texture = ExtResource("2_51kmo")
@@ -756,4 +758,14 @@ speed = null
 tile_set = SubResource("TileSet_1888r")
 format = 2
 
+[node name="lion" parent="." instance=ExtResource("36_vcocm")]
+position = Vector2(26759, 1633)
+
+[node name="npcPaths" type="Node2D" parent="."]
+
+[node name="hud" parent="." instance=ExtResource("37_picpn")]
+
 [connection signal="pgp_location" from="." to="player" method="_on_world_pgp_2_pgp_location"]
+
+[editable path="lion"]
+[editable path="hud"]
