@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx5i71jn1bae"
-path="res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"
+uid="uid://chraj6gvyi8c5"
+path="res://.godot/imported/individual wall tile 4.png-f7152720c5a32d4421161565aafb8c8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/water filler.png"
-dest_files=["res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"]
+source_file="res://pgp assets/walls/individual wall tile 4.png"
+dest_files=["res://.godot/imported/individual wall tile 4.png-f7152720c5a32d4421161565aafb8c8d.ctex"]
 
 [params]
 

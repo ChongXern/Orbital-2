@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx5i71jn1bae"
-path="res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"
+uid="uid://cucvlmg73dumy"
+path="res://.godot/imported/pioneer house logo.png-d707fd2f8614e53f13f8202982b8215b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/water filler.png"
-dest_files=["res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"]
+source_file="res://pgp assets/walls/pioneer house logo.png"
+dest_files=["res://.godot/imported/pioneer house logo.png-d707fd2f8614e53f13f8202982b8215b.ctex"]
 
 [params]
 

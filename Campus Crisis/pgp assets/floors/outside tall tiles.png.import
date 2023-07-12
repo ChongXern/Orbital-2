@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx5i71jn1bae"
-path="res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"
+uid="uid://17h87nldwbab"
+path="res://.godot/imported/outside tall tiles.png-e3ac8bc258f14cdc79a7fc7778ce3efe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/water filler.png"
-dest_files=["res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"]
+source_file="res://pgp assets/floors/outside tall tiles.png"
+dest_files=["res://.godot/imported/outside tall tiles.png-e3ac8bc258f14cdc79a7fc7778ce3efe.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx5i71jn1bae"
-path="res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"
+uid="uid://m7hamrp4msb6"
+path="res://.godot/imported/new gate.png-47b0cdaac6b7dc370fc45bbab69bcafc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/water filler.png"
-dest_files=["res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"]
+source_file="res://pgp assets/new gate.png"
+dest_files=["res://.godot/imported/new gate.png-47b0cdaac6b7dc370fc45bbab69bcafc.ctex"]
 
 [params]
 

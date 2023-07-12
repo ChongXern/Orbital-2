@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx5i71jn1bae"
-path="res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"
+uid="uid://ck5jn05xgoafk"
+path="res://.godot/imported/keep calm and be quiet.png-cb703b72d5507099329e7c9f38d25c79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/water filler.png"
-dest_files=["res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"]
+source_file="res://pgp assets/keep calm and be quiet.png"
+dest_files=["res://.godot/imported/keep calm and be quiet.png-cb703b72d5507099329e7c9f38d25c79.ctex"]
 
 [params]
 

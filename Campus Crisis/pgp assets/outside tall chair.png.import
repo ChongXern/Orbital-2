@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx5i71jn1bae"
-path="res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"
+uid="uid://40cjlk78co05"
+path="res://.godot/imported/outside tall chair.png-1779b2e37f976801eba5ec52778f086a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/water filler.png"
-dest_files=["res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"]
+source_file="res://pgp assets/outside tall chair.png"
+dest_files=["res://.godot/imported/outside tall chair.png-1779b2e37f976801eba5ec52778f086a.ctex"]
 
 [params]
 

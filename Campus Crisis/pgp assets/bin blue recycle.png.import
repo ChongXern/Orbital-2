@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx5i71jn1bae"
-path="res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"
+uid="uid://b87ndftv88u7i"
+path="res://.godot/imported/bin blue recycle.png-9dfcec5231bd292b027af308a9fcb274.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/water filler.png"
-dest_files=["res://.godot/imported/water filler.png-f4d65abc5954ca04f11eb9e4e16b099f.ctex"]
+source_file="res://pgp assets/bin blue recycle.png"
+dest_files=["res://.godot/imported/bin blue recycle.png-9dfcec5231bd292b027af308a9fcb274.ctex"]
 
 [params]
 
