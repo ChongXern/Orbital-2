@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o0s3olbwytf8"
-path="res://.godot/imported/backpack red left.png-8372147dd76e5a8508b46daa6c81be03.ctex"
+uid="uid://5lpg0j1hypat"
+path="res://.godot/imported/milo.png-138306c3cf67a1d49b6a9ac6d68db196.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/backpack red left.png"
-dest_files=["res://.godot/imported/backpack red left.png-8372147dd76e5a8508b46daa6c81be03.ctex"]
+source_file="res://pgp assets/stuff to put on tables/milo.png"
+dest_files=["res://.godot/imported/milo.png-138306c3cf67a1d49b6a9ac6d68db196.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvqgjwu8x78ky"
-path="res://.godot/imported/piano seat.png-05d98a01ab31538dbba1676f8d80a60d.ctex"
+uid="uid://dk8rr8mpal3h"
+path="res://.godot/imported/backpack red right.png-fc48414f166c90831a43345e53da679c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/piano seat.png"
-dest_files=["res://.godot/imported/piano seat.png-05d98a01ab31538dbba1676f8d80a60d.ctex"]
+source_file="res://pgp assets/stuff to put on tables/backpack red right.png"
+dest_files=["res://.godot/imported/backpack red right.png-fc48414f166c90831a43345e53da679c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5lpg0j1hypat"
-path="res://.godot/imported/milo.png-e7ec48b35d944987730dccb688777215.ctex"
+uid="uid://20aioi0mogxl"
+path="res://.godot/imported/barley drink .png-2f4badd19db96f2cb32e36d749e5b276.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/milo.png"
-dest_files=["res://.godot/imported/milo.png-e7ec48b35d944987730dccb688777215.ctex"]
+source_file="res://pgp assets/stuff to put on tables/barley drink .png"
+dest_files=["res://.godot/imported/barley drink .png-2f4badd19db96f2cb32e36d749e5b276.ctex"]
 
 [params]
 

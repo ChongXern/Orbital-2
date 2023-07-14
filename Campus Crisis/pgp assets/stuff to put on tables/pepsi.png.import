@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsq0p4pvjr7id"
-path="res://.godot/imported/backpack blue left copy.png-2128b5b8ba3f144f281811b66c7470dc.ctex"
+uid="uid://siw2jc3gioli"
+path="res://.godot/imported/pepsi.png-6c89560e7419b2e438cf8bfb604e8fee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/backpack blue left copy.png"
-dest_files=["res://.godot/imported/backpack blue left copy.png-2128b5b8ba3f144f281811b66c7470dc.ctex"]
+source_file="res://pgp assets/stuff to put on tables/pepsi.png"
+dest_files=["res://.godot/imported/pepsi.png-6c89560e7419b2e438cf8bfb604e8fee.ctex"]
 
 [params]
 

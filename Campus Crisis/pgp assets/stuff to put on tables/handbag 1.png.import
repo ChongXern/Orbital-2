@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://siw2jc3gioli"
-path="res://.godot/imported/pepsi.png-aeb82b898fd75aced743ede82d0594a9.ctex"
+uid="uid://y6pwmrxqu4r0"
+path="res://.godot/imported/handbag 1.png-18e31cbc2402dad9b13a9390c5f2d110.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/pepsi.png"
-dest_files=["res://.godot/imported/pepsi.png-aeb82b898fd75aced743ede82d0594a9.ctex"]
+source_file="res://pgp assets/stuff to put on tables/handbag 1.png"
+dest_files=["res://.godot/imported/handbag 1.png-18e31cbc2402dad9b13a9390c5f2d110.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://20aioi0mogxl"
-path="res://.godot/imported/barley drink .png-18f58c6a8fed104cbcc270b629233915.ctex"
+uid="uid://bsq0p4pvjr7id"
+path="res://.godot/imported/backpack blue left copy.png-802eadd2fb8670385b883f11251d365e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/barley drink .png"
-dest_files=["res://.godot/imported/barley drink .png-18f58c6a8fed104cbcc270b629233915.ctex"]
+source_file="res://pgp assets/stuff to put on tables/backpack blue left copy.png"
+dest_files=["res://.godot/imported/backpack blue left copy.png-802eadd2fb8670385b883f11251d365e.ctex"]
 
 [params]
 

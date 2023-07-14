@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt68aw86pdvbk"
-path="res://.godot/imported/large bottle.png-0c8060e9445bba9c2080edc3b1958aa2.ctex"
+uid="uid://o0s3olbwytf8"
+path="res://.godot/imported/backpack red left.png-82b79a0861dd9f87fe955aa9a7230c19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/large bottle.png"
-dest_files=["res://.godot/imported/large bottle.png-0c8060e9445bba9c2080edc3b1958aa2.ctex"]
+source_file="res://pgp assets/stuff to put on tables/backpack red left.png"
+dest_files=["res://.godot/imported/backpack red left.png-82b79a0861dd9f87fe955aa9a7230c19.ctex"]
 
 [params]
 
