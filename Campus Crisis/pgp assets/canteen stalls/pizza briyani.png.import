@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqiwapenv2b8e"
-path="res://.godot/imported/canteen table.png-8ca006091408190a3300a1dcea011e78.ctex"
+uid="uid://cy3kydnenjwpc"
+path="res://.godot/imported/pizza briyani.png-bb2dbf3fbb2ee5295da33581144313eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/canteen table.png"
-dest_files=["res://.godot/imported/canteen table.png-8ca006091408190a3300a1dcea011e78.ctex"]
+source_file="res://pgp assets/canteen stalls/pizza briyani.png"
+dest_files=["res://.godot/imported/pizza briyani.png-bb2dbf3fbb2ee5295da33581144313eb.ctex"]
 
 [params]
 

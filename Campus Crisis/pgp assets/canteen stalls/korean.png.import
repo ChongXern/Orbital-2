@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vxcul2xhwhm4"
-path="res://.godot/imported/canteen wall.png-9764f943713adae035812a8dbc056840.ctex"
+uid="uid://bdgf3tlbuygsp"
+path="res://.godot/imported/korean.png-c7547c226fe0d2c1ec4e088928a9354b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/canteen wall.png"
-dest_files=["res://.godot/imported/canteen wall.png-9764f943713adae035812a8dbc056840.ctex"]
+source_file="res://pgp assets/canteen stalls/korean.png"
+dest_files=["res://.godot/imported/korean.png-c7547c226fe0d2c1ec4e088928a9354b.ctex"]
 
 [params]
 

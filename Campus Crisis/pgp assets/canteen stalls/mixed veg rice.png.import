@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsqxq6sqfeebe"
-path="res://.godot/imported/canteen stall ceiling.png-88afb74453eb4e5d676751ae33cf010f.ctex"
+uid="uid://dxacm14jprijc"
+path="res://.godot/imported/mixed veg rice.png-e34c1475640267bbbeaf8f4ee67489ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/canteen stall ceiling.png"
-dest_files=["res://.godot/imported/canteen stall ceiling.png-88afb74453eb4e5d676751ae33cf010f.ctex"]
+source_file="res://pgp assets/canteen stalls/mixed veg rice.png"
+dest_files=["res://.godot/imported/mixed veg rice.png-e34c1475640267bbbeaf8f4ee67489ad.ctex"]
 
 [params]
 

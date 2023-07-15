@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvfkf33vl55yq"
-path="res://.godot/imported/notice board.png-11b28800f0e3ff616e5fd9ac14c62b74.ctex"
+uid="uid://ftlgg240w7sq"
+path="res://.godot/imported/canteen pillar.png-6d4b03388092248897c2d60d52800843.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp assets/walls/notice board.png"
-dest_files=["res://.godot/imported/notice board.png-11b28800f0e3ff616e5fd9ac14c62b74.ctex"]
+source_file="res://pgp assets/canteen stalls/canteen pillar.png"
+dest_files=["res://.godot/imported/canteen pillar.png-6d4b03388092248897c2d60d52800843.ctex"]
 
 [params]
 
