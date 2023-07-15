@@ -3120,7 +3120,6 @@ metadata/_edit_vertical_guides_ = [15529.0, 17929.0, 9.0, 26000.0]
 
 [node name="player" parent="." instance=ExtResource("1_vur2i")]
 position = Vector2(25062, 1588)
-speed = null
 
 [node name="lion" parent="." instance=ExtResource("3_8py68")]
 position = Vector2(27424, 1621)

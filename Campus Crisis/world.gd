@@ -20,6 +20,7 @@ func _ready():
 	$hud/hornButton.hide()
 	$hud/gameOverPanel.hide()
 	score = 60
+	Global.current_location = "clb"
 
 #shows tag button on collition with any npc/ally
 func _on_ally_hit():
