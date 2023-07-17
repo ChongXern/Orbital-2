@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dpydeuxt7sduq"]
+[gd_scene load_steps=37 format=3 uid="uid://dpydeuxt7sduq"]
 
 [ext_resource type="PackedScene" uid="uid://cfqusdtmjtapf" path="res://player.tscn" id="1_hbtjg"]
 [ext_resource type="Script" path="res://tutorial_world.gd" id="1_jqhod"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b3uu02lp03w3" path="res://npc_5.tscn" id="14_5m61i"]
 [ext_resource type="PackedScene" uid="uid://qeitfgj53ewa" path="res://hud.tscn" id="15_4hd8k"]
 [ext_resource type="PackedScene" uid="uid://b380d4ekl817o" path="res://pick up weapons/pick_up_torch.tscn" id="16_586qd"]
+[ext_resource type="Texture2D" uid="uid://bmub68nm66q8s" path="res://sprite animations/npc 7/npc_7_ally.png" id="16_d1ae2"]
 [ext_resource type="Texture2D" uid="uid://dirbgg2f56xs" path="res://sprite animations/weapons/pick up weapons/picked up torch.png" id="16_ugnmf"]
 [ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="17_lhe8e"]
 [ext_resource type="Texture2D" uid="uid://b78ji528w7po6" path="res://sprite animations/weapons/pick up weapons/picked up horn.png" id="17_wgxo0"]
@@ -11993,30 +11994,30 @@ layer_1/tile_data = PackedInt32Array(393313, 2, 0, 458849, 2, 1, 524385, 2, 2, 5
 position = Vector2(9416, 1288)
 collision_mask = 66
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="npc paths" type="Node2D" parent="."]
 
-[node name="Path2D" type="Path2D" parent="Node2D"]
+[node name="Path2D" type="Path2D" parent="npc paths"]
 curve = SubResource("Curve2D_blbxk")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="npc paths/Path2D"]
 position = Vector2(7088, 1960)
 rotation = 3.11083
 rotates = false
 loop = false
 
-[node name="tutorial_ally" parent="Node2D/Path2D/PathFollow2D" instance=ExtResource("13_e3x8c")]
+[node name="tutorial_ally" parent="npc paths/Path2D/PathFollow2D" instance=ExtResource("13_e3x8c")]
 rotation = -3.14159
 
-[node name="Path2D2" type="Path2D" parent="Node2D"]
+[node name="Path2D2" type="Path2D" parent="npc paths"]
 curve = SubResource("Curve2D_l6ty6")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D2"]
+[node name="PathFollow2D" type="PathFollow2D" parent="npc paths/Path2D2"]
 position = Vector2(5784, 800)
 rotation = 2.92945
 rotates = false
 loop = false
 
-[node name="npc 5" parent="Node2D/Path2D2/PathFollow2D" instance=ExtResource("14_5m61i")]
+[node name="npc 5" parent="npc paths/Path2D2/PathFollow2D" instance=ExtResource("14_5m61i")]
 rotation = -2.87979
 
 [node name="hud" parent="." instance=ExtResource("15_4hd8k")]
@@ -12027,6 +12028,9 @@ z_index = 1
 [node name="CenterContainer" parent="hud/PauseMenu" index="0"]
 offset_left = 1568.0
 offset_right = 6240.0
+
+[node name="Portfolio" parent="hud" index="11"]
+texture = ExtResource("16_d1ae2")
 
 [node name="PauseButton" parent="hud" index="12"]
 z_index = 1
@@ -12058,13 +12062,15 @@ flat = true
 [node name="weapons to pick up" type="Node2D" parent="."]
 
 [node name="pick up torch" parent="weapons to pick up" instance=ExtResource("16_586qd")]
+visible = false
 position = Vector2(1280, 1832)
 
 [node name="pick up spray" parent="weapons to pick up" instance=ExtResource("17_lhe8e")]
 process_mode = 3
-position = Vector2(6416, 1584)
+position = Vector2(5328, 1464)
 
 [node name="pick up horn" parent="weapons to pick up" instance=ExtResource("18_edsua")]
+visible = false
 position = Vector2(4688, 1624)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -12078,33 +12084,43 @@ process_mode = 3
 offset_left = -8.0
 offset_right = -8.0
 
-[node name="timerLabel" parent="tutorial_instructions" index="2"]
-position = Vector2(1656, 496)
+[node name="instructions" parent="tutorial_instructions" index="1"]
+position = Vector2(3272, 1872)
 
-[node name="allyToTag" parent="tutorial_instructions" index="3"]
-position = Vector2(5088, 464)
+[node name="Label" parent="tutorial_instructions" index="2"]
+offset_left = 3661.4
+offset_top = 1440.0
+offset_right = 5768.4
+offset_bottom = 2664.0
+theme_override_colors/font_color = Color(0.490196, 0.580392, 0.698039, 1)
 
-[node name="tagLabel" parent="tutorial_instructions" index="4"]
-position = Vector2(7008, 2224)
+[node name="timerLabel" parent="tutorial_instructions" index="3"]
+position = Vector2(1704, 456)
 
-[node name="lionDir" parent="tutorial_instructions" index="5"]
-position = Vector2(7136, 1304)
+[node name="allyToTag" parent="tutorial_instructions" index="4"]
+position = Vector2(4864, 184)
 
-[node name="pick up weapon" parent="tutorial_instructions" index="6"]
-position = Vector2(4080, 1600)
-scale = Vector2(12.565, 14.185)
+[node name="tagLabel" parent="tutorial_instructions" index="5"]
+position = Vector2(7600, 1952)
 
-[node name="use weapons" parent="tutorial_instructions" index="7"]
-position = Vector2(6448, 2544)
+[node name="lionDir" parent="tutorial_instructions" index="6"]
+position = Vector2(6760, 960)
+
+[node name="pick up weapon" parent="tutorial_instructions" index="7"]
+position = Vector2(4600, 2104)
+scale = Vector2(2, 2.258)
+
+[node name="use weapons" parent="tutorial_instructions" index="8"]
+position = Vector2(6160, 2568)
 
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="lionDistance" from="lion" to="hud" method="_on_lion_lion_distance"]
 [connection signal="playerKilled" from="lion" to="." method="_on_player_killed"]
 [connection signal="x_distance" from="lion" to="player" method="_on_lion_x_distance"]
-[connection signal="ally_tagged" from="Node2D/Path2D/PathFollow2D/tutorial_ally" to="hud" method="_on_ally_ally_tagged"]
-[connection signal="exit" from="Node2D/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_exit"]
-[connection signal="hit" from="Node2D/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_hit"]
-[connection signal="hit" from="Node2D/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_hit_2"]
+[connection signal="ally_tagged" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="hud" method="_on_ally_ally_tagged"]
+[connection signal="exit" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_exit"]
+[connection signal="hit" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_hit"]
+[connection signal="hit" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_hit_2" flags=6]
 [connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
 [connection signal="pressed_tag" from="hud" to="." method="_on_hud_pressed_tag"]
 [connection signal="pressed" from="hud/gameOverPanel/home button" to="hud" method="_on_home_button_pressed"]

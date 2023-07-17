@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx7q50l0c1ooj"
-path="res://.godot/imported/pixil-frame-0.png-0742df53cc21e7315acd4efd804819b5.ctex"
+uid="uid://dhus31pofl3v5"
+path="res://.godot/imported/tutorial tilemap.png-cc768515b82bfff340b279f6ce0d24a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tutorial ui/timer/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-0742df53cc21e7315acd4efd804819b5.ctex"]
+source_file="res://tutorial tilemap.png"
+dest_files=["res://.godot/imported/tutorial tilemap.png-cc768515b82bfff340b279f6ce0d24a2.ctex"]
 
 [params]
 

@@ -1,97 +1,108 @@
-[gd_scene load_steps=20 format=3 uid="uid://1dwyt4rghb7h"]
+[gd_scene load_steps=18 format=3 uid="uid://1dwyt4rghb7h"]
 
 [ext_resource type="Script" path="res://tutorial_instructions.gd" id="1_vofgs"]
-[ext_resource type="Texture2D" uid="uid://bx7q50l0c1ooj" path="res://tutorial ui/timer/pixil-frame-0.png" id="2_7vki2"]
-[ext_resource type="Texture2D" uid="uid://d0x3nxpi7qn2h" path="res://tutorial ui/timer/pixil-frame-1.png" id="3_hri5t"]
-[ext_resource type="Texture2D" uid="uid://cms34akkn60nl" path="res://tutorial ui/find this ally/pixil-frame-0.png" id="4_lbwe3"]
-[ext_resource type="Texture2D" uid="uid://8tu4hkv3yb2" path="res://tutorial ui/find this ally/pixil-frame-1.png" id="5_vl52u"]
-[ext_resource type="Texture2D" uid="uid://b7lcsksvlej0b" path="res://tutorial ui/tag ally/pixil-frame-0.png" id="6_3o25l"]
-[ext_resource type="Texture2D" uid="uid://b7bca6iu4ilh" path="res://tutorial ui/tag ally/pixil-frame-1.png" id="7_lk1nm"]
-[ext_resource type="Texture2D" uid="uid://8t57gmb6snvk" path="res://tutorial ui/lion direction/pixil-frame-0.png" id="8_mu3yx"]
-[ext_resource type="Texture2D" uid="uid://bv83lag71vrtc" path="res://tutorial ui/lion direction/pixil-frame-1.png" id="9_cdbbk"]
-[ext_resource type="Texture2D" uid="uid://crkblwdgu131v" path="res://tutorial ui/pick up weapon/pixil-frame-0.png" id="10_5k3tu"]
-[ext_resource type="Texture2D" uid="uid://dr8h78w5gfbck" path="res://tutorial ui/pick up weapon/pixil-frame-1.png" id="11_12p7x"]
-[ext_resource type="Texture2D" uid="uid://dowrt6ryec618" path="res://tutorial ui/use weapons/pixil-frame-0 (2).png" id="12_ub44o"]
-[ext_resource type="Texture2D" uid="uid://d0opf6nbu8eys" path="res://tutorial ui/use weapons/pixil-frame-1 (2).png" id="13_baw68"]
+[ext_resource type="Texture2D" uid="uid://ba63e6xncovuy" path="res://tutorial ui/unpressed_keys.png" id="2_csnsp"]
+[ext_resource type="Texture2D" uid="uid://bowlgjh3xgv4s" path="res://tutorial ui/pressed_keys.png" id="3_ifqxt"]
+[ext_resource type="Texture2D" uid="uid://bubpea2or54lt" path="res://tutorial ui/curvedLeftArrow0.png" id="4_82evy"]
+[ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="4_ys2yq"]
+[ext_resource type="Texture2D" uid="uid://cvho3lctld1dk" path="res://tutorial ui/curvedLeftArrow1.png" id="5_tl7ix"]
+[ext_resource type="Texture2D" uid="uid://bsto5x47ri5j2" path="res://tutorial ui/curvedRightArrow0.png" id="6_pe0p0"]
+[ext_resource type="Texture2D" uid="uid://djt4mehr1vxcl" path="res://tutorial ui/curvedRightArrow1.png" id="7_s3wi2"]
+[ext_resource type="Texture2D" uid="uid://dufsunu204qcf" path="res://tutorial ui/straightArrow0.png" id="10_xig6y"]
+[ext_resource type="Texture2D" uid="uid://sgn8ffprc3x" path="res://tutorial ui/straightArrow1.png" id="11_4frju"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vjx7m"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_n0xp3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7vki2")
+"texture": ExtResource("2_csnsp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_hri5t")
+"texture": ExtResource("3_ifqxt")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mqtqq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ur4fm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_lbwe3")
+"texture": ExtResource("4_82evy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_vl52u")
+"texture": ExtResource("5_tl7ix")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_eu3px"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqv5r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_3o25l")
+"texture": ExtResource("6_pe0p0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_lk1nm")
+"texture": ExtResource("7_s3wi2")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_m6cix"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_haaa1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_mu3yx")
+"texture": ExtResource("6_pe0p0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_cdbbk")
+"texture": ExtResource("7_s3wi2")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_r27gi"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_pmopa"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_5k3tu")
+"texture": ExtResource("10_xig6y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_12p7x")
+"texture": ExtResource("11_4frju")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cfeav"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_r77l7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_ub44o")
+"texture": ExtResource("10_xig6y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_baw68")
+"texture": ExtResource("11_4frju")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qcitr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_82evy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tl7ix")
 }],
 "loop": true,
 "name": &"default",
@@ -110,42 +121,231 @@ grow_vertical = 2
 pivot_offset = Vector2(-2648, -928)
 color = Color(1, 1, 1, 0.6)
 
-[node name="instructions" type="Label" parent="."]
-offset_left = 1960.0
-offset_top = 1224.0
-offset_right = 5492.0
-offset_bottom = 1776.0
-theme_override_colors/font_color = Color(0, 0, 1, 1)
+[node name="instructions" type="AnimatedSprite2D" parent="."]
+position = Vector2(2936, 1888)
+scale = Vector2(3.64583, 3.81944)
+sprite_frames = SubResource("SpriteFrames_n0xp3")
+frame = 1
+frame_progress = 0.433581
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.133
+anchor_top = -0.152
+anchor_right = -0.133
+anchor_bottom = -0.152
+offset_left = 3333.4
+offset_top = 1432.0
+offset_right = 5440.4
+offset_bottom = 2452.0
+theme_override_colors/font_color = Color(0.423529, 0.517647, 0.635294, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
 theme_override_font_sizes/font_size = 200
-text = "use (keys) or \"wasd\" to move around
-(press enter to continue)"
+text = "press
+
+or
+
+
+keys to move around"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.005
+offset_left = 464.0
+offset_top = 1216.0
+offset_right = 1630.75
+offset_bottom = 1315.92
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 100
+text = "(press enter to continue)"
 
 [node name="timerLabel" type="AnimatedSprite2D" parent="."]
-position = Vector2(1112, 472)
-scale = Vector2(15.57, 16.37)
-sprite_frames = SubResource("SpriteFrames_vjx7m")
+position = Vector2(952, 320)
+scale = Vector2(2, 2.104)
+sprite_frames = SubResource("SpriteFrames_ur4fm")
+frame = 1
+frame_progress = 0.873923
+
+[node name="Label" type="Label" parent="timerLabel"]
+offset_left = -108.0
+offset_top = 60.8365
+offset_right = 1237.0
+offset_bottom = 268.836
+theme_override_colors/font_color = Color(0.423529, 0.517647, 0.635294, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 100
+text = "tag the ally
+before the timer reaches 0"
+
+[node name="Label2" type="Label" parent="timerLabel/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.005
+offset_left = 108.0
+offset_top = 220.532
+offset_right = 684.755
+offset_bottom = 273.492
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 50
+text = "(press enter to continue)"
 
 [node name="allyToTag" type="AnimatedSprite2D" parent="."]
-position = Vector2(5302.5, 583.5)
-scale = Vector2(15.81, 17.61)
-sprite_frames = SubResource("SpriteFrames_mqtqq")
+position = Vector2(5184, 280)
+rotation = 3.14159
+scale = Vector2(1.795, 2)
+sprite_frames = SubResource("SpriteFrames_jqv5r")
+
+[node name="Label" type="Label" parent="allyToTag"]
+offset_left = 222.842
+offset_top = -180.0
+offset_right = 835.842
+offset_bottom = -75.9996
+rotation = -3.14159
+theme_override_colors/font_color = Color(0.423529, 0.517647, 0.635294, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 100
+text = "find this ally"
+
+[node name="Label3" type="Label" parent="allyToTag/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.005
+offset_left = 35.6552
+offset_top = 120.0
+offset_right = 627.782
+offset_bottom = 173.48
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 50
+text = "(press enter to continue)"
 
 [node name="tagLabel" type="AnimatedSprite2D" parent="."]
-position = Vector2(6992, 2320)
-scale = Vector2(15.38, 16.02)
-sprite_frames = SubResource("SpriteFrames_eu3px")
+position = Vector2(7560, 2128)
+rotation = -1.57079
+scale = Vector2(2, 2.083)
+sprite_frames = SubResource("SpriteFrames_haaa1")
+
+[node name="Label" type="Label" parent="tagLabel"]
+offset_left = 7.67773
+offset_top = -564.0
+offset_right = 377.678
+offset_bottom = -460.0
+rotation = 1.57079
+theme_override_colors/font_color = Color(0.427451, 0.521569, 0.635294, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 100
+text = "tag ally"
+
+[node name="Label4" type="Label" parent="tagLabel/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.005
+offset_left = -204.122
+offset_top = 99.6824
+offset_right = 393.108
+offset_bottom = 153.162
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 50
+text = "(press enter to continue)"
 
 [node name="lionDir" type="AnimatedSprite2D" parent="."]
-position = Vector2(6992, 1520)
-scale = Vector2(16.02, 13.22)
-sprite_frames = SubResource("SpriteFrames_m6cix")
+position = Vector2(6768, 720)
+rotation = 3.14159
+scale = Vector2(1.8875, 1.89907)
+sprite_frames = SubResource("SpriteFrames_pmopa")
+
+[node name="Label" type="Label" parent="lionDir"]
+offset_left = 186.489
+offset_top = 168.504
+offset_right = 881.489
+offset_bottom = 376.504
+rotation = 3.14159
+theme_override_colors/font_color = Color(0.423529, 0.521569, 0.635294, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 100
+text = "lion is here,
+avoid the lion!"
+
+[node name="Label5" type="Label" parent="lionDir/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.005
+offset_left = 33.9056
+offset_top = 206.417
+offset_right = 627.671
+offset_bottom = 259.897
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 50
+text = "(press enter to continue)"
 
 [node name="pick up weapon" type="AnimatedSprite2D" parent="."]
-position = Vector2(5304, 1536)
-scale = Vector2(17.61, 17.97)
-sprite_frames = SubResource("SpriteFrames_r27gi")
+position = Vector2(5824, 1936)
+scale = Vector2(2, 2.041)
+sprite_frames = SubResource("SpriteFrames_r77l7")
+
+[node name="Label" type="Label" parent="pick up weapon"]
+offset_left = -48.0
+offset_top = -215.581
+offset_right = 732.0
+offset_bottom = -111.581
+theme_override_colors/font_color = Color(0.423529, 0.517647, 0.635294, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 100
+text = "pick up weapon"
+
+[node name="Label6" type="Label" parent="pick up weapon/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.005
+offset_left = 88.0
+offset_top = 105.83
+offset_right = 681.765
+offset_bottom = 159.31
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 50
+text = "(press enter to continue)"
 
 [node name="use weapons" type="AnimatedSprite2D" parent="."]
-position = Vector2(6568, 2560)
-scale = Vector2(15.53, 14.89)
-sprite_frames = SubResource("SpriteFrames_cfeav")
+position = Vector2(5832, 2528)
+rotation = -3.14159
+scale = Vector2(2, 1.918)
+sprite_frames = SubResource("SpriteFrames_qcitr")
+
+[node name="Label" type="Label" parent="use weapons"]
+offset_left = 512.0
+offset_top = 300.312
+offset_right = 1616.0
+offset_bottom = 508.312
+rotation = -3.14159
+theme_override_colors/font_color = Color(0.423529, 0.517647, 0.635294, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 100
+text = "press weapon buttons 
+to use weapons"
+
+[node name="Label7" type="Label" parent="use weapons/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.005
+offset_left = 116.001
+offset_top = 200.208
+offset_right = 709.766
+offset_bottom = 253.688
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_ys2yq")
+theme_override_font_sizes/font_size = 50
+text = "(press enter to continue)"

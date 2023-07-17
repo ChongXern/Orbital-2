@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cms34akkn60nl"
-path="res://.godot/imported/pixil-frame-0.png-28680e39e13f030309f34dde56ccc79c.ctex"
+uid="uid://dufsunu204qcf"
+path="res://.godot/imported/straightArrow0.png-d1763cca5dc603110d5825268d17d4be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tutorial ui/find this ally/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-28680e39e13f030309f34dde56ccc79c.ctex"]
+source_file="res://tutorial ui/straightArrow0.png"
+dest_files=["res://.godot/imported/straightArrow0.png-d1763cca5dc603110d5825268d17d4be.ctex"]
 
 [params]
 

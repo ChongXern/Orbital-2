@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr8h78w5gfbck"
-path="res://.godot/imported/pixil-frame-1.png-eddf9120f344d8f0f5254a15e4068fbd.ctex"
+uid="uid://ba63e6xncovuy"
+path="res://.godot/imported/unpressed_keys.png-cc4b14d30ada5234ef6bb266c867cd97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tutorial ui/pick up weapon/pixil-frame-1.png"
-dest_files=["res://.godot/imported/pixil-frame-1.png-eddf9120f344d8f0f5254a15e4068fbd.ctex"]
+source_file="res://tutorial ui/unpressed_keys.png"
+dest_files=["res://.godot/imported/unpressed_keys.png-cc4b14d30ada5234ef6bb266c867cd97.ctex"]
 
 [params]
 

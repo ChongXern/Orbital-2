@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://nr2stsv6daql"]
+[gd_scene load_steps=7 format=3 uid="uid://nr2stsv6daql"]
 
 [ext_resource type="Script" path="res://StartMenu.gd" id="1_6oaex"]
 [ext_resource type="Texture2D" uid="uid://bhqo401dicgee" path="res://campus crisis icon.png" id="2_4krbc"]
 [ext_resource type="Texture2D" uid="uid://cbh0a1kwbcku0" path="res://CLB level 1.png" id="2_wikjw"]
 [ext_resource type="Texture2D" uid="uid://c5m4bm2jcldf1" path="res://coins.png" id="3_no3hd"]
 [ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="4_slonh"]
+[ext_resource type="Texture2D" uid="uid://dhus31pofl3v5" path="res://tutorial tilemap.png" id="5_kyaj6"]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_6oaex")
@@ -60,6 +61,11 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="levels/ScrollContainer"]
 layout_mode = 2
 size_flags_vertical = 4
+
+[node name="Sprite2D2" type="Sprite2D" parent="levels/ScrollContainer/VBoxContainer"]
+position = Vector2(1426.75, 666)
+scale = Vector2(2.50044, 3.03846)
+texture = ExtResource("5_kyaj6")
 
 [node name="Label5" type="Label" parent="levels/ScrollContainer/VBoxContainer"]
 layout_mode = 2

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crkblwdgu131v"
-path="res://.godot/imported/pixil-frame-0.png-df3ba201bba57a0d1be7b964914dbe22.ctex"
+uid="uid://cvho3lctld1dk"
+path="res://.godot/imported/curvedLeftArrow1.png-90ee682fd415ae12694d237ac4f4c26f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tutorial ui/pick up weapon/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-df3ba201bba57a0d1be7b964914dbe22.ctex"]
+source_file="res://tutorial ui/curvedLeftArrow1.png"
+dest_files=["res://.godot/imported/curvedLeftArrow1.png-90ee682fd415ae12694d237ac4f4c26f.ctex"]
 
 [params]
 

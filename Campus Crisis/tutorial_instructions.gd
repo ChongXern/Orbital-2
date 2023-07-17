@@ -10,6 +10,7 @@ func _ready():
 	$lionDir.hide()
 	$"pick up weapon".hide()
 	$"use weapons".hide()
+	$instructions.play()
 	
 
 
@@ -24,6 +25,7 @@ func _process(delta):
 		$"pick up weapon".hide()
 		$"use weapons".hide()
 		$instructions.hide()
+		$Label.hide()
 		$ColorRect.hide()
 		Global.count += 1
 	
@@ -57,4 +59,5 @@ func next():
 		$"pick up weapon".hide()
 		$"use weapons".hide()
 		$instructions.hide()
+		$Label.hide()
 		$ColorRect.hide()

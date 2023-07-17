@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7bca6iu4ilh"
-path="res://.godot/imported/pixil-frame-1.png-3f742a9a1f8bd9138207b38317c980dc.ctex"
+uid="uid://bsto5x47ri5j2"
+path="res://.godot/imported/curvedRightArrow0.png-0a7bfd0708fea49a0534b00366ec64b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tutorial ui/tag ally/pixil-frame-1.png"
-dest_files=["res://.godot/imported/pixil-frame-1.png-3f742a9a1f8bd9138207b38317c980dc.ctex"]
+source_file="res://tutorial ui/curvedRightArrow0.png"
+dest_files=["res://.godot/imported/curvedRightArrow0.png-0a7bfd0708fea49a0534b00366ec64b7.ctex"]
 
 [params]
 
