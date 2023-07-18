@@ -7,4 +7,4 @@ var count = 0;
 
 var coins = 0
 
-var current_location = "none"
+@onready var current_location

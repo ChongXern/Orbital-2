@@ -1,12 +1,14 @@
 extends Node2D
 var score
 
+
 func _process(delta):
 	var lion_dist: int = $lion.position.x - $player.position.x
 	#print_debug(lion_dist)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.current_location = "clb"
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()
 	$hud/Cross.hide()
@@ -20,7 +22,6 @@ func _ready():
 	$hud/hornButton.hide()
 	$hud/gameOverPanel.hide()
 	score = 60
-	Global.current_location = "clb"
 
 #shows tag button on collition with any npc/ally
 func _on_ally_hit():
@@ -36,9 +37,6 @@ func _on_ally_exit():
 func _on_hud_message_disappear():
 	$hud/Cross.hide()
 
-func _on_score_timer_timeout():
-	Global
-
 func _on_player_killed():
 	get_tree().paused = false
 	$hud/ScoreTimer.stop()
@@ -46,6 +44,7 @@ func _on_player_killed():
 	$player/AnimatedSprite2D.stop()
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()
+	#Global.current_location = "none"
 	#get_tree().change_scene_to_file("res://game_over.tscn")
 	#$hud/game_over.show()
 

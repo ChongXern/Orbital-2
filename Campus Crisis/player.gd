@@ -9,7 +9,6 @@ var stopped = false
 var isSpray = false
 var isTorch = false
 var isHorn = false
-#var current_location = "none"
 signal playerPos(pos: Vector2)
 
 # Called when the node enters the scene tree for the first time.
@@ -19,8 +18,10 @@ func _ready():
 	var moveDirection = Vector2.ZERO
 	moveDirection.x -= 1
 	velocity = moveDirection.normalized() * speed
-	#if current_location = "pgp":
-	#	$Camera2D.limit_bottom = 
+	if Global.current_location == "pgp":
+		$Camera2D.limit_bottom = 2560
+		$Camera2D.limit_right = 26480
+	print("location: ", Global.current_location)
 
 func compute_animation(current_dir):
 	var anim = $AnimatedSprite2D
@@ -79,7 +80,7 @@ func handleInput():
 		velocity = moveDirection.normalized() * speed
 
 func _physics_process(delta):
-	if not stopped:
+	if !isHorn and !isSpray and !isTorch:
 		handleInput()
 		compute_animation(current_dir)
 		move_and_slide()
