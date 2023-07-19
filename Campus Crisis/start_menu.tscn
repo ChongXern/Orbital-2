@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://nr2stsv6daql"]
+[gd_scene load_steps=8 format=3 uid="uid://nr2stsv6daql"]
 
 [ext_resource type="Script" path="res://StartMenu.gd" id="1_6oaex"]
 [ext_resource type="Texture2D" uid="uid://bhqo401dicgee" path="res://campus crisis icon.png" id="2_4krbc"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c5m4bm2jcldf1" path="res://coins.png" id="3_no3hd"]
 [ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="4_slonh"]
 [ext_resource type="Texture2D" uid="uid://dhus31pofl3v5" path="res://tutorial tilemap.png" id="5_kyaj6"]
+[ext_resource type="Texture2D" uid="uid://cd4qsmhl40gkj" path="res://tutorial ui/inventoryIcon1.png" id="7_celry"]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_6oaex")
@@ -51,10 +52,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 833.0
-offset_top = 1.0
-offset_right = 3027.0
-offset_bottom = 19.0
+offset_left = 911.0
+offset_top = -11.0
+offset_right = 3105.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -132,5 +133,27 @@ theme_override_fonts/font = ExtResource("4_slonh")
 theme_override_font_sizes/font_size = 500
 text = "UTown"
 
+[node name="inventory" type="Button" parent="."]
+offset_left = 5735.0
+offset_top = 18.0
+offset_right = 6750.0
+offset_bottom = 1026.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 1
+text = "Inventory"
+icon = ExtResource("7_celry")
+flat = true
+
+[node name="Label" type="Label" parent="inventory"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 588.0
+offset_right = 935.0
+offset_bottom = 792.0
+theme_override_fonts/font = ExtResource("4_slonh")
+theme_override_font_sizes/font_size = 200
+text = "Inventory"
+
 [connection signal="pressed" from="levels/ScrollContainer/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="levels/ScrollContainer/VBoxContainer/CLB level 1" to="." method="_on_clb_level_1_pressed"]
+[connection signal="pressed" from="inventory" to="." method="_on_inventory_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://bxmaqyaucubwb"]
+[gd_scene load_steps=129 format=3 uid="uid://bxmaqyaucubwb"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_218ld"]
 [ext_resource type="PackedScene" uid="uid://cfqusdtmjtapf" path="res://player.tscn" id="1_vur2i"]
@@ -66,6 +66,7 @@
 [ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="55_txtmg"]
 [ext_resource type="Texture2D" uid="uid://bbkq2lcjiq54" path="res://sprite animations/weapons/pick up weapons/picked up spray.png" id="55_uwwfy"]
 [ext_resource type="Texture2D" uid="uid://b78ji528w7po6" path="res://sprite animations/weapons/pick up weapons/picked up horn.png" id="56_p6lo4"]
+[ext_resource type="PackedScene" uid="uid://biupmkgv7tnm3" path="res://inventory.tscn" id="67_nqknd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xaebd"]
 resource_name = "pointed"
@@ -3289,6 +3290,8 @@ position = Vector2(12692, 2361)
 
 [node name="pick up horn" parent="weapons to pick up" instance=ExtResource("54_f8mav")]
 position = Vector2(17078, 1567)
+
+[node name="inventory" parent="." instance=ExtResource("67_nqknd")]
 
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="lionDistance" from="lion" to="hud" method="_on_lion_lion_distance"]

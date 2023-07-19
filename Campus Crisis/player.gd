@@ -18,6 +18,9 @@ func _ready():
 	var moveDirection = Vector2.ZERO
 	moveDirection.x -= 1
 	velocity = moveDirection.normalized() * speed
+	print(speed)
+	if (Global.speedBoost == true):
+		speed = 550
 
 func compute_animation(current_dir):
 	var anim = $AnimatedSprite2D

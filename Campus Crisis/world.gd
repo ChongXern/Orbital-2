@@ -108,16 +108,19 @@ func _on_pick_up_torch_picked_up():
 	index_weapons("torch")
 	#make weapons buttons appear
 	organise_weapons()
+	Global.torch_collected = true
 
 func _on_pick_up_spray_picked_up():
 	get_node("weapons to pick up/pick up spray").queue_free()
 	index_weapons("spray")
 	organise_weapons()
+	Global.spray_collected = true
 	
 func _on_pick_up_horn_picked_up():
 	get_node("weapons to pick up/pick up horn").queue_free()
 	index_weapons("horn")
 	organise_weapons()
+	Global.horn_collected = true
 
 func _on_torch_button_pressed():
 	$hud/torchButton.queue_free()

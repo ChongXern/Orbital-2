@@ -10,7 +10,8 @@ signal playerKilled
 
 func _ready():
 	if (Global.tutorial == true):
-		speed = 600
+		speed = 400
+
 func _on_player_player_pos(pos):
 	playerPos = pos
 

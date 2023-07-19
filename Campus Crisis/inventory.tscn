@@ -1,0 +1,324 @@
+[gd_scene load_steps=13 format=3 uid="uid://biupmkgv7tnm3"]
+
+[ext_resource type="Script" path="res://inventory.gd" id="1_ddsx4"]
+[ext_resource type="Texture2D" uid="uid://bhqo401dicgee" path="res://campus crisis icon.png" id="2_c8421"]
+[ext_resource type="Texture2D" uid="uid://c5m4bm2jcldf1" path="res://coins.png" id="3_qxoqp"]
+[ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="4_dx6wu"]
+[ext_resource type="Texture2D" uid="uid://681u3558viip" path="res://sprite animations/weapons/air horn/air horn weapon.png" id="5_qla6l"]
+[ext_resource type="Texture2D" uid="uid://icom1w5lbi04" path="res://sprite animations/weapons/fire torch/fire torch weapon.png" id="6_t1afv"]
+[ext_resource type="Texture2D" uid="uid://4c8uiqh8d0jv" path="res://sprite animations/weapons/pepper spray/pepper spray weapon.png" id="7_0rak8"]
+[ext_resource type="PackedScene" uid="uid://b380d4ekl817o" path="res://pick up weapons/pick_up_torch.tscn" id="8_jadby"]
+[ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="9_1dhc8"]
+[ext_resource type="PackedScene" uid="uid://btvwtfaobokv8" path="res://pick up weapons/pick_up_horn.tscn" id="10_4lnbh"]
+[ext_resource type="Texture2D" uid="uid://6tt12io5o40l" path="res://tutorial ui/speedBoost.png" id="11_popng"]
+[ext_resource type="Texture2D" uid="uid://cl8tf5kle822l" path="res://icon.svg" id="12_s6jiv"]
+
+[node name="inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ddsx4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 7800.0
+offset_bottom = 2999.0
+color = Color(0.815686, 0.815686, 0, 0.6)
+
+[node name="campus crisis logo" type="Sprite2D" parent="."]
+position = Vector2(3658, 1577)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_c8421")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 7798.0
+offset_bottom = 2985.0
+color = Color(0.505882, 0.505882, 0.505882, 0.662745)
+
+[node name="CoinsIcon" type="Sprite2D" parent="."]
+position = Vector2(6533, 217)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qxoqp")
+
+[node name="Coins" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6868.0
+offset_top = 91.0
+offset_right = 7117.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(0.976471, 0.847059, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 300
+text = "0"
+
+[node name="inventorylabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 2285.0
+offset_top = 72.0
+offset_right = 5495.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 500
+text = "INVENTORY"
+horizontal_alignment = 1
+
+[node name="weapons to pick up" type="Node2D" parent="."]
+position = Vector2(1901, 438)
+
+[node name="pick up torch" parent="weapons to pick up" instance=ExtResource("8_jadby")]
+position = Vector2(23509, 1718)
+
+[node name="pick up spray" parent="weapons to pick up" instance=ExtResource("9_1dhc8")]
+position = Vector2(12692, 2361)
+
+[node name="pick up horn" parent="weapons to pick up" instance=ExtResource("10_4lnbh")]
+position = Vector2(17078, 1567)
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 88.0
+offset_right = 630.0
+offset_bottom = 297.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "Back"
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 691.0
+offset_right = 7753.0
+offset_bottom = 2989.0
+theme_override_constants/side_margin = 0
+theme_override_constants/icon_separation = 0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+
+[node name="Weapons" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 500
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 1000
+tab_alignment = 1
+tabs_rearrange_group = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Weapons"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 6.0
+offset_right = 7795.0
+offset_bottom = 2129.0
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Weapons/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 1000
+columns = 3
+
+[node name="torch" type="PanelContainer" parent="TabContainer/Weapons/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Weapons/ScrollContainer/GridContainer/torch"]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapons/ScrollContainer/GridContainer/torch/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_t1afv")
+stretch_mode = 3
+
+[node name="spray" type="PanelContainer" parent="TabContainer/Weapons/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Weapons/ScrollContainer/GridContainer/spray"]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapons/ScrollContainer/GridContainer/spray/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_0rak8")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="horn" type="PanelContainer" parent="TabContainer/Weapons/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Weapons/ScrollContainer/GridContainer/horn"]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 200
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapons/ScrollContainer/GridContainer/horn/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_qla6l")
+
+[node name="Power ups" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/h_separation = 500
+theme_override_fonts/font = ExtResource("4_dx6wu")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Power ups"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 229.0
+offset_right = 7765.0
+offset_bottom = 2316.0
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Power ups/ScrollContainer"]
+layout_mode = 2
+
+[node name="speedBoost" type="PanelContainer" parent="TabContainer/Power ups/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Power ups/ScrollContainer/GridContainer/speedBoost"]
+layout_mode = 2
+theme_override_constants/margin_right = 0
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Power ups/ScrollContainer/GridContainer/speedBoost/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("11_popng")
+
+[node name="speed boost description" type="Node2D" parent="TabContainer/Power ups/ScrollContainer/GridContainer"]
+
+[node name="speedBoost description" type="Label" parent="TabContainer/Power ups/ScrollContainer/GridContainer/speed boost description"]
+offset_left = 2281.0
+offset_top = 121.0
+offset_right = 4201.0
+offset_bottom = 325.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "Speed Boost"
+
+[node name="Label" type="Label" parent="TabContainer/Power ups/ScrollContainer/GridContainer/speed boost description/speedBoost description"]
+layout_mode = 0
+offset_top = 243.0
+offset_right = 3192.0
+offset_bottom = 551.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 150
+text = "Increases the speed of your character.
+Escape the lion and get to the ally quicker!"
+
+[node name="Label2" type="Label" parent="TabContainer/Power ups/ScrollContainer/GridContainer/speed boost description/speedBoost description"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 634.0
+offset_right = 888.0
+offset_bottom = 871.0
+theme_override_colors/font_color = Color(0.976471, 0.847059, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "100"
+
+[node name="Sprite2D" type="Sprite2D" parent="TabContainer/Power ups/ScrollContainer/GridContainer/speed boost description/speedBoost description"]
+position = Vector2(125, 717)
+scale = Vector2(1.13125, 1.13125)
+texture = ExtResource("3_qxoqp")
+
+[node name="BuyButton" type="Button" parent="TabContainer/Power ups/ScrollContainer/GridContainer/speed boost description"]
+offset_left = 6728.0
+offset_top = 278.0
+offset_right = 7346.0
+offset_bottom = 558.0
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "BUY"
+
+[node name="biggerTagArea" type="PanelContainer" parent="TabContainer/Power ups/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea"]
+layout_mode = 2
+theme_override_constants/margin_right = 0
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("12_s6jiv")
+
+[node name="biggerTagArea description" type="Node2D" parent="TabContainer/Power ups/ScrollContainer/GridContainer"]
+
+[node name="label" type="Label" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description"]
+offset_left = 2286.0
+offset_top = 1276.0
+offset_right = 4206.0
+offset_bottom = 1480.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "Extended Arm"
+
+[node name="Label" type="Label" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description/label"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 240.0
+offset_right = 3224.0
+offset_bottom = 548.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 150
+text = "Tag the ally from further away!"
+
+[node name="Label2" type="Label" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description/label"]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 460.0
+offset_right = 902.0
+offset_bottom = 697.0
+theme_override_colors/font_color = Color(0.976471, 0.847059, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "100"
+
+[node name="Sprite2D" type="Sprite2D" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description/label"]
+position = Vector2(123, 540)
+scale = Vector2(1.13125, 1.13125)
+texture = ExtResource("3_qxoqp")
+
+[node name="BuyButton2" type="Button" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description"]
+offset_left = 6714.0
+offset_top = 1383.0
+offset_right = 7332.0
+offset_bottom = 1663.0
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "BUY"
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 2221.0
+offset_top = 1005.0
+offset_right = 5514.0
+offset_bottom = 2350.0
+color = Color(0, 0, 0, 1)
+
+[node name="notEnough" type="Label" parent="ColorRect3"]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 492.0
+offset_right = 3059.0
+offset_bottom = 796.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 300
+text = "Not enough coins!"
+
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="TabContainer/Power ups/ScrollContainer/GridContainer/speed boost description/BuyButton" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description/BuyButton2" to="." method="_on_buy_button_2_pressed"]

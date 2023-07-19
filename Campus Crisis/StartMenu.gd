@@ -19,3 +19,7 @@ func _on_clb_level_1_pressed():
 
 func _on_tutorial_pressed():
 	get_tree().change_scene_to_file("res://tutorial_world.tscn")
+
+
+func _on_inventory_pressed():
+	get_tree().change_scene_to_file("res://inventory.tscn")
