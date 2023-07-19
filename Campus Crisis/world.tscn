@@ -3244,7 +3244,7 @@ position = Vector2(-0.505859, 187.999)
 metadata/_edit_vertical_guides_ = [25957.0]
 metadata/_edit_horizontal_guides_ = [3107.0]
 
-[node name="gameOverPanel" parent="hud" index="13"]
+[node name="gameOverPanel" parent="hud" index="12"]
 mouse_filter = 1
 
 [node name="try again button" parent="hud/gameOverPanel" index="1"]

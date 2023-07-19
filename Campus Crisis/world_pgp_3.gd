@@ -26,8 +26,14 @@ func _ready():
 func _process(delta):
 	pass
 
+func _on_ally_hit():
+	$hud/TagButton.show()
+	
 func _on_ally_exit():
 	$hud/TagButton.hide()
 
-func _on_ally_hit():
-	$hud/TagButton.show()
+func _on_hud_message_disappear():
+	$hud/Cross.hide()
+
+func _on_hud_pressed_tag():
+	$hud._on_tagged_button_pressed()

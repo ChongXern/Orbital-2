@@ -6150,6 +6150,8 @@ rotates = false
 loop = false
 
 [node name="npc_11" parent="npc_paths/Path2D_11/PathFollow2D_11" instance=ExtResource("76_nex8a")]
+collision_layer = 8
+collision_mask = 2
 
 [node name="Path2D_14" type="Path2D" parent="npc_paths"]
 curve = SubResource("Curve2D_35vr6")
@@ -6160,6 +6162,8 @@ rotates = false
 loop = false
 
 [node name="npc_14" parent="npc_paths/Path2D_14/PathFollow2D" instance=ExtResource("77_43nn2")]
+collision_layer = 8
+collision_mask = 2
 
 [node name="Path2D_8" type="Path2D" parent="npc_paths"]
 curve = SubResource("Curve2D_bn2uw")
@@ -6173,6 +6177,8 @@ loop = false
 [node name="npc 8" parent="npc_paths/Path2D_8/PathFollow2D_8" instance=ExtResource("76_16wye")]
 y_sort_enabled = true
 rotation = 2.51153
+collision_layer = 8
+collision_mask = 2
 
 [node name="Path2D_7" type="Path2D" parent="npc_paths"]
 curve = SubResource("Curve2D_o8s0f")
@@ -6183,6 +6189,8 @@ rotates = false
 loop = false
 
 [node name="npc7" parent="npc_paths/Path2D_7/PathFollow2D_7" instance=ExtResource("76_duah5")]
+collision_layer = 8
+collision_mask = 2
 
 [node name="Path2D_10" type="Path2D" parent="npc_paths"]
 curve = SubResource("Curve2D_f7c28")
@@ -6193,6 +6201,8 @@ rotates = false
 loop = false
 
 [node name="npc_10" parent="npc_paths/Path2D_10/PathFollow2D" instance=ExtResource("80_4apj5")]
+collision_layer = 8
+collision_mask = 2
 
 [node name="hud" parent="." instance=ExtResource("75_d6bl3")]
 
@@ -6224,5 +6234,20 @@ flat = true
 position = Vector2(5674, 245)
 scale = Vector2(0.499221, 0.519588)
 texture = ExtResource("85_wrjoj")
+
+[connection signal="exit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_exit"]
+[connection signal="hit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_hit"]
+[connection signal="npc2_ally_tagged" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="hud" method="_on_npc_2_npc_2_ally_tagged"]
+[connection signal="exit" from="npc_paths/Path2D_11/PathFollow2D_11/npc_11" to="." method="_on_ally_exit"]
+[connection signal="hit" from="npc_paths/Path2D_11/PathFollow2D_11/npc_11" to="." method="_on_ally_hit"]
+[connection signal="exit" from="npc_paths/Path2D_14/PathFollow2D/npc_14" to="." method="_on_ally_exit"]
+[connection signal="hit" from="npc_paths/Path2D_14/PathFollow2D/npc_14" to="." method="_on_ally_hit"]
+[connection signal="exit" from="npc_paths/Path2D_8/PathFollow2D_8/npc 8" to="." method="_on_ally_exit"]
+[connection signal="hit" from="npc_paths/Path2D_8/PathFollow2D_8/npc 8" to="." method="_on_ally_hit"]
+[connection signal="exit" from="npc_paths/Path2D_7/PathFollow2D_7/npc7" to="." method="_on_ally_exit"]
+[connection signal="hit" from="npc_paths/Path2D_7/PathFollow2D_7/npc7" to="." method="_on_ally_hit"]
+[connection signal="exit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_exit"]
+[connection signal="hit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_hit"]
+[connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
 
 [editable path="hud"]

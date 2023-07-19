@@ -5,7 +5,9 @@ signal message_disappear
 var lionDistance: int
 var isAllyTagged = false
 var Coins = Global.coins
-var location = Global.current_location
+#var location = Global.current_location
+var hasSetLocation: bool = false
+var location
 
 #@onready var player_animation = get_parent().get_node("player")
 var score = 60
@@ -17,7 +19,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#print_debug("node: ", get_parent().get_node("/root/Global").get_path())
+	if not hasSetLocation:
+		location = Global.current_location
+		hasSetLocation = true
 	if Input.is_action_pressed("ui_cancel"):
 		PauseMenu.visible = true
 		get_tree().paused = true
@@ -70,7 +74,9 @@ func _on_try_again_button_pressed():
 	get_tree().reload_current_scene()
 
 func _on_ally_ally_tagged(tagged):
-	isAllyTagged = true
+	print_debug("Location: ", location)
+	if location == "clb":
+		isAllyTagged = true
 
 func _on_backtohome_pressed():
 	get_tree().paused = false
@@ -82,3 +88,8 @@ func _on_home_button_pressed():
 
 func _on_lion_lion_distance(distance):
 	lionDistance = distance - 500
+
+func _on_npc_2_npc_2_ally_tagged(tagged):
+	print_debug("Location: ", location)
+	if location == "pgp":
+		isAllyTagged = true
