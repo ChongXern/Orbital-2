@@ -5,6 +5,7 @@ signal message_disappear
 var lionDistance: int
 var isAllyTagged = false
 var Coins = Global.coins
+var location = Global.current_location
 
 #@onready var player_animation = get_parent().get_node("player")
 var score = 60

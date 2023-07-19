@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://bxmaqyaucubwb"]
+[gd_scene load_steps=129 format=3 uid="uid://bxmaqyaucubwb"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_218ld"]
 [ext_resource type="PackedScene" uid="uid://cfqusdtmjtapf" path="res://player.tscn" id="1_vur2i"]
@@ -66,6 +66,7 @@
 [ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="55_txtmg"]
 [ext_resource type="Texture2D" uid="uid://bbkq2lcjiq54" path="res://sprite animations/weapons/pick up weapons/picked up spray.png" id="55_uwwfy"]
 [ext_resource type="Texture2D" uid="uid://b78ji528w7po6" path="res://sprite animations/weapons/pick up weapons/picked up horn.png" id="56_p6lo4"]
+[ext_resource type="Texture2D" uid="uid://dn28nocehy4q8" path="res://sprite animations/npc 1/npc ally.png" id="64_ae612"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xaebd"]
 resource_name = "pointed"
@@ -3278,6 +3279,11 @@ offset_right = 7139.0
 offset_bottom = 2940.0
 icon = ExtResource("56_p6lo4")
 flat = true
+
+[node name="allyPortfolio" type="Sprite2D" parent="hud"]
+position = Vector2(5677, 246)
+scale = Vector2(0.466319, 0.485344)
+texture = ExtResource("64_ae612")
 
 [node name="weapons to pick up" type="Node2D" parent="."]
 
