@@ -11,6 +11,7 @@ func _on_player_player_pos(pos):
 	playerPos = pos
 
 func _physics_process(delta):
+	#print_debug(playerPos)
 	var distToLion = get_distance_to_player()
 	if distToLion >= 406:
 		lionDir == "left"

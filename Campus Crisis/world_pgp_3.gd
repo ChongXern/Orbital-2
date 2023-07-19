@@ -24,7 +24,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var lion_dist: int = $lion.position.x - $player.position.x
 
 func _on_ally_hit():
 	$hud/TagButton.show()

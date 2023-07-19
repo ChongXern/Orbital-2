@@ -1,4 +1,4 @@
-[gd_scene load_steps=167 format=3 uid="uid://bfyer5ld00qiy"]
+[gd_scene load_steps=168 format=3 uid="uid://bfyer5ld00qiy"]
 
 [ext_resource type="Texture2D" uid="uid://cjewkjihjkx8k" path="res://pgp assets/floors/pioneer floor.png" id="1_1lypg"]
 [ext_resource type="Script" path="res://world_pgp_3.gd" id="1_giid0"]
@@ -85,6 +85,7 @@
 [ext_resource type="Texture2D" uid="uid://bbkq2lcjiq54" path="res://sprite animations/weapons/pick up weapons/picked up spray.png" id="83_34jux"]
 [ext_resource type="Texture2D" uid="uid://b78ji528w7po6" path="res://sprite animations/weapons/pick up weapons/picked up horn.png" id="84_bmy8a"]
 [ext_resource type="Texture2D" uid="uid://dvr7527y84ru5" path="res://sprite animations/npc 2/npc_2_ally.png" id="85_wrjoj"]
+[ext_resource type="PackedScene" uid="uid://dd8qgse56k3ty" path="res://lion.tscn" id="86_dygk8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgb5s"]
 texture = ExtResource("1_1lypg")
@@ -6235,6 +6236,11 @@ position = Vector2(5674, 245)
 scale = Vector2(0.499221, 0.519588)
 texture = ExtResource("85_wrjoj")
 
+[node name="lion" parent="." instance=ExtResource("86_dygk8")]
+position = Vector2(28942, 1345)
+collision_mask = 67
+
+[connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="exit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_exit"]
 [connection signal="hit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_hit"]
 [connection signal="npc2_ally_tagged" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="hud" method="_on_npc_2_npc_2_ally_tagged"]

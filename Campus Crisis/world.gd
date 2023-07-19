@@ -41,6 +41,10 @@ func _on_player_killed():
 	get_tree().paused = false
 	$hud/ScoreTimer.stop()
 	$lion/AnimatedSprite2D.stop()
+	$npcPaths/Path2D2/PathFollow2D/npc2/AnimatedSprite2D.stop()
+	$npcPaths/Path2D3/PathFollow2D/npc3/AnimatedSprite2D.stop()
+	$npcPaths/Path2D4/PathFollow2D/npc4/AnimatedSprite2D.stop()
+	$npcPaths/Path2D_ally/PathFollow2D/ally/AnimatedSprite2D.stop()
 	$player/AnimatedSprite2D.stop()
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()

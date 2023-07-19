@@ -82,7 +82,7 @@ func _physics_process(delta):
 		compute_animation(current_dir)
 		move_and_slide()
 	emit_signal("playerPos", position)
-	#print_debug(x_distance)
+	#print_debug(position)
 
 func _on_torch_button_pressed():
 	isTorch = true
