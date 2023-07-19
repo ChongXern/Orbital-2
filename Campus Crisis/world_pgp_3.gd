@@ -11,6 +11,8 @@ func _ready():
 	$hud/PauseMenu.hide()
 	$hud/ScoreTimer.start()
 	$hud/gameOverPanel.hide()
+	$player/Camera2D.limit_bottom = 2560
+	$player/Camera2D.limit_right = 26480
 	'''$hud/torchButton.disabled = true
 	$hud/sprayButton.disabled = true
 	$hud/hornButton.disabled = true
@@ -24,10 +26,8 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_ally_exit():
 	$hud/TagButton.hide()
-
 
 func _on_ally_hit():
 	$hud/TagButton.show()
