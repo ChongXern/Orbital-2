@@ -1,10 +1,14 @@
 extends CanvasLayer
 signal pressed_tag
 signal message_disappear
+signal timesUp
 @onready var PauseMenu = $PauseMenu
 var lionDistance: int
 var isAllyTagged = false
 var Coins = Global.coins
+var hasSetLocation: bool = false
+var location
+
 #@onready var player_animation = get_parent().get_node("player")
 var score = 60
 
@@ -15,7 +19,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#print_debug("node: ", get_parent().get_node("/root/Global").get_path())
+	if not hasSetLocation:
+		location = Global.current_location
+		hasSetLocation = true
 	if Input.is_action_pressed("ui_cancel"):
 		PauseMenu.visible = true
 		get_tree().paused = true
@@ -28,6 +34,7 @@ func _on_tag_button_pressed():
 		$Tick.show()
 		$ScoreTimer.stop()
 		get_tree().paused = true
+		$"audio/correct ally".play()
 		await get_tree().create_timer(3).timeout
 		Coins += score
 		if (Global.tutorial == false):
@@ -35,6 +42,7 @@ func _on_tag_button_pressed():
 		get_tree().paused = false
 		get_tree().change_scene_to_file("res://start_menu.tscn")
 	else:
+		$"audio/wrong ally".play()
 		$Cross.show()
 
 func _on_message_timer_timeout():
@@ -45,6 +53,7 @@ func _on_score_timer_timeout():
 	$Score.text = str(score)
 	if score == 0:
 		$Score.text = "times up!"
+		timesUp.emit()
 		$Coin.hide()
 		$blackRect.show()
 		get_tree().paused = false
@@ -69,7 +78,9 @@ func _on_try_again_button_pressed():
 	get_tree().reload_current_scene()
 
 func _on_ally_ally_tagged(tagged):
-	isAllyTagged = true
+	print_debug("Location: ", location)
+	if location == "clb":
+		isAllyTagged = true
 
 func _on_backtohome_pressed():
 	get_tree().paused = false
@@ -81,3 +92,8 @@ func _on_home_button_pressed():
 
 func _on_lion_lion_distance(distance):
 	lionDistance = distance - 500
+
+func _on_npc_2_npc_2_ally_tagged(tagged):
+	print_debug("Location: ", location)
+	if location == "pgp":
+		isAllyTagged = true

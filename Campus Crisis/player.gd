@@ -5,6 +5,7 @@ var current_dir = "left"
 var currentWeapon = "none"
 var started_game = false
 var x_distance
+var isGameOver: bool = false
 var stopped = false
 var isSpray = false
 var isTorch = false
@@ -79,11 +80,12 @@ func handleInput():
 		velocity = moveDirection.normalized() * speed
 
 func _physics_process(delta):
-	handleInput()
-	compute_animation(current_dir)
-	move_and_slide()
+	if !isGameOver and !isHorn and !isSpray and !isTorch:
+		handleInput()
+		compute_animation(current_dir)
+		move_and_slide()
 	emit_signal("playerPos", position)
-	#print_debug(x_distance)
+	#print_debug(position)
 
 func _on_torch_button_pressed():
 	isTorch = true
@@ -130,16 +132,13 @@ func _on_spray_button_pressed():
 	isSpray = false
 	stopped = false
 
-
 func _on_horn_button_pressed():
 	isHorn = true
 	stopped = true
 	if x_distance >= 513:
 		$AnimatedSprite2D.flip_h = false
-		print_debug("horn pressed flipped false")
 	else:
 		$AnimatedSprite2D.flip_h = true
-		print_debug("horn pressed flipped true")
 	$AnimatedSprite2D.flip_h = !$AnimatedSprite2D.flip_h
 	$AnimatedSprite2D.play("air_horn_up")
 	await get_tree().create_timer(0.267).timeout
@@ -159,3 +158,11 @@ func _on_try_again_button_pressed():
 
 func _on_lion_x_distance(distance):
 	x_distance = distance
+
+'''
+func _on_world_pgp_2_pgp_location():
+	current_location = "pgp"'''
+
+
+func _on_world_pgp_3_game_over():
+	isGameOver = true

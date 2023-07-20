@@ -5,12 +5,14 @@ var torchcount = 0
 var horncount = 0
 var spraycount = 0
 
+
 func _process(delta):
 	var lion_dist: int = $lion.position.x - $player.position.x
 	#print_debug(lion_dist)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.current_location = "clb"
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()
 	$hud/Cross.hide()
@@ -61,16 +63,18 @@ func _on_ally_exit():
 func _on_hud_message_disappear():
 	$hud/Cross.hide()
 
-func _on_score_timer_timeout():
-	Global
-
 func _on_player_killed():
 	get_tree().paused = false
 	$hud/ScoreTimer.stop()
 	$lion/AnimatedSprite2D.stop()
+	$npcPaths/Path2D2/PathFollow2D/npc2/AnimatedSprite2D.stop()
+	$npcPaths/Path2D3/PathFollow2D/npc3/AnimatedSprite2D.stop()
+	$npcPaths/Path2D4/PathFollow2D/npc4/AnimatedSprite2D.stop()
+	$npcPaths/Path2D_ally/PathFollow2D/ally/AnimatedSprite2D.stop()
 	$player/AnimatedSprite2D.stop()
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()
+	#Global.current_location = "none"
 	#get_tree().change_scene_to_file("res://game_over.tscn")
 	#$hud/game_over.show()
 
