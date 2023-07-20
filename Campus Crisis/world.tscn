@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://bxmaqyaucubwb"]
+[gd_scene load_steps=130 format=3 uid="uid://bxmaqyaucubwb"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_218ld"]
 [ext_resource type="PackedScene" uid="uid://cfqusdtmjtapf" path="res://player.tscn" id="1_vur2i"]
@@ -66,6 +66,7 @@
 [ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="55_txtmg"]
 [ext_resource type="Texture2D" uid="uid://bbkq2lcjiq54" path="res://sprite animations/weapons/pick up weapons/picked up spray.png" id="55_uwwfy"]
 [ext_resource type="Texture2D" uid="uid://b78ji528w7po6" path="res://sprite animations/weapons/pick up weapons/picked up horn.png" id="56_p6lo4"]
+[ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="62_5n00d"]
 [ext_resource type="PackedScene" uid="uid://biupmkgv7tnm3" path="res://inventory.tscn" id="67_nqknd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xaebd"]
@@ -3238,7 +3239,7 @@ rotation = 3.13889
 rotates = false
 
 [node name="ally" parent="npcPaths/Path2D_ally/PathFollow2D" instance=ExtResource("37_2qjdf")]
-position = Vector2(-0.505859, 187.999)
+position = Vector2(-537.311, 1224.55)
 
 [node name="hud" parent="." instance=ExtResource("27_5kq3n")]
 metadata/_edit_vertical_guides_ = [25957.0]
@@ -3257,22 +3258,23 @@ mouse_filter = 1
 mouse_filter = 1
 
 [node name="torchButton" type="Button" parent="hud"]
-offset_left = 6863.0
-offset_top = 2547.0
-offset_right = 7171.0
-offset_bottom = 2931.0
+offset_left = 6892.0
+offset_top = 2639.0
+offset_right = 7200.0
+offset_bottom = 3023.0
 mouse_filter = 1
 icon = ExtResource("54_fjyu2")
 flat = true
 
-[node name="torchButton2" type="Button" parent="hud"]
-offset_left = 6863.0
-offset_top = 2547.0
-offset_right = 7171.0
-offset_bottom = 2931.0
-mouse_filter = 1
-icon = ExtResource("54_fjyu2")
-flat = true
+[node name="Label" type="Label" parent="hud/torchButton"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = -9.0
+offset_right = 307.0
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("62_5n00d")
+theme_override_font_sizes/font_size = 200
+text = "1"
 
 [node name="sprayButton" type="Button" parent="hud"]
 offset_left = 6901.0
@@ -3282,29 +3284,33 @@ offset_bottom = 2945.0
 icon = ExtResource("55_uwwfy")
 flat = true
 
-[node name="sprayButton2" type="Button" parent="hud"]
-offset_left = 6901.0
-offset_top = 2654.0
-offset_right = 7139.0
-offset_bottom = 2945.0
-icon = ExtResource("55_uwwfy")
-flat = true
+[node name="Label" type="Label" parent="hud/sprayButton"]
+layout_mode = 0
+offset_left = 199.0
+offset_top = -37.0
+offset_right = 313.0
+offset_bottom = 239.0
+theme_override_fonts/font = ExtResource("62_5n00d")
+theme_override_font_sizes/font_size = 200
+text = "1"
 
 [node name="hornButton" type="Button" parent="hud"]
-offset_left = 6901.0
-offset_top = 2620.0
-offset_right = 7139.0
-offset_bottom = 2940.0
+offset_left = 6908.0
+offset_top = 2640.0
+offset_right = 7196.0
+offset_bottom = 2965.0
 icon = ExtResource("56_p6lo4")
 flat = true
 
-[node name="hornButton2" type="Button" parent="hud"]
-offset_left = 6901.0
-offset_top = 2620.0
-offset_right = 7139.0
-offset_bottom = 2940.0
-icon = ExtResource("56_p6lo4")
-flat = true
+[node name="Label" type="Label" parent="hud/hornButton"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = -33.0
+offset_right = 319.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("62_5n00d")
+theme_override_font_sizes/font_size = 200
+text = "1"
 
 [node name="weapons to pick up" type="Node2D" parent="."]
 
@@ -3318,10 +3324,11 @@ position = Vector2(12692, 2361)
 position = Vector2(17078, 1567)
 
 [node name="inventory" parent="." instance=ExtResource("67_nqknd")]
-offset_left = -528.0
-offset_top = 11.0
-offset_right = -528.0
-offset_bottom = 11.0
+visible = false
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 17.0
+offset_bottom = 12.0
 
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="lionDistance" from="lion" to="hud" method="_on_lion_lion_distance"]
@@ -3343,21 +3350,12 @@ offset_bottom = 11.0
 [connection signal="pressed" from="hud/torchButton" to="." method="_on_torch_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="player" method="_on_torch_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="lion" method="_on_torch_button_pressed"]
-[connection signal="pressed" from="hud/torchButton2" to="." method="_on_torch_button_2_pressed"]
-[connection signal="pressed" from="hud/torchButton2" to="player" method="_on_torch_button_pressed"]
-[connection signal="pressed" from="hud/torchButton2" to="lion" method="_on_torch_button_pressed"]
 [connection signal="pressed" from="hud/sprayButton" to="." method="_on_spray_button_pressed"]
 [connection signal="pressed" from="hud/sprayButton" to="player" method="_on_spray_button_pressed"]
 [connection signal="pressed" from="hud/sprayButton" to="lion" method="_on_spray_button_pressed"]
-[connection signal="pressed" from="hud/sprayButton2" to="." method="_on_spray_button_2_pressed"]
-[connection signal="pressed" from="hud/sprayButton2" to="player" method="_on_spray_button_pressed"]
-[connection signal="pressed" from="hud/sprayButton2" to="lion" method="_on_spray_button_pressed"]
 [connection signal="pressed" from="hud/hornButton" to="." method="_on_horn_button_pressed"]
 [connection signal="pressed" from="hud/hornButton" to="player" method="_on_horn_button_pressed"]
 [connection signal="pressed" from="hud/hornButton" to="lion" method="_on_horn_button_pressed"]
-[connection signal="pressed" from="hud/hornButton2" to="." method="_on_horn_button_2_pressed"]
-[connection signal="pressed" from="hud/hornButton2" to="player" method="_on_horn_button_pressed"]
-[connection signal="pressed" from="hud/hornButton2" to="lion" method="_on_horn_button_pressed"]
 [connection signal="picked_up" from="weapons to pick up/pick up torch" to="." method="_on_pick_up_torch_picked_up"]
 [connection signal="picked_up" from="weapons to pick up/pick up spray" to="." method="_on_pick_up_spray_picked_up"]
 [connection signal="picked_up" from="weapons to pick up/pick up horn" to="." method="_on_pick_up_horn_picked_up"]
