@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://nr2stsv6daql"]
+[gd_scene load_steps=9 format=3 uid="uid://nr2stsv6daql"]
 
 [ext_resource type="Script" path="res://StartMenu.gd" id="1_6oaex"]
 [ext_resource type="Texture2D" uid="uid://bhqo401dicgee" path="res://campus crisis icon.png" id="2_4krbc"]
 [ext_resource type="Texture2D" uid="uid://cbh0a1kwbcku0" path="res://CLB level 1.png" id="2_wikjw"]
 [ext_resource type="Texture2D" uid="uid://c5m4bm2jcldf1" path="res://coins.png" id="3_no3hd"]
 [ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="4_slonh"]
-[ext_resource type="AudioStream" uid="uid://b5t4d0jsxhnjj" path="res://audio/war-is-coming-103662.mp3" id="6_slado"]
 [ext_resource type="Texture2D" uid="uid://dhus31pofl3v5" path="res://tutorial tilemap.png" id="5_kyaj6"]
+[ext_resource type="AudioStream" path="res://audio/war-is-coming-103662.mp3" id="6_slado"]
 [ext_resource type="Texture2D" uid="uid://cd4qsmhl40gkj" path="res://tutorial ui/inventoryIcon1.png" id="7_celry"]
 
 [node name="StartMenu" type="Node2D"]

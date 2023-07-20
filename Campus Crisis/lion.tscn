@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://csb2lok5qdpdx" path="res://sprite animations/lion/lion_10.png" id="11_2aioq"]
 [ext_resource type="Texture2D" uid="uid://chhwplrq0xf3s" path="res://sprite animations/lion/lion_11.png" id="12_ekoqd"]
 [ext_resource type="Texture2D" uid="uid://dv83g1a1ld43g" path="res://sprite animations/lion/lion_12.png" id="13_2n6tj"]
-[ext_resource type="AudioStream" uid="uid://hogclyf0nti" path="res://audio/roar weapon.mp3" id="14_7xt5q"]
+[ext_resource type="AudioStream" path="res://audio/roar weapon.mp3" id="14_7xt5q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vwho"]
 radius = 84.0
