@@ -59,7 +59,88 @@ func _on_lion_player_killed():
 	$hud/gameOverPanel.show()
 	get_tree().paused = false
 
-func _on_npc_2_npc_2_ally_tagged(tagged):
-	if not gameOverAudioPlayed:
-		$"audio/background gameplay".stop()
-		gameOverAudioPlayed = true
+
+
+var first_weapon = "none"
+var second_weapon = "none"
+var third_weapon = "none"
+
+func reorganise_weapons(weapon: String):
+	if (first_weapon == weapon):
+		first_weapon = second_weapon
+		second_weapon = third_weapon
+		third_weapon = "none"
+	elif (second_weapon == weapon):
+		second_weapon = third_weapon
+		third_weapon = "none"
+	elif (third_weapon == weapon):
+		third_weapon = "none"
+	organise_weapons()
+
+func index_weapons(weapon: String):
+	if first_weapon == "none":
+		first_weapon = weapon
+	elif second_weapon == "none":
+		second_weapon = weapon
+	elif third_weapon == "none":
+		third_weapon = weapon
+
+func organise_individual_weapon(index: int, weapon: String):
+	var buttonPos = Vector2(6923, 2654)
+	buttonPos.x -= (index - 1) * 330
+	var _button
+	if (weapon == "torch"):
+		_button = $hud/torchButton
+	elif (weapon == "spray"):
+		_button = $hud/sprayButton
+	else:
+		_button = $hud/hornButton
+	_button.position = buttonPos
+	_button.disabled = false
+	_button.visible = true
+
+func organise_weapons():
+	if (first_weapon != "none"):
+		organise_individual_weapon(1, first_weapon)
+	if (second_weapon != "none"):
+		organise_individual_weapon(2, second_weapon)
+	if (third_weapon != "none"):
+		organise_individual_weapon(3, third_weapon)
+	#print_weapons()
+
+func print_weapons():
+	print_debug(" 1st weapon: ", first_weapon)
+	print_debug(" 2nd weapon: ", second_weapon)
+	print_debug(" 3rd weapon: ", third_weapon)
+
+#torch is picked up
+func _on_pick_up_torch_picked_up():
+	#item disappears and collision is disabled
+	get_node("weapons to pick up/pick up torch").queue_free()
+	#set as which weapon
+	index_weapons("torch")
+	#make weapons buttons appear
+	organise_weapons()
+
+func _on_pick_up_spray_picked_up():
+	get_node("weapons to pick up/pick up spray").queue_free()
+	index_weapons("spray")
+	organise_weapons()
+	
+func _on_pick_up_horn_picked_up():
+	get_node("weapons to pick up/pick up horn").queue_free()
+	index_weapons("horn")
+	organise_weapons()
+
+func _on_torch_button_pressed():
+	$hud/torchButton.queue_free()
+	reorganise_weapons("torch")
+
+func _on_spray_button_pressed():
+	await get_tree().create_timer(0.267).timeout
+	$hud/sprayButton.queue_free()
+	reorganise_weapons("spray")
+
+func _on_horn_button_pressed():
+	$hud/hornButton.queue_free()
+	reorganise_weapons("horn")

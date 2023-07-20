@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=3 uid="uid://bfyer5ld00qiy"]
+[gd_scene load_steps=176 format=3 uid="uid://bfyer5ld00qiy"]
 
 [ext_resource type="Texture2D" uid="uid://cjewkjihjkx8k" path="res://pgp assets/floors/pioneer floor.png" id="1_1lypg"]
 [ext_resource type="Script" path="res://world_pgp_3.gd" id="1_giid0"]
@@ -91,6 +91,9 @@
 [ext_resource type="AudioStream" uid="uid://drybhst2ieaj5" path="res://audio/roar start.mp3" id="89_4np6f"]
 [ext_resource type="AudioStream" uid="uid://ogkw4d5nn86f" path="res://audio/roar end.mp3" id="90_622a3"]
 [ext_resource type="AudioStream" uid="uid://456do2t0ea3h" path="res://audio/shortened crowd.mp3" id="91_kb34k"]
+[ext_resource type="PackedScene" uid="uid://b380d4ekl817o" path="res://pick up weapons/pick_up_torch.tscn" id="92_wxp57"]
+[ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="93_etldy"]
+[ext_resource type="PackedScene" uid="uid://btvwtfaobokv8" path="res://pick up weapons/pick_up_horn.tscn" id="94_aahti"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgb5s"]
 texture = ExtResource("1_1lypg")
@@ -6267,6 +6270,18 @@ volume_db = -10.0
 stream = ExtResource("91_kb34k")
 volume_db = -5.0
 
+[node name="weapons to pick up" type="Node2D" parent="."]
+z_index = 1
+
+[node name="pick up torch" parent="weapons to pick up" instance=ExtResource("92_wxp57")]
+position = Vector2(23509, 1718)
+
+[node name="pick up spray" parent="weapons to pick up" instance=ExtResource("93_etldy")]
+position = Vector2(9479, 1725)
+
+[node name="pick up horn" parent="weapons to pick up" instance=ExtResource("94_aahti")]
+position = Vector2(19321, 1158)
+
 [connection signal="gameOver" from="." to="player" method="_on_world_pgp_3_game_over"]
 [connection signal="gameOver" from="." to="npc_paths/Path2D_2/PathFollow2D_2/npc2" method="_on_world_pgp_3_game_over"]
 [connection signal="gameOver" from="." to="npc_paths/Path2D_11/PathFollow2D_11/npc_11" method="_on_world_pgp_3_game_over"]
@@ -6290,8 +6305,22 @@ volume_db = -5.0
 [connection signal="exit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_exit"]
 [connection signal="hit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_hit"]
 [connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
+[connection signal="pressed" from="hud/gameOverPanel/try again button" to="player" method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="hud/gameOverPanel/home button" to="hud" method="_on_home_button_pressed"]
+[connection signal="pressed" from="hud/torchButton" to="." method="_on_torch_button_pressed"]
+[connection signal="pressed" from="hud/torchButton" to="player" method="_on_torch_button_pressed"]
+[connection signal="pressed" from="hud/torchButton" to="lion" method="_on_torch_button_pressed"]
+[connection signal="pressed" from="hud/sprayButton" to="." method="_on_spray_button_pressed"]
+[connection signal="pressed" from="hud/sprayButton" to="player" method="_on_spray_button_pressed"]
+[connection signal="pressed" from="hud/sprayButton" to="lion" method="_on_spray_button_pressed"]
+[connection signal="pressed" from="hud/hornButton" to="." method="_on_horn_button_pressed"]
+[connection signal="pressed" from="hud/hornButton" to="player" method="_on_horn_button_pressed"]
+[connection signal="pressed" from="hud/hornButton" to="lion" method="_on_horn_button_pressed"]
 [connection signal="lionDistance" from="lion" to="hud" method="_on_lion_lion_distance"]
 [connection signal="playerKilled" from="lion" to="." method="_on_lion_player_killed"]
 [connection signal="x_distance" from="lion" to="player" method="_on_lion_x_distance"]
+[connection signal="picked_up" from="weapons to pick up/pick up torch" to="." method="_on_pick_up_torch_picked_up"]
+[connection signal="picked_up" from="weapons to pick up/pick up spray" to="." method="_on_pick_up_spray_picked_up"]
+[connection signal="picked_up" from="weapons to pick up/pick up horn" to="." method="_on_pick_up_horn_picked_up"]
 
 [editable path="hud"]
