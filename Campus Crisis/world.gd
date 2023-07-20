@@ -1,5 +1,9 @@
 extends Node2D
 var score
+var save: SaveGame
+var torchcount = 0
+var horncount = 0
+var spraycount = 0
 
 
 func _process(delta):
@@ -21,7 +25,29 @@ func _ready():
 	$hud/sprayButton.hide()
 	$hud/hornButton.hide()
 	$hud/gameOverPanel.hide()
+	
+	$hud/torchButton/Label.text = str(torchcount)
+	$hud/sprayButton/Label.text = str(spraycount)
+	$hud/hornButton/Label.text = str(horncount)
 	score = 60
+	if (Global.torch_bought == true):
+		torchcount += 1
+		$hud/torchButton/Label.text = str(torchcount)
+		$hud/torchButton.show()
+		$hud/torchButton.disabled = false
+		organise_weapons()
+	if (Global.spray_bought == true):
+		spraycount += 1
+		$hud/sprayButton/Label.text = str(spraycount)
+		$hud/sprayButton.show()
+		$hud/sprayButton.disabled = false
+		organise_weapons()
+	if (Global.horn_bought == true):
+		horncount += 1
+		$hud/hornButton/Label.text = str(horncount)
+		$hud/hornButton.show()
+		$hud/hornButton.disabled = false
+		organise_weapons()
 
 #shows tag button on collition with any npc/ally
 func _on_ally_hit():
@@ -107,31 +133,55 @@ func print_weapons():
 #torch is picked up
 func _on_pick_up_torch_picked_up():
 	#item disappears and collision is disabled
-	get_node("weapons to pick up/pick up torch").queue_free()
+	get_node("weapons to pick up/pick up torch").hide()
 	#set as which weapon
 	index_weapons("torch")
 	#make weapons buttons appear
 	organise_weapons()
+	Global.torch_collected = true
+	
+	torchcount += 1
+	$hud/torchButton/Label.text = str(torchcount)
 
 func _on_pick_up_spray_picked_up():
-	get_node("weapons to pick up/pick up spray").queue_free()
+	get_node("weapons to pick up/pick up spray").hide()
 	index_weapons("spray")
 	organise_weapons()
+	Global.spray_collected = true
+	
+	spraycount += 1
+	$hud/sprayButton/Label.text = str(spraycount)
 	
 func _on_pick_up_horn_picked_up():
-	get_node("weapons to pick up/pick up horn").queue_free()
+	get_node("weapons to pick up/pick up horn").hide()
 	index_weapons("horn")
 	organise_weapons()
+	Global.horn_collected = true
+	
+	horncount += 1
+	$hud/hornButton/Label.text = str(horncount)
 
 func _on_torch_button_pressed():
-	$hud/torchButton.queue_free()
-	reorganise_weapons("torch")
+	torchcount -= 1
+	$hud/torchButton/Label.text = str(torchcount)
+	if  (torchcount == 0):
+		$hud/torchButton.hide()
+		reorganise_weapons("torch")
 
 func _on_spray_button_pressed():
 	await get_tree().create_timer(0.267).timeout
-	$hud/sprayButton.queue_free()
-	reorganise_weapons("spray")
+	spraycount -= 1
+	$hud/sprayButton/Label.text = str(spraycount)
+	print("spraycount",spraycount)
+	if (spraycount == 0):
+		$hud/sprayButton.hide()
+		reorganise_weapons("spray")
 
 func _on_horn_button_pressed():
-	$hud/hornButton.queue_free()
-	reorganise_weapons("horn")
+	horncount -= 1
+	$hud/hornButton/Label.text = str(horncount)
+	if (horncount == 0):
+		$hud/hornButton.hide()
+		reorganise_weapons("horn")
+
+

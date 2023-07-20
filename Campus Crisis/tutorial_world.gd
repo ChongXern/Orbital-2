@@ -7,6 +7,7 @@ func _process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.tutorial = true
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()
 	$hud/Cross.hide()
@@ -25,10 +26,12 @@ func _ready():
 #shows tag button on collision with any npc/ally
 func _on_ally_hit():
 	$hud/TagButton.show()
+	
 
 #shows the respective outcomes of tagging any npc/ally
 func _on_hud_pressed_tag():
 	$hud._on_tagged_button_pressed()
+
 
 func _on_ally_exit():
 	$hud/TagButton.hide()
@@ -113,6 +116,7 @@ func _on_pick_up_spray_picked_up():
 	organise_weapons()
 	get_tree().paused = true
 	$tutorial_instructions/"use weapons".show()
+	$"tutorial_instructions/use weapons".play()
 	$tutorial_instructions/ColorRect.show()
 	$tutorial_instructions.next()
 
@@ -139,4 +143,13 @@ func _on_pick_up_spray_tutorial_instruction():
 	get_tree().paused = true
 	$tutorial_instructions/ColorRect.show()
 	$tutorial_instructions/"pick up weapon".show()
+	$"tutorial_instructions/pick up weapon".play()
+	$tutorial_instructions.next()
+
+
+func _on_ally_hit_2():
+	get_tree().paused = true
+	$tutorial_instructions/tagLabel.show()
+	$tutorial_instructions/ColorRect.show()
+	$tutorial_instructions/tagLabel.play()
 	$tutorial_instructions.next()

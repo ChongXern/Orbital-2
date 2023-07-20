@@ -10,6 +10,7 @@ func _ready():
 	$lionDir.hide()
 	$"pick up weapon".hide()
 	$"use weapons".hide()
+	$instructions.play()
 	
 
 
@@ -24,6 +25,7 @@ func _process(delta):
 		$"pick up weapon".hide()
 		$"use weapons".hide()
 		$instructions.hide()
+		$Label.hide()
 		$ColorRect.hide()
 		Global.count += 1
 	
@@ -31,17 +33,20 @@ func _process(delta):
 		get_tree().paused = true
 		$ColorRect.show()
 		$timerLabel.show()
+		$timerLabel.play()
 
 	
 	if Global.count == 2:
 		get_tree().paused = true
 		$ColorRect.show()
 		$allyToTag.show()
+		$allyToTag.play()
 	
 	if Global.count == 3:
 		get_tree().paused = true
 		$ColorRect.show()
 		$lionDir.show()
+		$lionDir.play()
 	
 
 func next():
@@ -54,4 +59,5 @@ func next():
 		$"pick up weapon".hide()
 		$"use weapons".hide()
 		$instructions.hide()
+		$Label.hide()
 		$ColorRect.hide()

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 @export var speed = 600
 var isLionRunningAway = false
 var lionDir = "none"
@@ -7,6 +8,10 @@ signal x_distance(distance: int)
 var playerPos: Vector2 = Vector2.ZERO
 signal playerKilled
 var isGameOver: bool = false
+
+func _ready():
+	if (Global.tutorial == true):
+		speed = 400
 
 func _on_player_player_pos(pos):
 	playerPos = pos

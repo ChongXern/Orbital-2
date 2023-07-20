@@ -37,7 +37,8 @@ func _on_tag_button_pressed():
 		$"audio/correct ally".play()
 		await get_tree().create_timer(3).timeout
 		Coins += score
-		Global.coins = Coins
+		if (Global.tutorial == false):
+			Global.coins = Coins
 		get_tree().paused = false
 		get_tree().change_scene_to_file("res://start_menu.tscn")
 	else:
