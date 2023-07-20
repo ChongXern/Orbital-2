@@ -154,6 +154,24 @@ theme_override_fonts/font = ExtResource("4_slonh")
 theme_override_font_sizes/font_size = 200
 text = "Inventory"
 
+[node name="save" type="Button" parent="."]
+offset_left = 5946.0
+offset_top = 989.0
+offset_right = 6389.0
+offset_bottom = 1270.0
+theme_override_font_sizes/font_size = 200
+text = "save"
+
+[node name="load" type="Button" parent="."]
+offset_left = 6117.0
+offset_top = 1560.0
+offset_right = 6544.0
+offset_bottom = 1841.0
+theme_override_font_sizes/font_size = 200
+text = "load"
+
 [connection signal="pressed" from="levels/ScrollContainer/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="levels/ScrollContainer/VBoxContainer/CLB level 1" to="." method="_on_clb_level_1_pressed"]
 [connection signal="pressed" from="inventory" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="load" to="." method="_on_load_pressed"]

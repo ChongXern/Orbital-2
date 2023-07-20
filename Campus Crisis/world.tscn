@@ -3261,6 +3261,16 @@ offset_left = 6863.0
 offset_top = 2547.0
 offset_right = 7171.0
 offset_bottom = 2931.0
+mouse_filter = 1
+icon = ExtResource("54_fjyu2")
+flat = true
+
+[node name="torchButton2" type="Button" parent="hud"]
+offset_left = 6863.0
+offset_top = 2547.0
+offset_right = 7171.0
+offset_bottom = 2931.0
+mouse_filter = 1
 icon = ExtResource("54_fjyu2")
 flat = true
 
@@ -3272,7 +3282,23 @@ offset_bottom = 2945.0
 icon = ExtResource("55_uwwfy")
 flat = true
 
+[node name="sprayButton2" type="Button" parent="hud"]
+offset_left = 6901.0
+offset_top = 2654.0
+offset_right = 7139.0
+offset_bottom = 2945.0
+icon = ExtResource("55_uwwfy")
+flat = true
+
 [node name="hornButton" type="Button" parent="hud"]
+offset_left = 6901.0
+offset_top = 2620.0
+offset_right = 7139.0
+offset_bottom = 2940.0
+icon = ExtResource("56_p6lo4")
+flat = true
+
+[node name="hornButton2" type="Button" parent="hud"]
 offset_left = 6901.0
 offset_top = 2620.0
 offset_right = 7139.0
@@ -3292,6 +3318,10 @@ position = Vector2(12692, 2361)
 position = Vector2(17078, 1567)
 
 [node name="inventory" parent="." instance=ExtResource("67_nqknd")]
+offset_left = -528.0
+offset_top = 11.0
+offset_right = -528.0
+offset_bottom = 11.0
 
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="lionDistance" from="lion" to="hud" method="_on_lion_lion_distance"]
@@ -3313,12 +3343,21 @@ position = Vector2(17078, 1567)
 [connection signal="pressed" from="hud/torchButton" to="." method="_on_torch_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="player" method="_on_torch_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="lion" method="_on_torch_button_pressed"]
+[connection signal="pressed" from="hud/torchButton2" to="." method="_on_torch_button_2_pressed"]
+[connection signal="pressed" from="hud/torchButton2" to="player" method="_on_torch_button_pressed"]
+[connection signal="pressed" from="hud/torchButton2" to="lion" method="_on_torch_button_pressed"]
 [connection signal="pressed" from="hud/sprayButton" to="." method="_on_spray_button_pressed"]
 [connection signal="pressed" from="hud/sprayButton" to="player" method="_on_spray_button_pressed"]
 [connection signal="pressed" from="hud/sprayButton" to="lion" method="_on_spray_button_pressed"]
+[connection signal="pressed" from="hud/sprayButton2" to="." method="_on_spray_button_2_pressed"]
+[connection signal="pressed" from="hud/sprayButton2" to="player" method="_on_spray_button_pressed"]
+[connection signal="pressed" from="hud/sprayButton2" to="lion" method="_on_spray_button_pressed"]
 [connection signal="pressed" from="hud/hornButton" to="." method="_on_horn_button_pressed"]
 [connection signal="pressed" from="hud/hornButton" to="player" method="_on_horn_button_pressed"]
 [connection signal="pressed" from="hud/hornButton" to="lion" method="_on_horn_button_pressed"]
+[connection signal="pressed" from="hud/hornButton2" to="." method="_on_horn_button_2_pressed"]
+[connection signal="pressed" from="hud/hornButton2" to="player" method="_on_horn_button_pressed"]
+[connection signal="pressed" from="hud/hornButton2" to="lion" method="_on_horn_button_pressed"]
 [connection signal="picked_up" from="weapons to pick up/pick up torch" to="." method="_on_pick_up_torch_picked_up"]
 [connection signal="picked_up" from="weapons to pick up/pick up spray" to="." method="_on_pick_up_spray_picked_up"]
 [connection signal="picked_up" from="weapons to pick up/pick up horn" to="." method="_on_pick_up_horn_picked_up"]

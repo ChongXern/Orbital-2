@@ -86,6 +86,36 @@ theme_override_fonts/font = ExtResource("4_dx6wu")
 theme_override_font_sizes/font_size = 200
 text = "Back"
 
+[node name="TorchBuyButton" type="Button" parent="."]
+top_level = true
+layout_mode = 2
+offset_left = 199.0
+offset_top = 2466.0
+offset_right = 909.0
+offset_bottom = 2747.0
+theme_override_font_sizes/font_size = 200
+text = "BUY"
+
+[node name="SprayBuyButton" type="Button" parent="."]
+top_level = true
+layout_mode = 2
+offset_left = 2254.0
+offset_top = 2475.0
+offset_right = 2964.0
+offset_bottom = 2756.0
+theme_override_font_sizes/font_size = 200
+text = "BUY"
+
+[node name="HornBuyButton" type="Button" parent="."]
+top_level = true
+layout_mode = 2
+offset_left = 4223.0
+offset_top = 2475.0
+offset_right = 4933.0
+offset_bottom = 2756.0
+theme_override_font_sizes/font_size = 200
+text = "BUY"
+
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
 offset_left = 9.0
@@ -320,5 +350,8 @@ theme_override_font_sizes/font_size = 300
 text = "Not enough coins!"
 
 [connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="TorchBuyButton" to="." method="_on_torch_buy_button_pressed"]
+[connection signal="pressed" from="SprayBuyButton" to="." method="_on_torch_buy_button_pressed"]
+[connection signal="pressed" from="HornBuyButton" to="." method="_on_torch_buy_button_pressed"]
 [connection signal="pressed" from="TabContainer/Power ups/ScrollContainer/GridContainer/speed boost description/BuyButton" to="." method="_on_buy_button_pressed"]
 [connection signal="pressed" from="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description/BuyButton2" to="." method="_on_buy_button_2_pressed"]
