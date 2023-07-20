@@ -5,7 +5,6 @@ signal message_disappear
 var lionDistance: int
 var isAllyTagged = false
 var Coins = Global.coins
-#var location = Global.current_location
 var hasSetLocation: bool = false
 var location
 
@@ -30,6 +29,7 @@ func _process(delta):
 func _on_tag_button_pressed():
 	$MessageTimer.start()
 	if isAllyTagged == true:
+		$"audio/correct ally".play()
 		$blackRect.show()
 		$Tick.show()
 		$ScoreTimer.stop()
@@ -40,6 +40,7 @@ func _on_tag_button_pressed():
 		get_tree().paused = false
 		get_tree().change_scene_to_file("res://start_menu.tscn")
 	else:
+		$"audio/wrong ally".play()
 		$Cross.show()
 
 func _on_message_timer_timeout():

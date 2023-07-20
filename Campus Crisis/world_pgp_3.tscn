@@ -1,4 +1,4 @@
-[gd_scene load_steps=168 format=3 uid="uid://bfyer5ld00qiy"]
+[gd_scene load_steps=173 format=3 uid="uid://bfyer5ld00qiy"]
 
 [ext_resource type="Texture2D" uid="uid://cjewkjihjkx8k" path="res://pgp assets/floors/pioneer floor.png" id="1_1lypg"]
 [ext_resource type="Script" path="res://world_pgp_3.gd" id="1_giid0"]
@@ -86,6 +86,11 @@
 [ext_resource type="Texture2D" uid="uid://b78ji528w7po6" path="res://sprite animations/weapons/pick up weapons/picked up horn.png" id="84_bmy8a"]
 [ext_resource type="Texture2D" uid="uid://dvr7527y84ru5" path="res://sprite animations/npc 2/npc_2_ally.png" id="85_wrjoj"]
 [ext_resource type="PackedScene" uid="uid://dd8qgse56k3ty" path="res://lion.tscn" id="86_dygk8"]
+[ext_resource type="AudioStream" uid="uid://chm0cocb6edyj" path="res://audio/gameplay music background.mp3" id="87_qc5ju"]
+[ext_resource type="AudioStream" uid="uid://bnggftwtcujhf" path="res://audio/game over.mp3" id="88_m1scr"]
+[ext_resource type="AudioStream" uid="uid://drybhst2ieaj5" path="res://audio/roar start.mp3" id="89_4np6f"]
+[ext_resource type="AudioStream" uid="uid://ogkw4d5nn86f" path="res://audio/roar end.mp3" id="90_622a3"]
+[ext_resource type="AudioStream" uid="uid://456do2t0ea3h" path="res://audio/shortened crowd.mp3" id="91_kb34k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgb5s"]
 texture = ExtResource("1_1lypg")
@@ -6239,6 +6244,28 @@ texture = ExtResource("85_wrjoj")
 [node name="lion" parent="." instance=ExtResource("86_dygk8")]
 position = Vector2(27901, 1398)
 collision_mask = 67
+
+[node name="audio" type="Node2D" parent="."]
+
+[node name="background gameplay" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("87_qc5ju")
+volume_db = -10.0
+
+[node name="background game over" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("88_m1scr")
+volume_db = -10.0
+
+[node name="lion start roar" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("89_4np6f")
+volume_db = -10.0
+
+[node name="lion end roar" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("90_622a3")
+volume_db = -10.0
+
+[node name="crowd screaming" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("91_kb34k")
+volume_db = -5.0
 
 [connection signal="gameOver" from="." to="player" method="_on_world_pgp_3_game_over"]
 [connection signal="gameOver" from="." to="npc_paths/Path2D_2/PathFollow2D_2/npc2" method="_on_world_pgp_3_game_over"]

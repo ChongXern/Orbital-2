@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://456do2t0ea3h"
+path="res://.godot/imported/shortened crowd.mp3-64fc078384f131fbf490a7a6cd804cf4.mp3str"
+
+[deps]
+
+source_file="res://audio/shortened crowd.mp3"
+dest_files=["res://.godot/imported/shortened crowd.mp3-64fc078384f131fbf490a7a6cd804cf4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

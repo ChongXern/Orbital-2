@@ -1,10 +1,14 @@
 extends Node2D
 var score
+var gameOverAudioPlayed: bool = false
 signal gameOver
 #new ally is npc2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$"audio/background gameplay".play()
+	$"audio/lion start roar".play()
+	$"audio/crowd screaming".play()
 	Global.current_location = "pgp"
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()
@@ -22,10 +26,11 @@ func _ready():
 	$hud/hornButton.hide()	
 	score = 60
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var lion_dist: int = $lion.position.x - $player.position.x
+	if score == 0:
+		emit_signal("gameOver")
 
 func _on_ally_hit():
 	$hud/TagButton.show()
@@ -39,10 +44,13 @@ func _on_hud_message_disappear():
 func _on_hud_pressed_tag():
 	$hud._on_tagged_button_pressed()
 
-
 func _on_lion_player_killed():
-	#Global.isPaused = true
 	emit_signal("gameOver")
+	if not gameOverAudioPlayed:
+		$"audio/background gameplay".stop()
+		$"audio/background game over".play()
+		$"audio/lion end roar".play()
+		gameOverAudioPlayed = true
 	get_tree().paused = true
 	$hud/ScoreTimer.stop()
 	$lion/AnimatedSprite2D.stop()
@@ -50,4 +58,8 @@ func _on_lion_player_killed():
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()
 	get_tree().paused = false
-	#Global.isPaused = false
+
+func _on_npc_2_npc_2_ally_tagged(tagged):
+	if not gameOverAudioPlayed:
+		$"audio/background gameplay".stop()
+		gameOverAudioPlayed = true
