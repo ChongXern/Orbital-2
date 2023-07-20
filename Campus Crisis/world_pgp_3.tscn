@@ -6237,7 +6237,7 @@ scale = Vector2(0.499221, 0.519588)
 texture = ExtResource("85_wrjoj")
 
 [node name="lion" parent="." instance=ExtResource("86_dygk8")]
-position = Vector2(28942, 1345)
+position = Vector2(27901, 1398)
 collision_mask = 67
 
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
@@ -6255,5 +6255,8 @@ collision_mask = 67
 [connection signal="exit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_exit"]
 [connection signal="hit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_hit"]
 [connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
+[connection signal="lionDistance" from="lion" to="hud" method="_on_lion_lion_distance"]
+[connection signal="playerKilled" from="lion" to="." method="_on_lion_player_killed"]
+[connection signal="x_distance" from="lion" to="player" method="_on_lion_x_distance"]
 
 [editable path="hud"]

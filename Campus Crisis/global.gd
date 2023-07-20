@@ -6,3 +6,4 @@ var count = 0
 
 var coins = 0
 var current_location = "none"
+var isPaused = false

@@ -9,7 +9,6 @@ var stopped = false
 var isSpray = false
 var isTorch = false
 var isHorn = false
-var location = Global.current_location
 signal playerPos(pos: Vector2)
 
 # Called when the node enters the scene tree for the first time.
@@ -129,16 +128,13 @@ func _on_spray_button_pressed():
 	isSpray = false
 	stopped = false
 
-
 func _on_horn_button_pressed():
 	isHorn = true
 	stopped = true
 	if x_distance >= 513:
 		$AnimatedSprite2D.flip_h = false
-		print_debug("horn pressed flipped false")
 	else:
 		$AnimatedSprite2D.flip_h = true
-		print_debug("horn pressed flipped true")
 	$AnimatedSprite2D.flip_h = !$AnimatedSprite2D.flip_h
 	$AnimatedSprite2D.play("air_horn_up")
 	await get_tree().create_timer(0.267).timeout

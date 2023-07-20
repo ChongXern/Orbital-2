@@ -37,3 +37,20 @@ func _on_hud_message_disappear():
 
 func _on_hud_pressed_tag():
 	$hud._on_tagged_button_pressed()
+
+
+func _on_lion_player_killed():
+	get_tree().paused = true
+	Global.isPaused = true
+	$hud/ScoreTimer.stop()
+	'''
+	$lion/AnimatedSprite2D.stop()
+	$npcPaths/Path2D2/PathFollow2D/npc2/AnimatedSprite2D.stop()
+	$npcPaths/Path2D3/PathFollow2D/npc3/AnimatedSprite2D.stop()
+	$npcPaths/Path2D4/PathFollow2D/npc4/AnimatedSprite2D.stop()
+	$npcPaths/Path2D_ally/PathFollow2D/ally/AnimatedSprite2D.stop()
+	$player/AnimatedSprite2D.stop()'''
+	$hud/blackRect.show()
+	$hud/gameOverPanel.show()
+	get_tree().paused = false
+	Global.isPaused = false

@@ -25,6 +25,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_cancel"):
 		PauseMenu.visible = true
 		get_tree().paused = true
+		Global.isPaused = true
 	$distanceToLion.text = str(lionDistance / 60, " m")
 
 func _on_tag_button_pressed():
@@ -34,10 +35,12 @@ func _on_tag_button_pressed():
 		$Tick.show()
 		$ScoreTimer.stop()
 		get_tree().paused = true
+		Global.isPaused = true
 		await get_tree().create_timer(3).timeout
 		Coins += score
 		Global.coins = Coins
 		get_tree().paused = false
+		Global.isPaused = false
 		get_tree().change_scene_to_file("res://start_menu.tscn")
 	else:
 		$Cross.show()
@@ -53,18 +56,21 @@ func _on_score_timer_timeout():
 		$Coin.hide()
 		$blackRect.show()
 		get_tree().paused = false
+		Global.isPaused = false
 		$gameOverPanel.show()
 
 
 func _on_resume_button_pressed():
 	PauseMenu.visible = false
 	get_tree().paused = false
+	Global.isPaused = false
 
 func _on_exit_button_pressed():
 	get_tree().quit()
 
 func _on_pause_button_pressed():
 	get_tree().paused = true
+	Global.isPaused = true
 	PauseMenu.visible = true
 
 func _on_quit_button_pressed():
@@ -80,10 +86,12 @@ func _on_ally_ally_tagged(tagged):
 
 func _on_backtohome_pressed():
 	get_tree().paused = false
+	Global.isPaused = false
 	get_tree().change_scene_to_file("res://start_menu.tscn")
 
 func _on_home_button_pressed():
 	get_tree().paused = false
+	Global.isPaused = false
 	get_tree().change_scene_to_file("res://start_menu.tscn")
 
 func _on_lion_lion_distance(distance):
