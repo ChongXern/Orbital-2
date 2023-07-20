@@ -59,6 +59,16 @@ func _on_lion_player_killed():
 	$hud/gameOverPanel.show()
 	get_tree().paused = false
 
+func _on_hud_times_up():
+	emit_signal("gameOver")
+	gameOverAudioPlayed = true
+	get_tree().paused = true
+	$hud/ScoreTimer.stop()
+	$lion/AnimatedSprite2D.stop()
+	$player/AnimatedSprite2D.stop()
+	#$hud/blackRect.show()
+	#$hud/gameOverPanel.show()
+	get_tree().paused = false
 
 
 var first_weapon = "none"

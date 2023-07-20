@@ -1,6 +1,7 @@
 extends CanvasLayer
 signal pressed_tag
 signal message_disappear
+signal timesUp
 @onready var PauseMenu = $PauseMenu
 var lionDistance: int
 var isAllyTagged = false
@@ -51,6 +52,7 @@ func _on_score_timer_timeout():
 	$Score.text = str(score)
 	if score == 0:
 		$Score.text = "times up!"
+		timesUp.emit()
 		$Coin.hide()
 		$blackRect.show()
 		get_tree().paused = false
