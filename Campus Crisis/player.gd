@@ -5,6 +5,7 @@ var current_dir = "left"
 var currentWeapon = "none"
 var started_game = false
 var x_distance
+var isGameOver: bool = false
 var stopped = false
 var isSpray = false
 var isTorch = false
@@ -76,7 +77,7 @@ func handleInput():
 		velocity = moveDirection.normalized() * speed
 
 func _physics_process(delta):
-	if !isHorn and !isSpray and !isTorch:
+	if !isGameOver and !isHorn and !isSpray and !isTorch:
 		handleInput()
 		compute_animation(current_dir)
 		move_and_slide()
@@ -158,3 +159,7 @@ func _on_lion_x_distance(distance):
 '''
 func _on_world_pgp_2_pgp_location():
 	current_location = "pgp"'''
+
+
+func _on_world_pgp_3_game_over():
+	isGameOver = true

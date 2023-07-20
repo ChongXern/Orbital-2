@@ -1,5 +1,6 @@
 extends Node2D
 var score
+signal gameOver
 #new ally is npc2
 
 # Called when the node enters the scene tree for the first time.
@@ -40,17 +41,13 @@ func _on_hud_pressed_tag():
 
 
 func _on_lion_player_killed():
+	#Global.isPaused = true
+	emit_signal("gameOver")
 	get_tree().paused = true
-	Global.isPaused = true
 	$hud/ScoreTimer.stop()
-	'''
 	$lion/AnimatedSprite2D.stop()
-	$npcPaths/Path2D2/PathFollow2D/npc2/AnimatedSprite2D.stop()
-	$npcPaths/Path2D3/PathFollow2D/npc3/AnimatedSprite2D.stop()
-	$npcPaths/Path2D4/PathFollow2D/npc4/AnimatedSprite2D.stop()
-	$npcPaths/Path2D_ally/PathFollow2D/ally/AnimatedSprite2D.stop()
-	$player/AnimatedSprite2D.stop()'''
+	$player/AnimatedSprite2D.stop()
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()
 	get_tree().paused = false
-	Global.isPaused = false
+	#Global.isPaused = false

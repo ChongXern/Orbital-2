@@ -5,19 +5,22 @@ signal npc2_ally_tagged(tagged: bool)
 @export var speed = 400
 var hasSetLocation: bool = false
 var location
+var isGameOver: bool = false
 #ally for pioneer house
 
 func _ready():
 	pass
 
 func _physics_process(delta):
-	$AnimatedSprite2D.play()
 	if not hasSetLocation:
 		location = Global.current_location
 		hasSetLocation = true
-	#npc moves along the path
-	if not Global.isPaused:
+	if not isGameOver:
+		$AnimatedSprite2D.play()
+		#npc moves along the path
 		get_parent().set_progress(get_parent().get_progress() + speed * delta)
+	else:
+		$AnimatedSprite2D.stop()
 
 func _on_body_entered(body):
 	if location == "pgp":
@@ -26,3 +29,6 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	exit.emit()
+
+func _on_world_pgp_3_game_over():
+	isGameOver = true

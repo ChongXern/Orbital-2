@@ -6240,6 +6240,14 @@ texture = ExtResource("85_wrjoj")
 position = Vector2(27901, 1398)
 collision_mask = 67
 
+[connection signal="gameOver" from="." to="player" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_2/PathFollow2D_2/npc2" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_11/PathFollow2D_11/npc_11" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_14/PathFollow2D/npc_14" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_8/PathFollow2D_8/npc 8" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_7/PathFollow2D_7/npc7" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_10/PathFollow2D/npc_10" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="lion" method="_on_world_pgp_3_game_over"]
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="exit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_exit"]
 [connection signal="hit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_hit"]
