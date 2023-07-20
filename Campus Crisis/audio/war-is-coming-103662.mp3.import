@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/war-is-coming-103662.mp3-d5664743a9b6c7b7cf53
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

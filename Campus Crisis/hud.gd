@@ -29,11 +29,11 @@ func _process(delta):
 func _on_tag_button_pressed():
 	$MessageTimer.start()
 	if isAllyTagged == true:
-		$"audio/correct ally".play()
 		$blackRect.show()
 		$Tick.show()
 		$ScoreTimer.stop()
 		get_tree().paused = true
+		$"audio/correct ally".play()
 		await get_tree().create_timer(3).timeout
 		Coins += score
 		Global.coins = Coins

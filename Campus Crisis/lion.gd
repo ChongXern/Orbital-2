@@ -47,11 +47,13 @@ func compute_pythagoras_distance() -> int:
 func _on_torch_button_pressed():
 	#emit_signal("lionDistance", get_distance_to_player())
 	isLionRunningAway = true
+	$AudioStreamPlayer.play()
 	await get_tree().create_timer(3).timeout
 	isLionRunningAway = false
 
 func _on_spray_button_pressed():
 	#emit_signal("lionDistance", get_distance_to_player())
+	$AudioStreamPlayer.play()
 	await get_tree().create_timer(0.267).timeout
 	isLionRunningAway = true
 	await get_tree().create_timer(2.733).timeout
@@ -60,6 +62,7 @@ func _on_spray_button_pressed():
 func _on_horn_button_pressed():
 	#emit_signal("lionDistance", get_distance_to_player())
 	isLionRunningAway = true
+	$AudioStreamPlayer.play()
 	await get_tree().create_timer(3).timeout
 	isLionRunningAway = false
 

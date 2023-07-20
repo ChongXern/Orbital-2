@@ -6274,7 +6274,7 @@ volume_db = -5.0
 z_index = 1
 
 [node name="pick up torch" parent="weapons to pick up" instance=ExtResource("92_wxp57")]
-position = Vector2(23509, 1718)
+position = Vector2(24884, 1450)
 
 [node name="pick up spray" parent="weapons to pick up" instance=ExtResource("93_etldy")]
 position = Vector2(9479, 1725)
