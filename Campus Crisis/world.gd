@@ -1,10 +1,10 @@
 extends Node2D
 var score
+var gameOverAudioPlayed: bool = false
 var save: SaveGame
 var torchcount = 0
 var horncount = 0
 var spraycount = 0
-
 
 func _process(delta):
 	var lion_dist: int = $lion.position.x - $player.position.x
@@ -12,6 +12,9 @@ func _process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$"audio/background gameplay".play()
+	$"audio/lion start roar".play()
+	$"audio/crowd screaming".play()
 	Global.current_location = "clb"
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()
@@ -25,7 +28,6 @@ func _ready():
 	$hud/sprayButton.hide()
 	$hud/hornButton.hide()
 	$hud/gameOverPanel.hide()
-	
 	$hud/torchButton/Label.text = str(torchcount)
 	$hud/sprayButton/Label.text = str(spraycount)
 	$hud/hornButton/Label.text = str(horncount)
@@ -64,6 +66,11 @@ func _on_hud_message_disappear():
 	$hud/Cross.hide()
 
 func _on_player_killed():
+	if not gameOverAudioPlayed:
+		$"audio/background gameplay".stop()
+		$"audio/background game over".play()
+		$"audio/lion end roar".play()
+		gameOverAudioPlayed = true
 	get_tree().paused = false
 	$hud/ScoreTimer.stop()
 	$lion/AnimatedSprite2D.stop()
@@ -77,6 +84,20 @@ func _on_player_killed():
 	#Global.current_location = "none"
 	#get_tree().change_scene_to_file("res://game_over.tscn")
 	#$hud/game_over.show()
+
+func _on_hud_times_up():
+	emit_signal("gameOver")
+	gameOverAudioPlayed = true
+	get_tree().paused = true
+	$hud/ScoreTimer.stop()
+	$lion/AnimatedSprite2D.stop()
+	$player/AnimatedSprite2D.stop()
+	$hud/torchButton.hide()
+	$hud/sprayButton.hide()
+	$hud/hornButton.hide()
+	#$hud/blackRect.show()
+	#$hud/gameOverPanel.show()
+	get_tree().paused = false
 
 var first_weapon = "none"
 var second_weapon = "none"
@@ -182,5 +203,3 @@ func _on_horn_button_pressed():
 	if (horncount == 0):
 		$hud/hornButton.hide()
 		reorganise_weapons("horn")
-
-
