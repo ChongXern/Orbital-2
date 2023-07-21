@@ -3362,6 +3362,12 @@ volume_db = -10.0
 stream = ExtResource("74_cofh2")
 volume_db = -5.0
 
+[connection signal="gameOver" from="." to="player" method="_on_game_over"]
+[connection signal="gameOver" from="." to="lion" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npcPaths/Path2D2/PathFollow2D/npc2" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npcPaths/Path2D3/PathFollow2D/npc3" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npcPaths/Path2D4/PathFollow2D/npc4" method="_on_world_game_over"]
+[connection signal="gameOver" from="." to="npcPaths/Path2D_ally/PathFollow2D/ally" method="_on_game_over"]
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="lionDistance" from="lion" to="hud" method="_on_lion_lion_distance"]
 [connection signal="playerKilled" from="lion" to="." method="_on_player_killed"]

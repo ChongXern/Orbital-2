@@ -12361,7 +12361,6 @@ loop = false
 rotation = -2.87979
 
 [node name="hud" parent="." instance=ExtResource("15_4hd8k")]
-visible = false
 
 [node name="PauseMenu" parent="hud" index="10"]
 z_index = 1
@@ -12420,7 +12419,6 @@ format = 2
 
 [node name="tutorial_instructions" parent="." instance=ExtResource("22_6xs4a")]
 process_mode = 3
-visible = false
 
 [node name="ColorRect" parent="tutorial_instructions" index="0"]
 offset_left = -8.0
@@ -12455,8 +12453,8 @@ scale = Vector2(2, 2.258)
 [node name="use weapons" parent="tutorial_instructions" index="8"]
 position = Vector2(6160, 2568)
 
-[connection signal="gameOver" from="." to="player" method="_on_tutorial_world_game_over"]
-[connection signal="gameOver" from="." to="lion" method="_on_tutorial_world_game_over"]
+[connection signal="gameOver" from="." to="player" method="_on_game_over"]
+[connection signal="gameOver" from="." to="lion" method="_on_game_over"]
 [connection signal="gameOver" from="." to="npc paths/Path2D/PathFollow2D/tutorial_ally" method="_on_tutorial_world_game_over"]
 [connection signal="gameOver" from="." to="npc paths/Path2D2/PathFollow2D/npc 5" method="_on_tutorial_world_game_over"]
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]

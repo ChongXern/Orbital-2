@@ -5,6 +5,7 @@ var save: SaveGame
 var torchcount = 0
 var horncount = 0
 var spraycount = 0
+signal gameOver
 
 func _process(delta):
 	var lion_dist: int = $lion.position.x - $player.position.x
@@ -66,6 +67,7 @@ func _on_hud_message_disappear():
 	$hud/Cross.hide()
 
 func _on_player_killed():
+	emit_signal("gameOver")
 	if not gameOverAudioPlayed:
 		$"audio/background gameplay".stop()
 		$"audio/background game over".play()
@@ -80,6 +82,9 @@ func _on_player_killed():
 	$npcPaths/Path2D_ally/PathFollow2D/ally/AnimatedSprite2D.stop()
 	$player/AnimatedSprite2D.stop()
 	$hud/blackRect.show()
+	$hud/torchButton.hide()
+	$hud/sprayButton.hide()
+	$hud/hornButton.hide()
 	$hud/gameOverPanel.show()
 	#Global.current_location = "none"
 	#get_tree().change_scene_to_file("res://game_over.tscn")

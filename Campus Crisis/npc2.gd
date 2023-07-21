@@ -31,5 +31,5 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	exit.emit()
 
-func _on_world_pgp_3_game_over():
+func _on_game_over():
 	isGameOver = true
