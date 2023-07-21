@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://40cjlk78co05"
-path="res://.godot/imported/outside tall chair.png-1779b2e37f976801eba5ec52778f086a.ctex"
+path="res://godot/imported/outside tall chair.png-1779b2e37f976801eba5ec52778f086a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/outside tall chair.png"
-dest_files=["res://.godot/imported/outside tall chair.png-1779b2e37f976801eba5ec52778f086a.ctex"]
+dest_files=["res://godot/imported/outside tall chair.png-1779b2e37f976801eba5ec52778f086a.ctex"]
 
 [params]
 

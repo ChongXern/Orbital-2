@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3shmwflnh4rf"
-path="res://.godot/imported/drain tile.png-16a46a7643a66b3d82782368d8603021.ctex"
+path="res://godot/imported/drain tile.png-16a46a7643a66b3d82782368d8603021.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/floors/drain tile.png"
-dest_files=["res://.godot/imported/drain tile.png-16a46a7643a66b3d82782368d8603021.ctex"]
+dest_files=["res://godot/imported/drain tile.png-16a46a7643a66b3d82782368d8603021.ctex"]
 
 [params]
 

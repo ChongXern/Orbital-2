@@ -86,42 +86,12 @@ theme_override_fonts/font = ExtResource("4_dx6wu")
 theme_override_font_sizes/font_size = 200
 text = "Back"
 
-[node name="TorchBuyButton" type="Button" parent="."]
-top_level = true
-layout_mode = 2
-offset_left = 199.0
-offset_top = 2466.0
-offset_right = 909.0
-offset_bottom = 2747.0
-theme_override_font_sizes/font_size = 200
-text = "BUY"
-
-[node name="SprayBuyButton" type="Button" parent="."]
-top_level = true
-layout_mode = 2
-offset_left = 2254.0
-offset_top = 2475.0
-offset_right = 2964.0
-offset_bottom = 2756.0
-theme_override_font_sizes/font_size = 200
-text = "BUY"
-
-[node name="HornBuyButton" type="Button" parent="."]
-top_level = true
-layout_mode = 2
-offset_left = 4223.0
-offset_top = 2475.0
-offset_right = 4933.0
-offset_bottom = 2756.0
-theme_override_font_sizes/font_size = 200
-text = "BUY"
-
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 1.0
 offset_top = 691.0
-offset_right = 7753.0
-offset_bottom = 2989.0
+offset_right = 7807.0
+offset_bottom = 3008.0
 theme_override_constants/side_margin = 0
 theme_override_constants/icon_separation = 0
 theme_override_constants/outline_size = 0
@@ -136,12 +106,42 @@ theme_override_font_sizes/font_size = 1000
 tab_alignment = 1
 tabs_rearrange_group = 0
 
+[node name="TorchBuyButton" type="Button" parent="TabContainer/Weapons"]
+top_level = true
+layout_mode = 2
+offset_left = 199.0
+offset_top = 2466.0
+offset_right = 909.0
+offset_bottom = 2747.0
+theme_override_font_sizes/font_size = 200
+text = "BUY"
+
+[node name="SprayBuyButton" type="Button" parent="TabContainer/Weapons"]
+top_level = true
+layout_mode = 2
+offset_left = 2254.0
+offset_top = 2475.0
+offset_right = 2964.0
+offset_bottom = 2756.0
+theme_override_font_sizes/font_size = 200
+text = "BUY"
+
+[node name="HornBuyButton" type="Button" parent="TabContainer/Weapons"]
+top_level = true
+layout_mode = 2
+offset_left = 4223.0
+offset_top = 2475.0
+offset_right = 4933.0
+offset_bottom = 2756.0
+theme_override_font_sizes/font_size = 200
+text = "BUY"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Weapons"]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 6.0
-offset_right = 7795.0
-offset_bottom = 2129.0
+offset_left = 9.0
+offset_top = 35.0
+offset_right = 7797.0
+offset_bottom = 2105.0
 
 [node name="GridContainer" type="GridContainer" parent="TabContainer/Weapons/ScrollContainer"]
 layout_mode = 2
@@ -164,6 +164,33 @@ layout_mode = 2
 texture = ExtResource("6_t1afv")
 stretch_mode = 3
 
+[node name="Label" type="Label" parent="TabContainer/Weapons/ScrollContainer/GridContainer/torch/MarginContainer/TextureRect"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 1042.0
+offset_right = 927.0
+offset_bottom = 1346.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "Torch"
+horizontal_alignment = 1
+
+[node name="CoinsIcon" type="Sprite2D" parent="TabContainer/Weapons/ScrollContainer/GridContainer/torch/MarginContainer/TextureRect"]
+position = Vector2(250, 1385)
+scale = Vector2(1.34062, 1.3125)
+texture = ExtResource("3_qxoqp")
+
+[node name="Label2" type="Label" parent="TabContainer/Weapons/ScrollContainer/GridContainer/torch/MarginContainer/TextureRect"]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 1289.0
+offset_right = 815.0
+offset_bottom = 1493.0
+theme_override_colors/font_color = Color(1, 0.929412, 0.313726, 1)
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "100"
+
 [node name="spray" type="PanelContainer" parent="TabContainer/Weapons/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
@@ -183,6 +210,34 @@ texture = ExtResource("7_0rak8")
 expand_mode = 1
 stretch_mode = 3
 
+[node name="Label" type="Label" parent="TabContainer/Weapons/ScrollContainer/GridContainer/spray/MarginContainer/TextureRect"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 1042.0
+offset_right = 927.0
+offset_bottom = 1346.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "Spray
+"
+horizontal_alignment = 1
+
+[node name="CoinsIcon" type="Sprite2D" parent="TabContainer/Weapons/ScrollContainer/GridContainer/spray/MarginContainer/TextureRect"]
+position = Vector2(250, 1385)
+scale = Vector2(1.34062, 1.3125)
+texture = ExtResource("3_qxoqp")
+
+[node name="Label2" type="Label" parent="TabContainer/Weapons/ScrollContainer/GridContainer/spray/MarginContainer/TextureRect"]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 1289.0
+offset_right = 815.0
+offset_bottom = 1493.0
+theme_override_colors/font_color = Color(1, 0.929412, 0.313726, 1)
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "200"
+
 [node name="horn" type="PanelContainer" parent="TabContainer/Weapons/ScrollContainer/GridContainer"]
 layout_mode = 2
 
@@ -198,6 +253,34 @@ theme_override_constants/margin_bottom = 200
 layout_mode = 2
 texture = ExtResource("5_qla6l")
 
+[node name="Label" type="Label" parent="TabContainer/Weapons/ScrollContainer/GridContainer/horn/MarginContainer/TextureRect"]
+layout_mode = 0
+offset_left = -204.0
+offset_top = 856.0
+offset_right = 646.0
+offset_bottom = 1160.0
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "Airhorn"
+horizontal_alignment = 1
+
+[node name="CoinsIcon" type="Sprite2D" parent="TabContainer/Weapons/ScrollContainer/GridContainer/horn/MarginContainer/TextureRect"]
+position = Vector2(15, 1198)
+scale = Vector2(1.34062, 1.3125)
+texture = ExtResource("3_qxoqp")
+
+[node name="Label2" type="Label" parent="TabContainer/Weapons/ScrollContainer/GridContainer/horn/MarginContainer/TextureRect"]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 1093.0
+offset_right = 574.0
+offset_bottom = 1297.0
+theme_override_colors/font_color = Color(1, 0.929412, 0.313726, 1)
+theme_override_fonts/font = ExtResource("4_dx6wu")
+theme_override_font_sizes/font_size = 200
+text = "300
+"
+
 [node name="Power ups" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
@@ -206,10 +289,10 @@ theme_override_fonts/font = ExtResource("4_dx6wu")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Power ups"]
 layout_mode = 0
-offset_left = -7.0
-offset_top = 229.0
-offset_right = 7765.0
-offset_bottom = 2316.0
+offset_left = 11.0
+offset_top = 202.0
+offset_right = 7783.0
+offset_bottom = 2289.0
 
 [node name="GridContainer" type="GridContainer" parent="TabContainer/Power ups/ScrollContainer"]
 layout_mode = 2
@@ -313,7 +396,7 @@ offset_bottom = 697.0
 theme_override_colors/font_color = Color(0.976471, 0.847059, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_dx6wu")
 theme_override_font_sizes/font_size = 200
-text = "100"
+text = "200"
 
 [node name="Sprite2D" type="Sprite2D" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description/label"]
 position = Vector2(123, 540)
@@ -350,8 +433,8 @@ theme_override_font_sizes/font_size = 300
 text = "Not enough coins!"
 
 [connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="TorchBuyButton" to="." method="_on_torch_buy_button_pressed"]
-[connection signal="pressed" from="SprayBuyButton" to="." method="_on_torch_buy_button_pressed"]
-[connection signal="pressed" from="HornBuyButton" to="." method="_on_torch_buy_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapons/TorchBuyButton" to="." method="_on_torch_buy_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapons/SprayBuyButton" to="." method="_on_torch_buy_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapons/HornBuyButton" to="." method="_on_torch_buy_button_pressed"]
 [connection signal="pressed" from="TabContainer/Power ups/ScrollContainer/GridContainer/speed boost description/BuyButton" to="." method="_on_buy_button_pressed"]
 [connection signal="pressed" from="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description/BuyButton2" to="." method="_on_buy_button_2_pressed"]

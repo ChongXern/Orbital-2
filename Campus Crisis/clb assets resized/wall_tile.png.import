@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fnxuuejomx5v"
-path="res://.godot/imported/wall_tile.png-16ae6f06c87bfcc74bee436bbaa6f55b.ctex"
+path="res://godot/imported/wall_tile.png-16ae6f06c87bfcc74bee436bbaa6f55b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://clb assets resized/wall_tile.png"
-dest_files=["res://.godot/imported/wall_tile.png-16ae6f06c87bfcc74bee436bbaa6f55b.ctex"]
+dest_files=["res://godot/imported/wall_tile.png-16ae6f06c87bfcc74bee436bbaa6f55b.ctex"]
 
 [params]
 

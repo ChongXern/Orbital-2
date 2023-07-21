@@ -9,6 +9,8 @@ var current_location = "none"
 var isPaused = false
 var isAllyTagged: bool = false
 var tutorial = false
+var justentered = true
+var load_scene = "tutorial"
 
 var coins = 0
 var speedBoost = false
@@ -19,3 +21,4 @@ var spray_collected = false
 var torch_bought = false
 var horn_bought = false
 var spray_bought = false
+var level_unlocked:String = "tutorial"

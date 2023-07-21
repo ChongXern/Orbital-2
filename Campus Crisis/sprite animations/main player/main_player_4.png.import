@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgkkrak0440yd"
-path="res://.godot/imported/main_player_4.png-1f83e5567780ff42f43ee971ac2adaad.ctex"
+path="res://godot/imported/main_player_4.png-1f83e5567780ff42f43ee971ac2adaad.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/main player/main_player_4.png"
-dest_files=["res://.godot/imported/main_player_4.png-1f83e5567780ff42f43ee971ac2adaad.ctex"]
+dest_files=["res://godot/imported/main_player_4.png-1f83e5567780ff42f43ee971ac2adaad.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nb6hniqegcid"
-path="res://.godot/imported/grass and tiles.png-03c2436a140c4acacecfac06da65db18.ctex"
+path="res://godot/imported/grass and tiles.png-03c2436a140c4acacecfac06da65db18.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/floors/grass and tiles.png"
-dest_files=["res://.godot/imported/grass and tiles.png-03c2436a140c4acacecfac06da65db18.ctex"]
+dest_files=["res://godot/imported/grass and tiles.png-03c2436a140c4acacecfac06da65db18.ctex"]
 
 [params]
 

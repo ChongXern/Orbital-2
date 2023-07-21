@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddm71k8f21mu8"
-path="res://.godot/imported/lion_3.png-1bf3d553e785268f3b95e7c84522bf20.ctex"
+path="res://godot/imported/lion_3.png-1bf3d553e785268f3b95e7c84522bf20.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/lion/lion_3.png"
-dest_files=["res://.godot/imported/lion_3.png-1bf3d553e785268f3b95e7c84522bf20.ctex"]
+dest_files=["res://godot/imported/lion_3.png-1bf3d553e785268f3b95e7c84522bf20.ctex"]
 
 [params]
 

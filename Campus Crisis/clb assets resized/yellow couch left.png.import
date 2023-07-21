@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4xfp3vteehra"
-path="res://.godot/imported/yellow couch left.png-262a6ca4d96569449ba7444bd6552945.ctex"
+path="res://godot/imported/yellow couch left.png-262a6ca4d96569449ba7444bd6552945.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://clb assets resized/yellow couch left.png"
-dest_files=["res://.godot/imported/yellow couch left.png-262a6ca4d96569449ba7444bd6552945.ctex"]
+dest_files=["res://godot/imported/yellow couch left.png-262a6ca4d96569449ba7444bd6552945.ctex"]
 
 [params]
 

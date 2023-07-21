@@ -38,18 +38,21 @@ func _ready():
 		$hud/torchButton/Label.text = str(torchcount)
 		$hud/torchButton.show()
 		$hud/torchButton.disabled = false
+		first_weapon = "torch"
 		organise_weapons()
 	if (Global.spray_bought == true):
 		spraycount += 1
 		$hud/sprayButton/Label.text = str(spraycount)
 		$hud/sprayButton.show()
 		$hud/sprayButton.disabled = false
+		second_weapon = "spray"
 		organise_weapons()
 	if (Global.horn_bought == true):
 		horncount += 1
 		$hud/hornButton/Label.text = str(horncount)
 		$hud/hornButton.show()
 		$hud/hornButton.disabled = false
+		third_weapon = "horn"
 		organise_weapons()
 
 #shows tag button on collition with any npc/ally
@@ -197,7 +200,6 @@ func _on_spray_button_pressed():
 	await get_tree().create_timer(0.267).timeout
 	spraycount -= 1
 	$hud/sprayButton/Label.text = str(spraycount)
-	print("spraycount",spraycount)
 	if (spraycount == 0):
 		$hud/sprayButton.hide()
 		reorganise_weapons("spray")

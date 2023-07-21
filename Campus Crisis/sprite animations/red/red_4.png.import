@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj4q43m0qmjfr"
-path="res://.godot/imported/red_4.png-fbdc674393ecb228e3f7bdecc3d4aa4a.ctex"
+path="res://godot/imported/red_4.png-fbdc674393ecb228e3f7bdecc3d4aa4a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/red/red_4.png"
-dest_files=["res://.godot/imported/red_4.png-fbdc674393ecb228e3f7bdecc3d4aa4a.ctex"]
+dest_files=["res://godot/imported/red_4.png-fbdc674393ecb228e3f7bdecc3d4aa4a.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7x72cuyss35n"
-path="res://.godot/imported/individual wall tile 3.png-e8131a739564e836b5efffc901ff2148.ctex"
+path="res://godot/imported/individual wall tile 3.png-e8131a739564e836b5efffc901ff2148.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/walls/individual wall tile 3.png"
-dest_files=["res://.godot/imported/individual wall tile 3.png-e8131a739564e836b5efffc901ff2148.ctex"]
+dest_files=["res://godot/imported/individual wall tile 3.png-e8131a739564e836b5efffc901ff2148.ctex"]
 
 [params]
 

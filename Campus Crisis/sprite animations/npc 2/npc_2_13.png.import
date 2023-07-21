@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c53ii8d32g85n"
-path="res://.godot/imported/npc_2_13.png-7c7f3e0c5099d91ff4d6d9c6751579ff.ctex"
+path="res://godot/imported/npc_2_13.png-7c7f3e0c5099d91ff4d6d9c6751579ff.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/npc 2/npc_2_13.png"
-dest_files=["res://.godot/imported/npc_2_13.png-7c7f3e0c5099d91ff4d6d9c6751579ff.ctex"]
+dest_files=["res://godot/imported/npc_2_13.png-7c7f3e0c5099d91ff4d6d9c6751579ff.ctex"]
 
 [params]
 

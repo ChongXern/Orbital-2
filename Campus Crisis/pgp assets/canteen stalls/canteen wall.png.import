@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vxcul2xhwhm4"
-path="res://.godot/imported/canteen wall.png-984ad8541774591f6e785bc4cca39eee.ctex"
+path="res://godot/imported/canteen wall.png-984ad8541774591f6e785bc4cca39eee.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/canteen stalls/canteen wall.png"
-dest_files=["res://.godot/imported/canteen wall.png-984ad8541774591f6e785bc4cca39eee.ctex"]
+dest_files=["res://godot/imported/canteen wall.png-984ad8541774591f6e785bc4cca39eee.ctex"]
 
 [params]
 

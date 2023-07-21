@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djq20dcqsf2lm"
-path="res://.godot/imported/orange chair left.png-5d22598a74e48b147cbe2c1c8eeffd59.ctex"
+path="res://godot/imported/orange chair left.png-5d22598a74e48b147cbe2c1c8eeffd59.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/orange chair left.png"
-dest_files=["res://.godot/imported/orange chair left.png-5d22598a74e48b147cbe2c1c8eeffd59.ctex"]
+dest_files=["res://godot/imported/orange chair left.png-5d22598a74e48b147cbe2c1c8eeffd59.ctex"]
 
 [params]
 

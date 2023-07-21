@@ -82,6 +82,7 @@
 [ext_resource type="PackedScene" uid="uid://00rwihm2jo20" path="res://npc_14.tscn" id="77_43nn2"]
 [ext_resource type="PackedScene" uid="uid://c1ooykehfqemm" path="res://npc_10.tscn" id="80_4apj5"]
 [ext_resource type="Texture2D" uid="uid://dirbgg2f56xs" path="res://sprite animations/weapons/pick up weapons/picked up torch.png" id="82_0hx6v"]
+[ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="83_08jv2"]
 [ext_resource type="Texture2D" uid="uid://bbkq2lcjiq54" path="res://sprite animations/weapons/pick up weapons/picked up spray.png" id="83_34jux"]
 [ext_resource type="Texture2D" uid="uid://b78ji528w7po6" path="res://sprite animations/weapons/pick up weapons/picked up horn.png" id="84_bmy8a"]
 [ext_resource type="Texture2D" uid="uid://dvr7527y84ru5" path="res://sprite animations/npc 2/npc_2_ally.png" id="85_wrjoj"]
@@ -6246,29 +6247,61 @@ collision_mask = 2
 
 [node name="hud" parent="." instance=ExtResource("75_d6bl3")]
 
+[node name="StartMenu" parent="hud" index="14"]
+visible = true
+
 [node name="torchButton" type="Button" parent="hud"]
-offset_left = 6863.0
-offset_top = 2547.0
-offset_right = 7171.0
-offset_bottom = 2931.0
+offset_left = 6935.0
+offset_top = 2573.0
+offset_right = 7243.0
+offset_bottom = 2957.0
 icon = ExtResource("82_0hx6v")
 flat = true
 
+[node name="Label" type="Label" parent="hud/torchButton"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 4.0
+offset_right = 302.0
+offset_bottom = 280.0
+theme_override_fonts/font = ExtResource("83_08jv2")
+theme_override_font_sizes/font_size = 200
+text = "1"
+
 [node name="sprayButton" type="Button" parent="hud"]
-offset_left = 6901.0
-offset_top = 2654.0
-offset_right = 7139.0
-offset_bottom = 2945.0
+offset_left = 6923.0
+offset_top = 2598.0
+offset_right = 7211.0
+offset_bottom = 2920.0
 icon = ExtResource("83_34jux")
 flat = true
 
+[node name="Label" type="Label" parent="hud/sprayButton"]
+layout_mode = 0
+offset_left = 202.0
+offset_right = 257.0
+offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("83_08jv2")
+theme_override_font_sizes/font_size = 200
+text = "1"
+
 [node name="hornButton" type="Button" parent="hud"]
-offset_left = 6901.0
-offset_top = 2620.0
-offset_right = 7139.0
-offset_bottom = 2940.0
+offset_left = 6921.0
+offset_top = 2589.0
+offset_right = 7209.0
+offset_bottom = 2914.0
 icon = ExtResource("84_bmy8a")
 flat = true
+
+[node name="Label" type="Label" parent="hud/hornButton"]
+layout_mode = 0
+offset_left = 201.0
+offset_top = -3.0
+offset_right = 256.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("83_08jv2")
+theme_override_font_sizes/font_size = 200
+text = "1"
 
 [node name="allyPortfolio" type="Sprite2D" parent="hud"]
 position = Vector2(5674, 245)

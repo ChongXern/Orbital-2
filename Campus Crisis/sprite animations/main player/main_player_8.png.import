@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bau2cal18syx8"
-path="res://.godot/imported/main_player_8.png-2e040dba8d33adcdbfe5f1e81d8c131b.ctex"
+path="res://godot/imported/main_player_8.png-2e040dba8d33adcdbfe5f1e81d8c131b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/main player/main_player_8.png"
-dest_files=["res://.godot/imported/main_player_8.png-2e040dba8d33adcdbfe5f1e81d8c131b.ctex"]
+dest_files=["res://godot/imported/main_player_8.png-2e040dba8d33adcdbfe5f1e81d8c131b.ctex"]
 
 [params]
 

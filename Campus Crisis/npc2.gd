@@ -33,3 +33,9 @@ func _on_body_exited(body):
 
 func _on_game_over():
 	isGameOver = true
+
+func _on_area_2d_body_entered(body):
+	if (Global.biggerTagArea == true):
+		npc2_ally_tagged.emit(true)
+		hit.emit()
+		print_debug("hit.emit()")

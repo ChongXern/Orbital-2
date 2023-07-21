@@ -8,6 +8,7 @@ func _process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.current_location = "tutorial"
 	Global.tutorial = true
 	Global.current_location = "tut"
 	$player/Camera2D.limit_left = -2143

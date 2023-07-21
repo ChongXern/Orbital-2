@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3koh11epc108"
-path="res://.godot/imported/pepper_spray_3.png-d0ba148d683393e0bcf25f0e33762f62.ctex"
+path="res://godot/imported/pepper_spray_3.png-d0ba148d683393e0bcf25f0e33762f62.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/weapons/pepper spray 2/pepper_spray_3.png"
-dest_files=["res://.godot/imported/pepper_spray_3.png-d0ba148d683393e0bcf25f0e33762f62.ctex"]
+dest_files=["res://godot/imported/pepper_spray_3.png-d0ba148d683393e0bcf25f0e33762f62.ctex"]
 
 [params]
 

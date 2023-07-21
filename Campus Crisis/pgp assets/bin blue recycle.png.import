@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b87ndftv88u7i"
-path="res://.godot/imported/bin blue recycle.png-9dfcec5231bd292b027af308a9fcb274.ctex"
+path="res://godot/imported/bin blue recycle.png-9dfcec5231bd292b027af308a9fcb274.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/bin blue recycle.png"
-dest_files=["res://.godot/imported/bin blue recycle.png-9dfcec5231bd292b027af308a9fcb274.ctex"]
+dest_files=["res://godot/imported/bin blue recycle.png-9dfcec5231bd292b027af308a9fcb274.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbh0a1kwbcku0"
-path="res://.godot/imported/CLB level 1.png-514a36ad796862698e3810c9e38ef735.ctex"
+path="res://godot/imported/CLB level 1.png-514a36ad796862698e3810c9e38ef735.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://CLB level 1.png"
-dest_files=["res://.godot/imported/CLB level 1.png-514a36ad796862698e3810c9e38ef735.ctex"]
+dest_files=["res://godot/imported/CLB level 1.png-514a36ad796862698e3810c9e38ef735.ctex"]
 
 [params]
 

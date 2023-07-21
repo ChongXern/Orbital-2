@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnl18msi2kn3b"
-path="res://.godot/imported/ground floor tile 1.png-8667ebfee8f21aa2b04aece1d7099709.ctex"
+path="res://godot/imported/ground floor tile 1.png-8667ebfee8f21aa2b04aece1d7099709.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://clb assets resized/ground floor tile 1.png"
-dest_files=["res://.godot/imported/ground floor tile 1.png-8667ebfee8f21aa2b04aece1d7099709.ctex"]
+dest_files=["res://godot/imported/ground floor tile 1.png-8667ebfee8f21aa2b04aece1d7099709.ctex"]
 
 [params]
 

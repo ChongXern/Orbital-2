@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w35pejbkj27c"
-path="res://.godot/imported/ice cream freezer + snacks.png-e1f0640ad62fda7ed6b692d4985e0598.ctex"
+path="res://godot/imported/ice cream freezer + snacks.png-e1f0640ad62fda7ed6b692d4985e0598.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/ice cream freezer + snacks.png"
-dest_files=["res://.godot/imported/ice cream freezer + snacks.png-e1f0640ad62fda7ed6b692d4985e0598.ctex"]
+dest_files=["res://godot/imported/ice cream freezer + snacks.png-e1f0640ad62fda7ed6b692d4985e0598.ctex"]
 
 [params]
 
