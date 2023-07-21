@@ -1,4 +1,4 @@
-[gd_scene load_steps=176 format=3 uid="uid://bfyer5ld00qiy"]
+[gd_scene load_steps=178 format=3 uid="uid://bfyer5ld00qiy"]
 
 [ext_resource type="Texture2D" uid="uid://cjewkjihjkx8k" path="res://pgp assets/floors/pioneer floor.png" id="1_1lypg"]
 [ext_resource type="Script" path="res://world_pgp_3.gd" id="1_giid0"]
@@ -94,6 +94,32 @@
 [ext_resource type="PackedScene" uid="uid://b380d4ekl817o" path="res://pick up weapons/pick_up_torch.tscn" id="92_wxp57"]
 [ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="93_etldy"]
 [ext_resource type="PackedScene" uid="uid://btvwtfaobokv8" path="res://pick up weapons/pick_up_horn.tscn" id="94_aahti"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gfgfl"]
+texture = ExtResource("27_xcipi")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 40, 40, 40, -40, -40)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, -13.5, -37, 5.5, -28.5, 22.5, -16.5, 30, -4, 36, 14, 40, 40, -40, 40)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 40, -13.5, 37, 5.5, 28.5, 22.5, 16.5, 30, 4, 36, -14, 40, -40, -40, -40)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, -40, 40)
+
+[sub_resource type="TileSet" id="TileSet_421kg"]
+tile_size = Vector2i(80, 80)
+physics_layer_0/collision_layer = 64
+physics_layer_0/collision_mask = 9
+sources/0 = SubResource("TileSetAtlasSource_gfgfl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgb5s"]
 texture = ExtResource("1_1lypg")
@@ -6087,7 +6113,9 @@ metadata/_edit_horizontal_guides_ = [3463.0, 880.0, 2560.0]
 position = Vector2(26359, 1319)
 
 [node name="lion TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_421kg")
 format = 2
+layer_0/tile_data = PackedInt32Array(1114352, 0, 1, 1048817, 0, 1, 983281, 0, 0, 917744, 0, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -6248,7 +6276,7 @@ scale = Vector2(0.499221, 0.519588)
 texture = ExtResource("85_wrjoj")
 
 [node name="lion" parent="." instance=ExtResource("86_dygk8")]
-position = Vector2(27901, 1398)
+position = Vector2(28476, 1317)
 collision_mask = 67
 
 [node name="audio" type="Node2D" parent="."]
@@ -6280,10 +6308,10 @@ z_index = 1
 position = Vector2(24884, 1450)
 
 [node name="pick up spray" parent="weapons to pick up" instance=ExtResource("93_etldy")]
-position = Vector2(9479, 1725)
+position = Vector2(9558, 1726)
 
 [node name="pick up horn" parent="weapons to pick up" instance=ExtResource("94_aahti")]
-position = Vector2(19321, 1158)
+position = Vector2(19310, 1023)
 
 [connection signal="gameOver" from="." to="player" method="_on_game_over"]
 [connection signal="gameOver" from="." to="npc_paths/Path2D_2/PathFollow2D_2/npc2" method="_on_game_over"]
