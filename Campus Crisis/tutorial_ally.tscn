@@ -1,66 +1,66 @@
 [gd_scene load_steps=16 format=3 uid="uid://cy13gbs4cpgw4"]
 
 [ext_resource type="Script" path="res://tutorial_ally.gd" id="1_20k1s"]
-[ext_resource type="Texture2D" uid="uid://c2g1rbmbt5sti" path="res://sprite animations/npc 7/npc_7_1.png" id="2_c3585"]
-[ext_resource type="Texture2D" uid="uid://b2xqlqwif7m46" path="res://sprite animations/npc 7/npc_7_2.png" id="3_mykes"]
-[ext_resource type="Texture2D" uid="uid://v6su0qeeq1rh" path="res://sprite animations/npc 7/npc_7_3.png" id="4_wnwed"]
-[ext_resource type="Texture2D" uid="uid://4wxtu50j4wbi" path="res://sprite animations/npc 7/npc_7_4.png" id="5_s3kwc"]
-[ext_resource type="Texture2D" uid="uid://cdgxankafk0bo" path="res://sprite animations/npc 7/npc_7_5.png" id="6_81eml"]
-[ext_resource type="Texture2D" uid="uid://c44aitfteeob6" path="res://sprite animations/npc 7/npc_7_6.png" id="7_ow2hu"]
-[ext_resource type="Texture2D" uid="uid://w6c7bxvj03ty" path="res://sprite animations/npc 7/npc_7_7.png" id="8_1blln"]
-[ext_resource type="Texture2D" uid="uid://wrodwg3dgmbi" path="res://sprite animations/npc 7/npc_7_8.png" id="9_0grsl"]
-[ext_resource type="Texture2D" uid="uid://bk6r0ua3k5mwe" path="res://sprite animations/npc 7/npc_7_9.png" id="10_54gi1"]
-[ext_resource type="Texture2D" uid="uid://dnargc78x45w7" path="res://sprite animations/npc 7/npc_7_10.png" id="11_nswmg"]
-[ext_resource type="Texture2D" uid="uid://bibmde6jdkvxf" path="res://sprite animations/npc 7/npc_7_11.png" id="12_eoc3w"]
-[ext_resource type="Texture2D" uid="uid://cg8ns5bi1iq5d" path="res://sprite animations/npc 7/npc_7_12.png" id="13_lp5ix"]
+[ext_resource type="Texture2D" uid="uid://8miomrt6j8sk" path="res://sprite animations/npc 13/npc_13_1.png" id="2_y3l6j"]
+[ext_resource type="Texture2D" uid="uid://hw80clrbshx3" path="res://sprite animations/npc 13/npc_13_2.png" id="3_qedim"]
+[ext_resource type="Texture2D" uid="uid://dj4riwybo4w6y" path="res://sprite animations/npc 13/npc_13_3.png" id="4_g2gp8"]
+[ext_resource type="Texture2D" uid="uid://bmixiqrfvrx41" path="res://sprite animations/npc 13/npc_13_4.png" id="5_uvs7y"]
+[ext_resource type="Texture2D" uid="uid://bvw3nvpsx5q6f" path="res://sprite animations/npc 13/npc_13_5.png" id="6_353yd"]
+[ext_resource type="Texture2D" uid="uid://dbo2sud4h84nf" path="res://sprite animations/npc 13/npc_13_6.png" id="7_6q8pk"]
+[ext_resource type="Texture2D" uid="uid://b4k4intd4erse" path="res://sprite animations/npc 13/npc_13_7.png" id="8_y2y4h"]
+[ext_resource type="Texture2D" uid="uid://gxdjdtwlr5m2" path="res://sprite animations/npc 13/npc_13_8.png" id="9_cf646"]
+[ext_resource type="Texture2D" uid="uid://c7htt15mkrisx" path="res://sprite animations/npc 13/npc_13_9.png" id="10_dbsnq"]
+[ext_resource type="Texture2D" uid="uid://brybcny6mfont" path="res://sprite animations/npc 13/npc_13_10.png" id="11_eshj6"]
+[ext_resource type="Texture2D" uid="uid://5uvaayfovndq" path="res://sprite animations/npc 13/npc_13_11.png" id="12_c3aby"]
+[ext_resource type="Texture2D" uid="uid://b1oays08wibjh" path="res://sprite animations/npc 13/npc_13_12.png" id="13_4y1x8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pqu6a"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_c3585")
+"texture": ExtResource("2_y3l6j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_mykes")
+"texture": ExtResource("3_qedim")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_wnwed")
+"texture": ExtResource("4_g2gp8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_s3kwc")
+"texture": ExtResource("5_uvs7y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_81eml")
+"texture": ExtResource("6_353yd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ow2hu")
+"texture": ExtResource("7_6q8pk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_1blln")
+"texture": ExtResource("8_y2y4h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_0grsl")
+"texture": ExtResource("9_cf646")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_54gi1")
+"texture": ExtResource("10_dbsnq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_nswmg")
+"texture": ExtResource("11_eshj6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_eoc3w")
+"texture": ExtResource("12_c3aby")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_lp5ix")
+"texture": ExtResource("13_4y1x8")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4khf"]
-radius = 160.0
-height = 576.0
+radius = 294.0
+height = 588.0
 
 [node name="tutorial_ally" type="Area2D"]
 scale = Vector2(0.5, 0.5)

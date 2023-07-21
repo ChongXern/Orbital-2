@@ -74,3 +74,6 @@ func _on_horn_button_pressed():
 
 func _on_world_pgp_3_game_over():
 	isGameOver = true
+
+func _on_tutorial_world_game_over():
+	isGameOver = true

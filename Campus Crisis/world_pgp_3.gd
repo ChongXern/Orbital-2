@@ -1,5 +1,4 @@
 extends Node2D
-var score
 var gameOverAudioPlayed: bool = false
 signal gameOver
 #new ally is npc2
@@ -24,13 +23,10 @@ func _ready():
 	$hud/torchButton.hide()
 	$hud/sprayButton.hide()
 	$hud/hornButton.hide()	
-	score = 60
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var lion_dist: int = $lion.position.x - $player.position.x
-	if score == 0:
-		emit_signal("gameOver")
 
 func _on_ally_hit():
 	$hud/TagButton.show()
@@ -54,6 +50,9 @@ func _on_lion_player_killed():
 	get_tree().paused = true
 	$hud/ScoreTimer.stop()
 	$lion/AnimatedSprite2D.stop()
+	$hud/torchButton.hide()
+	$hud/sprayButton.hide()
+	$hud/hornButton.hide()
 	$player/AnimatedSprite2D.stop()
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()
@@ -66,10 +65,12 @@ func _on_hud_times_up():
 	$hud/ScoreTimer.stop()
 	$lion/AnimatedSprite2D.stop()
 	$player/AnimatedSprite2D.stop()
+	$hud/torchButton.hide()
+	$hud/sprayButton.hide()
+	$hud/hornButton.hide()
 	#$hud/blackRect.show()
 	#$hud/gameOverPanel.show()
 	get_tree().paused = false
-
 
 var first_weapon = "none"
 var second_weapon = "none"
@@ -154,3 +155,4 @@ func _on_spray_button_pressed():
 func _on_horn_button_pressed():
 	$hud/hornButton.queue_free()
 	reorganise_weapons("horn")
+

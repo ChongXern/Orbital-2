@@ -3197,7 +3197,6 @@ rotates = false
 loop = false
 
 [node name="npc2" parent="npcPaths/Path2D2/PathFollow2D" instance=ExtResource("28_b5oh3")]
-z_index = 1
 position = Vector2(-15.3086, 182.246)
 rotation = 3.13427
 

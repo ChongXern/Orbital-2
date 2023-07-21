@@ -1,5 +1,6 @@
 extends Node2D
-var score
+signal gameOver
+#var score
 
 func _process(delta):
 	var lion_dist: int = $lion.position.x - $player.position.x
@@ -8,6 +9,8 @@ func _process(delta):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.tutorial = true
+	Global.current_location = "tut"
+	$player/Camera2D.limit_left = -2143
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()
 	$hud/Cross.hide()
@@ -20,18 +23,11 @@ func _ready():
 	$hud/sprayButton.hide()
 	$hud/hornButton.hide()
 	$hud/gameOverPanel.hide()
-	
-	score = 60
+	#score = 30
 
 #shows tag button on collision with any npc/ally
 func _on_ally_hit():
 	$hud/TagButton.show()
-	
-
-#shows the respective outcomes of tagging any npc/ally
-func _on_hud_pressed_tag():
-	$hud._on_tagged_button_pressed()
-
 
 func _on_ally_exit():
 	$hud/TagButton.hide()
@@ -39,15 +35,35 @@ func _on_ally_exit():
 func _on_hud_message_disappear():
 	$hud/Cross.hide()
 
+#shows the respective outcomes of tagging any npc/ally
+func _on_hud_pressed_tag():
+	$hud._on_tagged_button_pressed()
+
 func _on_player_killed():
-	get_tree().paused = false
+	emit_signal("gameOver")
+	get_tree().paused = true
 	$hud/ScoreTimer.stop()
 	$lion/AnimatedSprite2D.stop()
 	$player/AnimatedSprite2D.stop()
+	$hud/torchButton.hide()
+	$hud/sprayButton.hide()
+	$hud/hornButton.hide()
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()
+	get_tree().paused = false
 	#get_tree().change_scene_to_file("res://game_over.tscn")
 	#$hud/game_over.show()
+
+func _on_hud_times_up():
+	emit_signal("gameOver")
+	get_tree().paused = true
+	$hud/ScoreTimer.stop()
+	$lion/AnimatedSprite2D.stop()
+	$player/AnimatedSprite2D.stop()
+	$hud/torchButton.hide()
+	$hud/sprayButton.hide()
+	$hud/hornButton.hide()
+	get_tree().paused = false
 
 var first_weapon = "none"
 var second_weapon = "none"
@@ -137,7 +153,6 @@ func _on_spray_button_pressed():
 func _on_horn_button_pressed():
 	$hud/hornButton.queue_free()
 	reorganise_weapons("horn")
-
 
 func _on_pick_up_spray_tutorial_instruction():
 	get_tree().paused = true

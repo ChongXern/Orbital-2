@@ -21,6 +21,7 @@ func _physics_process(delta):
 		get_parent().set_progress(get_parent().get_progress() + speed * delta)
 	else:
 		$AnimatedSprite2D.stop()
+	#print_debug(location)
 
 func _on_body_entered(body):
 	if location == "pgp":

@@ -8,9 +8,11 @@ var isAllyTagged = false
 var Coins = Global.coins
 var hasSetLocation: bool = false
 var location
+var score = 60
 
 #@onready var player_animation = get_parent().get_node("player")
-var score = 60
+#var score = 60
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -96,4 +98,10 @@ func _on_lion_lion_distance(distance):
 func _on_npc_2_npc_2_ally_tagged(tagged):
 	print_debug("Location: ", location)
 	if location == "pgp":
+		isAllyTagged = true
+
+
+func _on_tutorial_ally_tut_ally_tagged(tagged):
+	print_debug("Location: ", location)
+	if location == "tut":
 		isAllyTagged = true

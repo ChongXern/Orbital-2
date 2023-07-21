@@ -157,7 +157,6 @@ func _on_pick_up_horn_picked_up():
 	index_weapons("horn")
 	organise_weapons()
 	Global.horn_collected = true
-	
 	horncount += 1
 	$hud/hornButton/Label.text = str(horncount)
 
