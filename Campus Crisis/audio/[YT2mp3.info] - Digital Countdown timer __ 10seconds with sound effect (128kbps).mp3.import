@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mqpn7a4pkrj"
+path="res://.godot/imported/[YT2mp3.info] - Digital Countdown timer __ 10seconds with sound effect (128kbps).mp3-8eb6ea5ca4b9ece82d66b815c48a9e3e.mp3str"
+
+[deps]
+
+source_file="res://audio/[YT2mp3.info] - Digital Countdown timer __ 10seconds with sound effect (128kbps).mp3"
+dest_files=["res://.godot/imported/[YT2mp3.info] - Digital Countdown timer __ 10seconds with sound effect (128kbps).mp3-8eb6ea5ca4b9ece82d66b815c48a9e3e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

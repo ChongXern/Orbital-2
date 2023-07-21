@@ -87,7 +87,7 @@
 [ext_resource type="Texture2D" uid="uid://dvr7527y84ru5" path="res://sprite animations/npc 2/npc_2_ally.png" id="85_wrjoj"]
 [ext_resource type="PackedScene" uid="uid://dd8qgse56k3ty" path="res://lion.tscn" id="86_dygk8"]
 [ext_resource type="AudioStream" uid="uid://chm0cocb6edyj" path="res://audio/gameplay music background.mp3" id="87_qc5ju"]
-[ext_resource type="AudioStream" uid="uid://bnggftwtcujhf" path="res://audio/game over.mp3" id="88_m1scr"]
+[ext_resource type="AudioStream" uid="uid://c2h4v8xkh56o5" path="res://audio/game over loss.mp3" id="88_7rcuc"]
 [ext_resource type="AudioStream" uid="uid://drybhst2ieaj5" path="res://audio/roar start.mp3" id="89_4np6f"]
 [ext_resource type="AudioStream" uid="uid://ogkw4d5nn86f" path="res://audio/roar end.mp3" id="90_622a3"]
 [ext_resource type="AudioStream" uid="uid://456do2t0ea3h" path="res://audio/shortened crowd.mp3" id="91_kb34k"]
@@ -6086,6 +6086,9 @@ metadata/_edit_horizontal_guides_ = [3463.0, 880.0, 2560.0]
 [node name="player" parent="." instance=ExtResource("21_nc8vi")]
 position = Vector2(26359, 1319)
 
+[node name="lion TileMap" type="TileMap" parent="."]
+format = 2
+
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_64opa")
@@ -6255,7 +6258,7 @@ stream = ExtResource("87_qc5ju")
 volume_db = -10.0
 
 [node name="background game over" type="AudioStreamPlayer" parent="audio"]
-stream = ExtResource("88_m1scr")
+stream = ExtResource("88_7rcuc")
 volume_db = -10.0
 
 [node name="lion start roar" type="AudioStreamPlayer" parent="audio"]
