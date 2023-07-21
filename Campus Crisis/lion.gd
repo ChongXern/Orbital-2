@@ -71,6 +71,5 @@ func _on_horn_button_pressed():
 	await get_tree().create_timer(3).timeout
 	isLionRunningAway = false
 
-
-func _on_world_pgp_3_game_over():
+func _on_game_over():
 	isGameOver = true

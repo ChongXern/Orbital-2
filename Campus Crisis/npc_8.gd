@@ -18,10 +18,8 @@ func _physics_process(delta):
 func _on_body_entered(body):
 	hit.emit()
 
-
 func _on_body_exited(body):
 	exit.emit()
-
 
 func _on_world_pgp_3_game_over():
 	isGameOver = true

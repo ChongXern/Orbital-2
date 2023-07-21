@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2h4v8xkh56o5"
+path="res://.godot/imported/game over loss.mp3-0959e06585405d8fb893f04d03cb471e.mp3str"
+
+[deps]
+
+source_file="res://audio/game over loss.mp3"
+dest_files=["res://.godot/imported/game over loss.mp3-0959e06585405d8fb893f04d03cb471e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

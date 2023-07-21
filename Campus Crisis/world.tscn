@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=3 uid="uid://bxmaqyaucubwb"]
+[gd_scene load_steps=136 format=3 uid="uid://bxmaqyaucubwb"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_218ld"]
 [ext_resource type="PackedScene" uid="uid://cfqusdtmjtapf" path="res://player.tscn" id="1_vur2i"]
@@ -69,6 +69,11 @@
 [ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="62_5n00d"]
 [ext_resource type="Texture2D" uid="uid://dn28nocehy4q8" path="res://sprite animations/npc 1/npc ally.png" id="64_ae612"]
 [ext_resource type="PackedScene" uid="uid://biupmkgv7tnm3" path="res://inventory.tscn" id="67_nqknd"]
+[ext_resource type="AudioStream" uid="uid://chm0cocb6edyj" path="res://audio/gameplay music background.mp3" id="70_h5115"]
+[ext_resource type="AudioStream" uid="uid://c2h4v8xkh56o5" path="res://audio/game over loss.mp3" id="71_i1nk3"]
+[ext_resource type="AudioStream" uid="uid://drybhst2ieaj5" path="res://audio/roar start.mp3" id="72_iq7ja"]
+[ext_resource type="AudioStream" uid="uid://ogkw4d5nn86f" path="res://audio/roar end.mp3" id="73_fudhu"]
+[ext_resource type="AudioStream" uid="uid://456do2t0ea3h" path="res://audio/shortened crowd.mp3" id="74_cofh2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xaebd"]
 resource_name = "pointed"
@@ -3197,7 +3202,6 @@ rotates = false
 loop = false
 
 [node name="npc2" parent="npcPaths/Path2D2/PathFollow2D" instance=ExtResource("28_b5oh3")]
-z_index = 1
 position = Vector2(-15.3086, 182.246)
 rotation = 3.13427
 
@@ -3336,6 +3340,34 @@ offset_top = 12.0
 offset_right = 17.0
 offset_bottom = 12.0
 
+[node name="audio" type="Node2D" parent="."]
+
+[node name="background gameplay" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("70_h5115")
+volume_db = -10.0
+
+[node name="background game over" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("71_i1nk3")
+volume_db = -10.0
+
+[node name="lion start roar" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("72_iq7ja")
+volume_db = -10.0
+
+[node name="lion end roar" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("73_fudhu")
+volume_db = -10.0
+
+[node name="crowd screaming" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("74_cofh2")
+volume_db = -5.0
+
+[connection signal="gameOver" from="." to="player" method="_on_game_over"]
+[connection signal="gameOver" from="." to="lion" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npcPaths/Path2D2/PathFollow2D/npc2" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npcPaths/Path2D3/PathFollow2D/npc3" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npcPaths/Path2D4/PathFollow2D/npc4" method="_on_world_game_over"]
+[connection signal="gameOver" from="." to="npcPaths/Path2D_ally/PathFollow2D/ally" method="_on_game_over"]
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="lionDistance" from="lion" to="hud" method="_on_lion_lion_distance"]
 [connection signal="playerKilled" from="lion" to="." method="_on_player_killed"]
@@ -3351,6 +3383,7 @@ offset_bottom = 12.0
 [connection signal="hit" from="npcPaths/Path2D_ally/PathFollow2D/ally" to="." method="_on_ally_hit"]
 [connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
 [connection signal="pressed_tag" from="hud" to="." method="_on_hud_pressed_tag"]
+[connection signal="timesUp" from="hud" to="." method="_on_hud_times_up"]
 [connection signal="pressed" from="hud/gameOverPanel/try again button" to="player" method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="hud/gameOverPanel/home button" to="hud" method="_on_home_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="." method="_on_torch_button_pressed"]

@@ -5,8 +5,13 @@ signal message_disappear
 var lionDistance: int
 var isAllyTagged = false
 var Coins = Global.coins
-#@onready var player_animation = get_parent().get_node("player")
+var hasSetLocation: bool = false
+var location
 var score = 60
+
+#@onready var player_animation = get_parent().get_node("player")
+#var score = 60
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -48,6 +53,8 @@ func _on_message_timer_timeout():
 func _on_score_timer_timeout():
 	score -= 1
 	$Score.text = str(score)
+	if score == 10:
+		$AudioStreamPlayer.play()
 	if score == 0:
 		$Score.text = "times up!"
 		$Coin.hide()
@@ -90,3 +97,14 @@ func _on_home_button_pressed():
 
 func _on_lion_lion_distance(distance):
 	lionDistance = distance - 500
+
+func _on_npc_2_npc_2_ally_tagged(tagged):
+	print_debug("Location: ", location)
+	if location == "pgp":
+		isAllyTagged = true
+
+
+func _on_tutorial_ally_tut_ally_tagged(tagged):
+	print_debug("Location: ", location)
+	if location == "tut":
+		isAllyTagged = true

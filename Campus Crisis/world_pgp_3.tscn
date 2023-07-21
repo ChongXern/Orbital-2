@@ -1,4 +1,4 @@
-[gd_scene load_steps=177 format=3 uid="uid://b22jrqagjjsa5"]
+[gd_scene load_steps=178 format=3 uid="uid://bfyer5ld00qiy"]
 
 [ext_resource type="Texture2D" uid="uid://cjewkjihjkx8k" path="res://pgp assets/floors/pioneer floor.png" id="1_1lypg"]
 [ext_resource type="Script" path="res://world_pgp_3.gd" id="1_giid0"]
@@ -78,9 +78,9 @@
 [ext_resource type="PackedScene" uid="uid://qeitfgj53ewa" path="res://hud.tscn" id="75_d6bl3"]
 [ext_resource type="PackedScene" uid="uid://bslq031oe440y" path="res://npc_8.tscn" id="76_16wye"]
 [ext_resource type="PackedScene" uid="uid://cu5bf3qj8mltp" path="res://npc_7.tscn" id="76_duah5"]
-[ext_resource type="PackedScene" path="res://npc_11.tscn" id="76_nex8a"]
-[ext_resource type="PackedScene" path="res://npc_14.tscn" id="77_43nn2"]
-[ext_resource type="PackedScene" path="res://npc_10.tscn" id="80_4apj5"]
+[ext_resource type="PackedScene" uid="uid://5qkdtno52qkb" path="res://npc_11.tscn" id="76_nex8a"]
+[ext_resource type="PackedScene" uid="uid://00rwihm2jo20" path="res://npc_14.tscn" id="77_43nn2"]
+[ext_resource type="PackedScene" uid="uid://c1ooykehfqemm" path="res://npc_10.tscn" id="80_4apj5"]
 [ext_resource type="Texture2D" uid="uid://dirbgg2f56xs" path="res://sprite animations/weapons/pick up weapons/picked up torch.png" id="82_0hx6v"]
 [ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="83_08jv2"]
 [ext_resource type="Texture2D" uid="uid://bbkq2lcjiq54" path="res://sprite animations/weapons/pick up weapons/picked up spray.png" id="83_34jux"]
@@ -88,13 +88,39 @@
 [ext_resource type="Texture2D" uid="uid://dvr7527y84ru5" path="res://sprite animations/npc 2/npc_2_ally.png" id="85_wrjoj"]
 [ext_resource type="PackedScene" uid="uid://dd8qgse56k3ty" path="res://lion.tscn" id="86_dygk8"]
 [ext_resource type="AudioStream" uid="uid://chm0cocb6edyj" path="res://audio/gameplay music background.mp3" id="87_qc5ju"]
-[ext_resource type="AudioStream" uid="uid://bnggftwtcujhf" path="res://audio/game over.mp3" id="88_m1scr"]
+[ext_resource type="AudioStream" uid="uid://c2h4v8xkh56o5" path="res://audio/game over loss.mp3" id="88_7rcuc"]
 [ext_resource type="AudioStream" uid="uid://drybhst2ieaj5" path="res://audio/roar start.mp3" id="89_4np6f"]
 [ext_resource type="AudioStream" uid="uid://ogkw4d5nn86f" path="res://audio/roar end.mp3" id="90_622a3"]
 [ext_resource type="AudioStream" uid="uid://456do2t0ea3h" path="res://audio/shortened crowd.mp3" id="91_kb34k"]
 [ext_resource type="PackedScene" uid="uid://b380d4ekl817o" path="res://pick up weapons/pick_up_torch.tscn" id="92_wxp57"]
 [ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="93_etldy"]
 [ext_resource type="PackedScene" uid="uid://btvwtfaobokv8" path="res://pick up weapons/pick_up_horn.tscn" id="94_aahti"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gfgfl"]
+texture = ExtResource("27_xcipi")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 40, 40, 40, -40, -40)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, -13.5, -37, 5.5, -28.5, 22.5, -16.5, 30, -4, 36, 14, 40, 40, -40, 40)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 40, -13.5, 37, 5.5, 28.5, 22.5, 16.5, 30, 4, 36, -14, 40, -40, -40, -40)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, -40, 40)
+
+[sub_resource type="TileSet" id="TileSet_421kg"]
+tile_size = Vector2i(80, 80)
+physics_layer_0/collision_layer = 64
+physics_layer_0/collision_mask = 9
+sources/0 = SubResource("TileSetAtlasSource_gfgfl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgb5s"]
 texture = ExtResource("1_1lypg")
@@ -6045,9 +6071,9 @@ sources/86 = SubResource("TileSetAtlasSource_w0fb3")
 
 [sub_resource type="Curve2D" id="Curve2D_byhr6"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 25683, 2828, 0, 0, 0, 0, 25354, 2408, 0, 0, 0, 0, 22136, 2513, 0, 0, 0, 0, 21874, 1611, 0, 0, 0, 0, 20901, 925, 0, 0, 0, 0, 19589, 1096, 0, 0, 0, 0, 18994, 1721, 0, 0, 0, 0, 18113, 1670, 0, 0, 0, 0, 17923, 973, 0, 0, 0, 0, 16788, 985, 0, 0, 0, 0, 16479, 1234, 0, 0, 0, 0, 16220, 2344, 0, 0, 0, 0, 15982, 2466, 0, 0, 0, 0, 15130, 2432, 0, 0, 0, 0, 13980, 2427, 0, 0, 0, 0, 13459, 2451, 0, 0, 0, 0, 13125, 1752, 0, 0, 0, 0, 12061, 1738, 0, 0, 0, 0, 11654, 926, 0, 0, 0, 0, 10369, 975, 0, 0, 0, 0, 8669, 941, 0, 0, 0, 0, 6650, 1157, 0, 0, 0, 0, 6622, 1050, 0, 0, 0, 0, 4803, 1230, 0, 0, 0, 0, 4189, 1741, 0, 0, 0, 0, 3021, 1764, 0, 0, 0, 0, 2153, 988, 0, 0, 0, 0, 1277, 1140, 0, 0, 0, 0, 813, 1954, 0, 0, 0, 0, 5, 1799, 0, 0, 0, 0, 5, 1799)
+"points": PackedVector2Array(0, 0, 0, 0, 25325, 2153, 0, 0, 0, 0, 22136, 2513, 0, 0, 0, 0, 21874, 1611, 0, 0, 0, 0, 20901, 925, 0, 0, 0, 0, 19589, 1096, 0, 0, 0, 0, 18994, 1721, 0, 0, 0, 0, 18113, 1670, 0, 0, 0, 0, 17923, 973, 0, 0, 0, 0, 16788, 985, 0, 0, 0, 0, 15009, 1106, 0, 0, 0, 0, 14806, 1707, 0, 0, 0, 0, 12061, 1738, 0, 0, 0, 0, 11654, 926, 0, 0, 0, 0, 8669, 941, 0, 0, 0, 0, 6650, 1157, 0, 0, 0, 0, 4803, 1230, 0, 0, 0, 0, 4189, 1741, 0, 0, 0, 0, 3021, 1764, 0, 0, 0, 0, 2153, 988, 0, 0, 0, 0, 1277, 1140, 0, 0, 0, 0, 813, 1954, 0, 0, 0, 0, 5, 1799, 0, 0, 0, 0, 5, 1799)
 }
-point_count = 31
+point_count = 23
 
 [sub_resource type="Curve2D" id="Curve2D_4c8bm"]
 _data = {
@@ -6086,6 +6112,11 @@ metadata/_edit_horizontal_guides_ = [3463.0, 880.0, 2560.0]
 
 [node name="player" parent="." instance=ExtResource("21_nc8vi")]
 position = Vector2(26359, 1319)
+
+[node name="lion TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_421kg")
+format = 2
+layer_0/tile_data = PackedInt32Array(1114352, 0, 1, 1048817, 0, 1, 983281, 0, 0, 917744, 0, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -6145,7 +6176,7 @@ z_index = 1
 curve = SubResource("Curve2D_byhr6")
 
 [node name="PathFollow2D_2" type="PathFollow2D" parent="npc_paths/Path2D_2"]
-position = Vector2(25683, 2828)
+position = Vector2(25325, 2153)
 rotates = false
 loop = false
 
@@ -6278,7 +6309,7 @@ scale = Vector2(0.499221, 0.519588)
 texture = ExtResource("85_wrjoj")
 
 [node name="lion" parent="." instance=ExtResource("86_dygk8")]
-position = Vector2(27901, 1398)
+position = Vector2(28476, 1317)
 collision_mask = 67
 
 [node name="audio" type="Node2D" parent="."]
@@ -6288,7 +6319,7 @@ stream = ExtResource("87_qc5ju")
 volume_db = -10.0
 
 [node name="background game over" type="AudioStreamPlayer" parent="audio"]
-stream = ExtResource("88_m1scr")
+stream = ExtResource("88_7rcuc")
 volume_db = -10.0
 
 [node name="lion start roar" type="AudioStreamPlayer" parent="audio"]
@@ -6310,23 +6341,23 @@ z_index = 1
 position = Vector2(24884, 1450)
 
 [node name="pick up spray" parent="weapons to pick up" instance=ExtResource("93_etldy")]
-position = Vector2(9479, 1725)
+position = Vector2(9558, 1726)
 
 [node name="pick up horn" parent="weapons to pick up" instance=ExtResource("94_aahti")]
-position = Vector2(19321, 1158)
+position = Vector2(19310, 1023)
 
-[connection signal="gameOver" from="." to="player" method="_on_world_pgp_3_game_over"]
-[connection signal="gameOver" from="." to="npc_paths/Path2D_2/PathFollow2D_2/npc2" method="_on_world_pgp_3_game_over"]
-[connection signal="gameOver" from="." to="npc_paths/Path2D_11/PathFollow2D_11/npc_11" method="_on_world_pgp_3_game_over"]
-[connection signal="gameOver" from="." to="npc_paths/Path2D_14/PathFollow2D/npc_14" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="player" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_2/PathFollow2D_2/npc2" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_11/PathFollow2D_11/npc_11" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_14/PathFollow2D/npc_14" method="_on_game_over"]
 [connection signal="gameOver" from="." to="npc_paths/Path2D_8/PathFollow2D_8/npc 8" method="_on_world_pgp_3_game_over"]
 [connection signal="gameOver" from="." to="npc_paths/Path2D_7/PathFollow2D_7/npc7" method="_on_world_pgp_3_game_over"]
-[connection signal="gameOver" from="." to="npc_paths/Path2D_10/PathFollow2D/npc_10" method="_on_world_pgp_3_game_over"]
-[connection signal="gameOver" from="." to="lion" method="_on_world_pgp_3_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_10/PathFollow2D/npc_10" method="_on_game_over"]
+[connection signal="gameOver" from="." to="lion" method="_on_game_over"]
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="exit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_exit"]
 [connection signal="hit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_hit"]
-[connection signal="npc2_ally_tagged" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="hud" method="_on_ally_ally_tagged"]
+[connection signal="npc2_ally_tagged" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="hud" method="_on_npc_2_npc_2_ally_tagged"]
 [connection signal="exit" from="npc_paths/Path2D_11/PathFollow2D_11/npc_11" to="." method="_on_ally_exit"]
 [connection signal="hit" from="npc_paths/Path2D_11/PathFollow2D_11/npc_11" to="." method="_on_ally_hit"]
 [connection signal="exit" from="npc_paths/Path2D_14/PathFollow2D/npc_14" to="." method="_on_ally_exit"]
@@ -6338,6 +6369,8 @@ position = Vector2(19321, 1158)
 [connection signal="exit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_exit"]
 [connection signal="hit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_hit"]
 [connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
+[connection signal="pressed_tag" from="hud" to="." method="_on_hud_pressed_tag"]
+[connection signal="timesUp" from="hud" to="." method="_on_hud_times_up"]
 [connection signal="pressed" from="hud/gameOverPanel/try again button" to="player" method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="hud/gameOverPanel/home button" to="hud" method="_on_home_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="." method="_on_torch_button_pressed"]

@@ -163,6 +163,5 @@ func _on_lion_x_distance(distance):
 func _on_world_pgp_2_pgp_location():
 	current_location = "pgp"'''
 
-
-func _on_world_pgp_3_game_over():
+func _on_game_over():
 	isGameOver = true
