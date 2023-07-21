@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bnibhf4p2ovin" path="res://play.png" id="6_oudgg"]
 [ext_resource type="AudioStream" uid="uid://dfd5oyxq0vp48" path="res://audio/wrong ally.mp3" id="8_snwvh"]
 [ext_resource type="AudioStream" uid="uid://cveys743kawwe" path="res://audio/correct ally.mp3" id="9_sprma"]
-[ext_resource type="PackedScene" uid="uid://nr2stsv6daql" path="res://start_menu.tscn" id="10_snk3l"]
 [ext_resource type="AudioStream" uid="uid://mqpn7a4pkrj" path="res://audio/[YT2mp3.info] - Digital Countdown timer __ 10seconds with sound effect (128kbps).mp3" id="10_pmdq3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hl24h"]
@@ -282,8 +281,6 @@ volume_db = -10.0
 stream = ExtResource("9_sprma")
 volume_db = -10.0
 
-[node name="StartMenu" parent="." instance=ExtResource("10_snk3l")]
-visible = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_pmdq3")
 volume_db = -10.0

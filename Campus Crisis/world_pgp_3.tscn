@@ -1,4 +1,4 @@
-[gd_scene load_steps=178 format=3 uid="uid://bfyer5ld00qiy"]
+[gd_scene load_steps=179 format=3 uid="uid://bfyer5ld00qiy"]
 
 [ext_resource type="Texture2D" uid="uid://cjewkjihjkx8k" path="res://pgp assets/floors/pioneer floor.png" id="1_1lypg"]
 [ext_resource type="Script" path="res://world_pgp_3.gd" id="1_giid0"]
@@ -6247,9 +6247,6 @@ collision_mask = 2
 
 [node name="hud" parent="." instance=ExtResource("75_d6bl3")]
 
-[node name="StartMenu" parent="hud" index="14"]
-visible = true
-
 [node name="torchButton" type="Button" parent="hud"]
 offset_left = 6935.0
 offset_top = 2573.0
@@ -6352,7 +6349,7 @@ position = Vector2(19310, 1023)
 [connection signal="gameOver" from="." to="npc_paths/Path2D_14/PathFollow2D/npc_14" method="_on_game_over"]
 [connection signal="gameOver" from="." to="npc_paths/Path2D_8/PathFollow2D_8/npc 8" method="_on_world_pgp_3_game_over"]
 [connection signal="gameOver" from="." to="npc_paths/Path2D_7/PathFollow2D_7/npc7" method="_on_world_pgp_3_game_over"]
-[connection signal="gameOver" from="." to="npc_paths/Path2D_10/PathFollow2D/npc_10" method="_on_game_over"]
+[connection signal="gameOver" from="." to="npc_paths/Path2D_10/PathFollow2D/npc_10" method="_on_world_pgp_3_game_over"]
 [connection signal="gameOver" from="." to="lion" method="_on_game_over"]
 [connection signal="playerPos" from="player" to="lion" method="_on_player_player_pos"]
 [connection signal="exit" from="npc_paths/Path2D_2/PathFollow2D_2/npc2" to="." method="_on_ally_exit"]
@@ -6370,7 +6367,7 @@ position = Vector2(19310, 1023)
 [connection signal="hit" from="npc_paths/Path2D_10/PathFollow2D/npc_10" to="." method="_on_ally_hit"]
 [connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
 [connection signal="pressed_tag" from="hud" to="." method="_on_hud_pressed_tag"]
-[connection signal="timesUp" from="hud" to="." method="_on_hud_times_up"]
+[connection signal="times_up" from="hud" to="." method="_on_hud_times_up"]
 [connection signal="pressed" from="hud/gameOverPanel/try again button" to="player" method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="hud/gameOverPanel/home button" to="hud" method="_on_home_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="." method="_on_torch_button_pressed"]

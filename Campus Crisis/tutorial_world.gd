@@ -10,7 +10,7 @@ func _process(delta):
 func _ready():
 	Global.current_location = "tutorial"
 	Global.tutorial = true
-	Global.current_location = "tut"
+	Global.current_location = "tutorial"
 	$player/Camera2D.limit_left = -2143
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()
@@ -143,16 +143,16 @@ func _on_pick_up_horn_picked_up():
 	organise_weapons()
 
 func _on_torch_button_pressed():
-	$hud/torchButton.queue_free()
+	$hud/torchButton.hide()
 	reorganise_weapons("torch")
 
 func _on_spray_button_pressed():
 	await get_tree().create_timer(0.267).timeout
-	$hud/sprayButton.queue_free()
+	$hud/sprayButton.hide()
 	reorganise_weapons("spray")
 
 func _on_horn_button_pressed():
-	$hud/hornButton.queue_free()
+	$hud/hornButton.hide()
 	reorganise_weapons("horn")
 
 func _on_pick_up_spray_tutorial_instruction():

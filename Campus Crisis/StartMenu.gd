@@ -2,7 +2,6 @@ extends Node2D
 var score
 var Coins
 
-
 func _ready():
 	update_coins(Coins)
 	$levels/ColorRect.hide()
@@ -20,11 +19,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Global.doSaveFile:
+		save_file()
+		print_debug("Saved file")
 
 func update_coins(Coins):
 	$Coins.text = str(Global.coins)
-	
 
 func _on_pgp_pressed():
 	if (Global.level_unlocked != "pgp"):

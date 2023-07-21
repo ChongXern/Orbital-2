@@ -162,7 +162,7 @@ func print_weapons():
 #torch is picked up
 func _on_pick_up_torch_picked_up():
 	#item disappears and collision is disabled
-	get_node("weapons to pick up/pick up torch").hide()
+	get_node("weapons to pick up/pick up torch").queue_free()
 	#set as which weapon
 	index_weapons("torch")
 	#make weapons buttons appear
@@ -173,7 +173,7 @@ func _on_pick_up_torch_picked_up():
 	$hud/torchButton/Label.text = str(torchcount)
 
 func _on_pick_up_spray_picked_up():
-	get_node("weapons to pick up/pick up spray").hide()
+	get_node("weapons to pick up/pick up spray").queue_free()
 	index_weapons("spray")
 	organise_weapons()
 	Global.spray_collected = true
@@ -182,7 +182,7 @@ func _on_pick_up_spray_picked_up():
 	$hud/sprayButton/Label.text = str(spraycount)
 	
 func _on_pick_up_horn_picked_up():
-	get_node("weapons to pick up/pick up horn").hide()
+	get_node("weapons to pick up/pick up horn").queue_free()
 	index_weapons("horn")
 	organise_weapons()
 	Global.horn_collected = true

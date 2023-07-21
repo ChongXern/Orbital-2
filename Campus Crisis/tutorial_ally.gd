@@ -22,7 +22,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.stop()
 
 func _on_body_entered(body):
-	if location == "tut":
+	if location == "tutorial":
 		tut_ally_tagged.emit(true)
 	hit.emit()
 

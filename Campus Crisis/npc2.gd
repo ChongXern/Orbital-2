@@ -29,6 +29,8 @@ func _on_body_entered(body):
 	hit.emit()
 
 func _on_body_exited(body):
+	if location == "pgp":
+		npc2_ally_tagged.emit(false)
 	exit.emit()
 
 func _on_game_over():

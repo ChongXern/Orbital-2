@@ -31,7 +31,7 @@ func _ready():
 	$hud/torchButton/Label.text = str(torchcount)
 	$hud/sprayButton/Label.text = str(spraycount)
 	$hud/hornButton/Label.text = str(horncount)
-	score = 60
+	var score = 60
 	
 	if (Global.torch_bought == true):
 		torchcount += 1
@@ -164,7 +164,6 @@ func _on_pick_up_torch_picked_up():
 	#make weapons buttons appear
 	organise_weapons()
 	Global.torch_collected = true
-	
 	torchcount += 1
 	$hud/torchButton/Label.text = str(torchcount)
 
@@ -173,7 +172,6 @@ func _on_pick_up_spray_picked_up():
 	index_weapons("spray")
 	organise_weapons()
 	Global.spray_collected = true
-	
 	spraycount += 1
 	$hud/sprayButton/Label.text = str(spraycount)
 	
@@ -182,7 +180,6 @@ func _on_pick_up_horn_picked_up():
 	index_weapons("horn")
 	organise_weapons()
 	Global.horn_collected = true
-	
 	horncount += 1
 	$hud/hornButton/Label.text = str(horncount)
 
@@ -190,7 +187,7 @@ func _on_torch_button_pressed():
 	torchcount -= 1
 	$hud/torchButton/Label.text = str(torchcount)
 	if  (torchcount == 0):
-		$hud/torchButton.queue_free()
+		$hud/torchButton.hide()
 		reorganise_weapons("torch")
 
 func _on_spray_button_pressed():
@@ -198,24 +195,12 @@ func _on_spray_button_pressed():
 	spraycount -= 1
 	$hud/sprayButton/Label.text = str(spraycount)
 	if (spraycount == 0):
-		$hud/sprayButton.queue_free()
+		$hud/sprayButton.hide()
 		reorganise_weapons("spray")
 
 func _on_horn_button_pressed():
 	horncount -= 1
 	$hud/hornButton/Label.text = str(horncount)
 	if (horncount == 0):
-		$hud/hornButton.queue_free()
+		$hud/hornButton.hide()
 		reorganise_weapons("horn")
-	$hud/torchButton.hide()
-	reorganise_weapons("torch")
-
-func _on_spray_button_pressed():
-	await get_tree().create_timer(0.267).timeout
-	$hud/sprayButton.hide()
-	reorganise_weapons("spray")
-
-func _on_horn_button_pressed():
-	$hud/hornButton.hide()
-	reorganise_weapons("horn")
-
