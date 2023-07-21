@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ji6mvcx1mdei"]
+[gd_scene load_steps=18 format=3 uid="uid://ji6mvcx1mdei"]
 
 [ext_resource type="Script" path="res://npc2.gd" id="1_bvd0o"]
 [ext_resource type="Texture2D" uid="uid://eoehcw144kh0" path="res://sprite animations/npc 2/npc_2_1.png" id="2_wygxt"]
@@ -66,6 +66,9 @@ animations = [{
 radius = 680.0
 height = 1360.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_c10f0"]
+radius = 330.002
+
 [node name="npc2" type="Area2D"]
 y_sort_enabled = true
 position = Vector2(2.08165e-12, 2.08165e-12)
@@ -85,5 +88,13 @@ position = Vector2(-20, 3)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("CapsuleShape2D_x50tl")
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_c10f0")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

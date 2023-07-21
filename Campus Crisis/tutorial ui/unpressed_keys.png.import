@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba63e6xncovuy"
-path="res://.godot/imported/unpressed_keys.png-cc4b14d30ada5234ef6bb266c867cd97.ctex"
+path="res://godot/imported/unpressed_keys.png-cc4b14d30ada5234ef6bb266c867cd97.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://tutorial ui/unpressed_keys.png"
-dest_files=["res://.godot/imported/unpressed_keys.png-cc4b14d30ada5234ef6bb266c867cd97.ctex"]
+dest_files=["res://godot/imported/unpressed_keys.png-cc4b14d30ada5234ef6bb266c867cd97.ctex"]
 
 [params]
 

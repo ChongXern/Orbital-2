@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dpydeuxt7sduq"]
+[gd_scene load_steps=36 format=3 uid="uid://dpydeuxt7sduq"]
 
 [ext_resource type="PackedScene" uid="uid://cfqusdtmjtapf" path="res://player.tscn" id="1_hbtjg"]
 [ext_resource type="Script" path="res://tutorial_world.gd" id="1_jqhod"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://b3uu02lp03w3" path="res://npc_5.tscn" id="14_5m61i"]
 [ext_resource type="PackedScene" uid="uid://qeitfgj53ewa" path="res://hud.tscn" id="15_4hd8k"]
 [ext_resource type="PackedScene" uid="uid://b380d4ekl817o" path="res://pick up weapons/pick_up_torch.tscn" id="16_586qd"]
-[ext_resource type="Texture2D" uid="uid://bmub68nm66q8s" path="res://sprite animations/npc 7/npc_7_ally.png" id="16_d1ae2"]
 [ext_resource type="Texture2D" uid="uid://dirbgg2f56xs" path="res://sprite animations/weapons/pick up weapons/picked up torch.png" id="16_ugnmf"]
 [ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="17_lhe8e"]
 [ext_resource type="Texture2D" uid="uid://b78ji528w7po6" path="res://sprite animations/weapons/pick up weapons/picked up horn.png" id="17_wgxo0"]
@@ -11957,7 +11956,7 @@ sources/10 = SubResource("TileSetAtlasSource_s2jf7")
 
 [sub_resource type="Curve2D" id="Curve2D_blbxk"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 7088, 1960, 0, 0, 0, 0, 6568, 1976, 0, 0, 0, 0, 6000, 1736, 0, 0, 0, 0, 4752, 1768, 0, 0, 0, 0, 2696, 1720, 0, 0, 0, 0, -104, 1856)
+"points": PackedVector2Array(0, 0, 0, 0, 7088, 1960, 0, 0, 0, 0, 6568, 1976, 0, 0, 0, 0, 6000, 1736, 0, 0, 0, 0, 4752, 1768, 0, 0, 0, 0, 2696, 1720, 0, 0, 0, 0, 72, 1872)
 }
 point_count = 6
 
@@ -12029,10 +12028,7 @@ z_index = 1
 offset_left = 1568.0
 offset_right = 6240.0
 
-[node name="Portfolio" parent="hud" index="11"]
-texture = ExtResource("16_d1ae2")
-
-[node name="PauseButton" parent="hud" index="12"]
+[node name="PauseButton" parent="hud" index="11"]
 z_index = 1
 
 [node name="torchButton" type="Button" parent="hud"]

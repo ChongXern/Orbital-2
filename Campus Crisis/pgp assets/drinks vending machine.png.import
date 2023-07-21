@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c867cgqq4u8df"
-path="res://.godot/imported/drinks vending machine.png-d8ad811f067c4a2e03511123cfa28f09.ctex"
+path="res://godot/imported/drinks vending machine.png-d8ad811f067c4a2e03511123cfa28f09.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/drinks vending machine.png"
-dest_files=["res://.godot/imported/drinks vending machine.png-d8ad811f067c4a2e03511123cfa28f09.ctex"]
+dest_files=["res://godot/imported/drinks vending machine.png-d8ad811f067c4a2e03511123cfa28f09.ctex"]
 
 [params]
 

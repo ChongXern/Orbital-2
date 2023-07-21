@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnw4hsofaq2eg"
-path="res://.godot/imported/tv 3.png-dbca964d2aae2a4bb3ed8d43c26c8915.ctex"
+path="res://godot/imported/tv 3.png-dbca964d2aae2a4bb3ed8d43c26c8915.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/walls/tv 3.png"
-dest_files=["res://.godot/imported/tv 3.png-dbca964d2aae2a4bb3ed8d43c26c8915.ctex"]
+dest_files=["res://godot/imported/tv 3.png-dbca964d2aae2a4bb3ed8d43c26c8915.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsq0p4pvjr7id"
-path="res://.godot/imported/backpack blue left copy.png-802eadd2fb8670385b883f11251d365e.ctex"
+path="res://godot/imported/backpack blue left copy.png-802eadd2fb8670385b883f11251d365e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/stuff to put on tables/backpack blue left copy.png"
-dest_files=["res://.godot/imported/backpack blue left copy.png-802eadd2fb8670385b883f11251d365e.ctex"]
+dest_files=["res://godot/imported/backpack blue left copy.png-802eadd2fb8670385b883f11251d365e.ctex"]
 
 [params]
 

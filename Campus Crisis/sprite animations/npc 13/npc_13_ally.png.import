@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duv20rj5jax8h"
-path="res://.godot/imported/npc_13_ally.png-0801ce0503326ce699226fd9f7f34c13.ctex"
+path="res://godot/imported/npc_13_ally.png-0801ce0503326ce699226fd9f7f34c13.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/npc 13/npc_13_ally.png"
-dest_files=["res://.godot/imported/npc_13_ally.png-0801ce0503326ce699226fd9f7f34c13.ctex"]
+dest_files=["res://godot/imported/npc_13_ally.png-0801ce0503326ce699226fd9f7f34c13.ctex"]
 
 [params]
 

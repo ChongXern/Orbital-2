@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gve3on7761ix"
-path="res://.godot/imported/grey square.png-deb837046214c4957cc33277a529dcf8.ctex"
+path="res://godot/imported/grey square.png-deb837046214c4957cc33277a529dcf8.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/grey square.png"
-dest_files=["res://.godot/imported/grey square.png-deb837046214c4957cc33277a529dcf8.ctex"]
+dest_files=["res://godot/imported/grey square.png-deb837046214c4957cc33277a529dcf8.ctex"]
 
 [params]
 

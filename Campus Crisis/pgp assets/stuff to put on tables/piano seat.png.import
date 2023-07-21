@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvqgjwu8x78ky"
-path="res://.godot/imported/piano seat.png-7115dbc02b6a418394313ae1c893a3a9.ctex"
+path="res://godot/imported/piano seat.png-7115dbc02b6a418394313ae1c893a3a9.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/stuff to put on tables/piano seat.png"
-dest_files=["res://.godot/imported/piano seat.png-7115dbc02b6a418394313ae1c893a3a9.ctex"]
+dest_files=["res://godot/imported/piano seat.png-7115dbc02b6a418394313ae1c893a3a9.ctex"]
 
 [params]
 

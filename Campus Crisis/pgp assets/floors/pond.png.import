@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2cumpef2m2hi"
-path="res://.godot/imported/pond.png-5024615a23f0c6eb16a8004e627c728d.ctex"
+path="res://godot/imported/pond.png-5024615a23f0c6eb16a8004e627c728d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/floors/pond.png"
-dest_files=["res://.godot/imported/pond.png-5024615a23f0c6eb16a8004e627c728d.ctex"]
+dest_files=["res://godot/imported/pond.png-5024615a23f0c6eb16a8004e627c728d.ctex"]
 
 [params]
 

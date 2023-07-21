@@ -7,6 +7,7 @@ func _process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.current_location = "tutorial"
 	Global.tutorial = true
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()

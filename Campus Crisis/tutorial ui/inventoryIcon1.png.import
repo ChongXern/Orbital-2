@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd4qsmhl40gkj"
-path="res://.godot/imported/inventoryIcon1.png-42e904355976702783e7ca9c6e51894c.ctex"
+path="res://godot/imported/inventoryIcon1.png-42e904355976702783e7ca9c6e51894c.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://tutorial ui/inventoryIcon1.png"
-dest_files=["res://.godot/imported/inventoryIcon1.png-42e904355976702783e7ca9c6e51894c.ctex"]
+dest_files=["res://godot/imported/inventoryIcon1.png-42e904355976702783e7ca9c6e51894c.ctex"]
 
 [params]
 

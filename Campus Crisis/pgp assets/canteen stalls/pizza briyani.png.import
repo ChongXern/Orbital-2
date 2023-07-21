@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy3kydnenjwpc"
-path="res://.godot/imported/pizza briyani.png-bb2dbf3fbb2ee5295da33581144313eb.ctex"
+path="res://godot/imported/pizza briyani.png-bb2dbf3fbb2ee5295da33581144313eb.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/canteen stalls/pizza briyani.png"
-dest_files=["res://.godot/imported/pizza briyani.png-bb2dbf3fbb2ee5295da33581144313eb.ctex"]
+dest_files=["res://godot/imported/pizza briyani.png-bb2dbf3fbb2ee5295da33581144313eb.ctex"]
 
 [params]
 

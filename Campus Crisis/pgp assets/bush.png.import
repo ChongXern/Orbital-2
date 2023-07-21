@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5ymsu6vyvx5u"
-path="res://.godot/imported/bush.png-4306016c92ce99bce04eb2dbf8363109.ctex"
+path="res://godot/imported/bush.png-4306016c92ce99bce04eb2dbf8363109.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/bush.png"
-dest_files=["res://.godot/imported/bush.png-4306016c92ce99bce04eb2dbf8363109.ctex"]
+dest_files=["res://godot/imported/bush.png-4306016c92ce99bce04eb2dbf8363109.ctex"]
 
 [params]
 

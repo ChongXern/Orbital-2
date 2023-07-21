@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xyhdryj6eawv"
-path="res://.godot/imported/green.png-2e09175c8ec9ce6e746054aa0da3a163.ctex"
+path="res://godot/imported/green.png-2e09175c8ec9ce6e746054aa0da3a163.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/walls/green.png"
-dest_files=["res://.godot/imported/green.png-2e09175c8ec9ce6e746054aa0da3a163.ctex"]
+dest_files=["res://godot/imported/green.png-2e09175c8ec9ce6e746054aa0da3a163.ctex"]
 
 [params]
 

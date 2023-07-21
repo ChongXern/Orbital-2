@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0hu10d23adcn"
-path="res://.godot/imported/star thing.png-4603e287c55e40af5b90d8de3690c390.ctex"
+path="res://godot/imported/star thing.png-4603e287c55e40af5b90d8de3690c390.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://clb assets resized/star thing.png"
-dest_files=["res://.godot/imported/star thing.png-4603e287c55e40af5b90d8de3690c390.ctex"]
+dest_files=["res://godot/imported/star thing.png-4603e287c55e40af5b90d8de3690c390.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://qeitfgj53ewa"]
+[gd_scene load_steps=12 format=3 uid="uid://qeitfgj53ewa"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_rp0qk"]
 [ext_resource type="Texture2D" uid="uid://dfu00fm1bj00g" path="res://sprite animations/weapons/tag.png" id="2_0ymmv"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bnibhf4p2ovin" path="res://play.png" id="6_oudgg"]
 [ext_resource type="AudioStream" uid="uid://dfd5oyxq0vp48" path="res://audio/wrong ally.mp3" id="8_snwvh"]
 [ext_resource type="AudioStream" uid="uid://cveys743kawwe" path="res://audio/correct ally.mp3" id="9_sprma"]
+[ext_resource type="PackedScene" uid="uid://nr2stsv6daql" path="res://start_menu.tscn" id="10_snk3l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hl24h"]
 bg_color = Color(1, 0, 0, 0.443137)
@@ -279,6 +280,9 @@ volume_db = -10.0
 [node name="correct ally" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource("9_sprma")
 volume_db = -10.0
+
+[node name="StartMenu" parent="." instance=ExtResource("10_snk3l")]
+visible = false
 
 [connection signal="pressed" from="TagButton" to="." method="_on_tag_button_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]

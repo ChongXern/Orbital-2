@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvx8dowrwo6lq"
-path="res://.godot/imported/torch_10.png-3660ffe9efd4160a88d386e69f3d5e36.ctex"
+path="res://godot/imported/torch_10.png-3660ffe9efd4160a88d386e69f3d5e36.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/weapons/fire torch/torch_10.png"
-dest_files=["res://.godot/imported/torch_10.png-3660ffe9efd4160a88d386e69f3d5e36.ctex"]
+dest_files=["res://godot/imported/torch_10.png-3660ffe9efd4160a88d386e69f3d5e36.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c76c84y03afp3"
-path="res://.godot/imported/green_11.png-ac9a50be783bcfb2e8158f466248a821.ctex"
+path="res://godot/imported/green_11.png-ac9a50be783bcfb2e8158f466248a821.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/green/green_11.png"
-dest_files=["res://.godot/imported/green_11.png-ac9a50be783bcfb2e8158f466248a821.ctex"]
+dest_files=["res://godot/imported/green_11.png-ac9a50be783bcfb2e8158f466248a821.ctex"]
 
 [params]
 

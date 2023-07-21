@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k6qbbhbnmv6a"
-path="res://.godot/imported/transparent square.png-e54dd40bd302581ff7a6ff3f1648daaf.ctex"
+path="res://godot/imported/transparent square.png-e54dd40bd302581ff7a6ff3f1648daaf.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://clb assets resized/transparent square.png"
-dest_files=["res://.godot/imported/transparent square.png-e54dd40bd302581ff7a6ff3f1648daaf.ctex"]
+dest_files=["res://godot/imported/transparent square.png-e54dd40bd302581ff7a6ff3f1648daaf.ctex"]
 
 [params]
 

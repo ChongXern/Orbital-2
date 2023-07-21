@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://820jmav76cci"
-path="res://.godot/imported/building outside.png-47be4e841d41275343c2f0bac7957204.ctex"
+path="res://godot/imported/building outside.png-47be4e841d41275343c2f0bac7957204.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/building outside.png"
-dest_files=["res://.godot/imported/building outside.png-47be4e841d41275343c2f0bac7957204.ctex"]
+dest_files=["res://godot/imported/building outside.png-47be4e841d41275343c2f0bac7957204.ctex"]
 
 [params]
 

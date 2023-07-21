@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djswfb0ugmkio"
-path="res://.godot/imported/gate railing.png-0bdd1819f07abcf9468b25aa5882a2c4.ctex"
+path="res://godot/imported/gate railing.png-0bdd1819f07abcf9468b25aa5882a2c4.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://pgp assets/gate railing.png"
-dest_files=["res://.godot/imported/gate railing.png-0bdd1819f07abcf9468b25aa5882a2c4.ctex"]
+dest_files=["res://godot/imported/gate railing.png-0bdd1819f07abcf9468b25aa5882a2c4.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyaykemgl3pww"
-path="res://.godot/imported/air horn 2.png-9720e5d9aa0e0a9bd8a2aab00319ecae.ctex"
+path="res://godot/imported/air horn 2.png-9720e5d9aa0e0a9bd8a2aab00319ecae.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://sprite animations/weapons/air horn/air horn 2.png"
-dest_files=["res://.godot/imported/air horn 2.png-9720e5d9aa0e0a9bd8a2aab00319ecae.ctex"]
+dest_files=["res://godot/imported/air horn 2.png-9720e5d9aa0e0a9bd8a2aab00319ecae.ctex"]
 
 [params]
 
