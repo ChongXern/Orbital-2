@@ -17,18 +17,19 @@ func _ready():
 	if (Global.biggerTagArea == true):
 		$"TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea description/BuyButton2".queue_free()
 	if (Global.torch_collected == true):
+		print_debug("torch collected")
 		$TabContainer/Weapons/ScrollContainer/GridContainer/torch/MarginContainer/TextureRect.show()
 		$TabContainer/Weapons/TorchBuyButton.show()
 		if (Global.torch_bought == true):
 			$TabContainer/Weapons/TorchBuyButton.hide()
-			
 	if (Global.spray_collected == true):
+		print_debug("spray collected")
 		$TabContainer/Weapons/ScrollContainer/GridContainer/spray/MarginContainer/TextureRect.show()
 		$TabContainer/Weapons/SprayBuyButton.show()
 		if (Global.spray_bought == true):
 			$TabContainer/Weapons/SprayBuyButton.hide()
-			
 	if (Global.horn_collected == true):
+		print_debug("horn collected")
 		$TabContainer/Weapons/ScrollContainer/GridContainer/horn/MarginContainer/TextureRect.show()
 		$TabContainer/Weapons/HornBuyButton.show()
 		if (Global.horn_bought == true):

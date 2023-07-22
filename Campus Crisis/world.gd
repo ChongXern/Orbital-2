@@ -5,6 +5,7 @@ var save: SaveGame
 var torchcount = 0
 var horncount = 0
 var spraycount = 0
+var canUseWeapon: bool = true
 signal gameOver
 
 func _process(delta):
@@ -143,9 +144,10 @@ func organise_individual_weapon(index: int, weapon: String):
 		_button = $hud/sprayButton
 	else:
 		_button = $hud/hornButton
-	_button.position = buttonPos
-	_button.disabled = false
-	_button.visible = true
+	if _button != null:
+		_button.position = buttonPos
+		_button.disabled = false
+		_button.visible = true
 
 func organise_weapons():
 	if (first_weapon != "none"):
@@ -192,11 +194,14 @@ func _on_pick_up_horn_picked_up():
 	$hud/hornButton/Label.text = str(horncount)
 
 func _on_torch_button_pressed():
-	torchcount -= 1
-	$hud/torchButton/Label.text = str(torchcount)
-	if  (torchcount == 0):
-		$hud/torchButton.queue_free()
-		reorganise_weapons("torch")
+	if canUseWeapon:
+		canUseWeapon = false
+		torchcount -= 1
+		$hud/torchButton/Label.text = str(torchcount)
+		if  (torchcount == 0):
+			$hud/torchButton.queue_free()
+			reorganise_weapons("torch")
+		canUseWeapon = true
 
 func _on_spray_button_pressed():
 	await get_tree().create_timer(0.267).timeout

@@ -21,6 +21,7 @@ func _ready():
 func _process(delta):
 	if Global.doSaveFile:
 		save_file()
+		Global.doSaveFile = false
 		print_debug("Saved file")
 
 func update_coins(Coins):
