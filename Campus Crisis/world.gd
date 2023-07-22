@@ -181,7 +181,6 @@ func _on_pick_up_spray_picked_up():
 	index_weapons("spray")
 	organise_weapons()
 	Global.spray_collected = true
-	
 	spraycount += 1
 	$hud/sprayButton/Label.text = str(spraycount)
 	
@@ -194,14 +193,11 @@ func _on_pick_up_horn_picked_up():
 	$hud/hornButton/Label.text = str(horncount)
 
 func _on_torch_button_pressed():
-	if canUseWeapon:
-		canUseWeapon = false
-		torchcount -= 1
-		$hud/torchButton/Label.text = str(torchcount)
-		if  (torchcount == 0):
-			$hud/torchButton.queue_free()
-			reorganise_weapons("torch")
-		canUseWeapon = true
+	torchcount -= 1
+	$hud/torchButton/Label.text = str(torchcount)
+	if  (torchcount == 0):
+		$hud/torchButton.queue_free()
+		reorganise_weapons("torch")
 
 func _on_spray_button_pressed():
 	await get_tree().create_timer(0.267).timeout

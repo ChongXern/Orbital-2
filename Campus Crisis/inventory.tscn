@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b5uxnlk8yl467" path="res://pick up weapons/pick_up_spray.tscn" id="9_1dhc8"]
 [ext_resource type="PackedScene" uid="uid://btvwtfaobokv8" path="res://pick up weapons/pick_up_horn.tscn" id="10_4lnbh"]
 [ext_resource type="Texture2D" uid="uid://6tt12io5o40l" path="res://tutorial ui/speedBoost.png" id="11_popng"]
-[ext_resource type="Texture2D" uid="uid://cl8tf5kle822l" path="res://icon.svg" id="12_s6jiv"]
+[ext_resource type="Texture2D" uid="uid://y6hbdjx8cp5e" path="res://clb assets resized/extended arm.png" id="12_u4med"]
 [ext_resource type="AudioStream" uid="uid://1l6k1ijecrjt" path="res://audio/cash-register-purchase-87313.mp3" id="13_scxk1"]
 [ext_resource type="AudioStream" uid="uid://cajlexvwctayn" path="res://audio/access denied.mp3" id="14_1dkqj"]
 
@@ -366,7 +366,7 @@ theme_override_constants/margin_right = 0
 
 [node name="TextureRect" type="TextureRect" parent="TabContainer/Power ups/ScrollContainer/GridContainer/biggerTagArea/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("12_s6jiv")
+texture = ExtResource("12_u4med")
 
 [node name="biggerTagArea description" type="Node2D" parent="TabContainer/Power ups/ScrollContainer/GridContainer"]
 
