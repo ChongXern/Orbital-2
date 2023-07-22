@@ -6312,7 +6312,7 @@ scale = Vector2(0.499221, 0.519588)
 texture = ExtResource("85_wrjoj")
 
 [node name="lion" parent="." instance=ExtResource("86_dygk8")]
-position = Vector2(28272, 1275)
+position = Vector2(28273, 1309)
 collision_mask = 67
 
 [node name="audio" type="Node2D" parent="."]
