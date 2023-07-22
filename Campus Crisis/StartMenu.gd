@@ -51,6 +51,8 @@ func _on_tutorial_pressed():
 
 
 func _on_inventory_pressed():
+	$inventory/slash_audio.play()
+	await get_tree().create_timer(0.2).timeout
 	get_tree().change_scene_to_file("res://inventory.tscn")
 
 var save_data = "user://save.data"

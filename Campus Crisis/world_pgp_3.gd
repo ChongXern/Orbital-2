@@ -40,6 +40,7 @@ func _ready():
 		$hud/torchButton.disabled = false
 		first_weapon = "torch"
 		organise_weapons()
+	
 	if (Global.spray_bought == true):
 		spraycount += 1
 		$hud/sprayButton/Label.text = str(spraycount)
@@ -47,6 +48,7 @@ func _ready():
 		$hud/sprayButton.disabled = false
 		second_weapon = "spray"
 		organise_weapons()
+	
 	if (Global.horn_bought == true):
 		horncount += 1
 		$hud/hornButton/Label.text = str(horncount)
@@ -71,6 +73,17 @@ func _on_hud_message_disappear():
 func _on_hud_pressed_tag():
 	$hud._on_tagged_button_pressed()
 
+func when_game_over():
+	$hud/ScoreTimer.stop()
+	$lion/AnimatedSprite2D.stop()
+	$player/AnimatedSprite2D.stop()
+	if ($hud/torchButton != null):
+		$hud/torchButton.queue_free()
+	if ($hud/sprayButton != null):
+		$hud/sprayButton.hide()
+	if ($hud/hornButton != null):
+		$hud/hornButton.hide()
+
 func _on_lion_player_killed():
 	emit_signal("gameOver")
 	if not gameOverAudioPlayed:
@@ -79,12 +92,7 @@ func _on_lion_player_killed():
 		$"audio/lion end roar".play()
 		gameOverAudioPlayed = true
 	get_tree().paused = true
-	$hud/ScoreTimer.stop()
-	$lion/AnimatedSprite2D.stop()
-	$hud/torchButton.hide()
-	$hud/sprayButton.hide()
-	$hud/hornButton.hide()
-	$player/AnimatedSprite2D.stop()
+	when_game_over()
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()
 	get_tree().paused = false
@@ -93,12 +101,7 @@ func _on_hud_times_up():
 	emit_signal("gameOver")
 	gameOverAudioPlayed = true
 	get_tree().paused = true
-	$hud/ScoreTimer.stop()
-	$lion/AnimatedSprite2D.stop()
-	$player/AnimatedSprite2D.stop()
-	$hud/torchButton.hide()
-	$hud/sprayButton.hide()
-	$hud/hornButton.hide()
+	when_game_over()
 	#$hud/blackRect.show()
 	#$hud/gameOverPanel.show()
 	get_tree().paused = false
@@ -187,20 +190,23 @@ func _on_torch_button_pressed():
 	torchcount -= 1
 	$hud/torchButton/Label.text = str(torchcount)
 	if  (torchcount == 0):
-		$hud/torchButton.hide()
+		print_debug("torch count zero")
+		$hud/torchButton.queue_free()
 		reorganise_weapons("torch")
+	else:
+		print_debug("not zero")
 
 func _on_spray_button_pressed():
 	await get_tree().create_timer(0.267).timeout
 	spraycount -= 1
 	$hud/sprayButton/Label.text = str(spraycount)
 	if (spraycount == 0):
-		$hud/sprayButton.hide()
+		$hud/sprayButton.queue_free()
 		reorganise_weapons("spray")
 
 func _on_horn_button_pressed():
 	horncount -= 1
 	$hud/hornButton/Label.text = str(horncount)
 	if (horncount == 0):
-		$hud/hornButton.hide()
+		$hud/hornButton.queue_free()
 		reorganise_weapons("horn")
