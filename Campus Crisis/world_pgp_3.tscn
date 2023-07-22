@@ -1,4 +1,4 @@
-[gd_scene load_steps=179 format=3 uid="uid://bfyer5ld00qiy"]
+[gd_scene load_steps=179 format=3 uid="uid://b22jrqagjjsa5"]
 
 [ext_resource type="Texture2D" uid="uid://cjewkjihjkx8k" path="res://pgp assets/floors/pioneer floor.png" id="1_1lypg"]
 [ext_resource type="Script" path="res://world_pgp_3.gd" id="1_giid0"]
@@ -78,9 +78,9 @@
 [ext_resource type="PackedScene" uid="uid://qeitfgj53ewa" path="res://hud.tscn" id="75_d6bl3"]
 [ext_resource type="PackedScene" uid="uid://bslq031oe440y" path="res://npc_8.tscn" id="76_16wye"]
 [ext_resource type="PackedScene" uid="uid://cu5bf3qj8mltp" path="res://npc_7.tscn" id="76_duah5"]
-[ext_resource type="PackedScene" uid="uid://5qkdtno52qkb" path="res://npc_11.tscn" id="76_nex8a"]
-[ext_resource type="PackedScene" uid="uid://00rwihm2jo20" path="res://npc_14.tscn" id="77_43nn2"]
-[ext_resource type="PackedScene" uid="uid://c1ooykehfqemm" path="res://npc_10.tscn" id="80_4apj5"]
+[ext_resource type="PackedScene" path="res://npc_11.tscn" id="76_nex8a"]
+[ext_resource type="PackedScene" path="res://npc_14.tscn" id="77_43nn2"]
+[ext_resource type="PackedScene" path="res://npc_10.tscn" id="80_4apj5"]
 [ext_resource type="Texture2D" uid="uid://dirbgg2f56xs" path="res://sprite animations/weapons/pick up weapons/picked up torch.png" id="82_0hx6v"]
 [ext_resource type="FontFile" uid="uid://87gla4t0j7vs" path="res://addons/denmark-regular-webfont.ttf" id="83_08jv2"]
 [ext_resource type="Texture2D" uid="uid://bbkq2lcjiq54" path="res://sprite animations/weapons/pick up weapons/picked up spray.png" id="83_34jux"]
