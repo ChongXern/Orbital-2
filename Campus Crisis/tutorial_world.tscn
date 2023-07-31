@@ -12467,7 +12467,6 @@ position = Vector2(6160, 2568)
 [connection signal="tut_ally_tagged" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="hud" method="_on_tutorial_ally_tut_ally_tagged"]
 [connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
 [connection signal="pressed_tag" from="hud" to="." method="_on_hud_pressed_tag"]
-[connection signal="timesUp" from="hud" to="." method="_on_hud_times_up"]
 [connection signal="pressed" from="hud/gameOverPanel/home button" to="hud" method="_on_home_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="." method="_on_torch_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="player" method="_on_torch_button_pressed"]
