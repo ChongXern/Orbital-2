@@ -8,6 +8,7 @@ var Coins = Global.coins
 var hasSetLocation: bool = false
 var location
 var score = 60
+signal times_up
 
 #@onready var player_animation = get_parent().get_node("player")
 #var score = 60
@@ -20,6 +21,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if not hasSetLocation:
+		location = Global.current_location
+		hasSetLocation = true
 	#print_debug("node: ", get_parent().get_node("/root/Global").get_path())
 	if Input.is_action_pressed("ui_cancel"):
 		PauseMenu.visible = true
@@ -37,7 +41,8 @@ func _on_tag_button_pressed():
 		$Tick.show()
 		$ScoreTimer.stop()
 		get_tree().paused = true
-		await get_tree().create_timer(3).timeout
+		$"audio/correct ally".play()
+		await get_tree().create_timer(5).timeout
 		Coins += score
 		if (Global.tutorial == false):
 			Global.coins = Coins
@@ -45,6 +50,7 @@ func _on_tag_button_pressed():
 		get_tree().paused = false
 		get_tree().change_scene_to_file("res://start_menu.tscn")
 	else:
+		$"audio/wrong ally".play()
 		$Cross.show()
 
 func _on_message_timer_timeout():
@@ -61,6 +67,7 @@ func _on_score_timer_timeout():
 		$blackRect.show()
 		get_tree().paused = false
 		$gameOverPanel.show()
+		emit_signal("times_up")
 
 
 func _on_resume_button_pressed():
@@ -68,7 +75,8 @@ func _on_resume_button_pressed():
 	get_tree().paused = false
 
 func _on_exit_button_pressed():
-	$StartMenu.save_file()
+	Global.doSaveFile = true
+	#$StartMenu.save_file()
 	get_tree().quit()
 
 func _on_pause_button_pressed():
@@ -76,14 +84,17 @@ func _on_pause_button_pressed():
 	PauseMenu.visible = true
 
 func _on_quit_button_pressed():
-	$StartMenu.save_file()
+	Global.doSaveFile = true
+	#$StartMenu.save_file()
 	get_tree().quit()
 
 func _on_try_again_button_pressed():
 	get_tree().reload_current_scene()
 
 func _on_ally_ally_tagged(tagged):
-	isAllyTagged = true
+	print_debug("Location: ", location)
+	if location == "clb":
+		isAllyTagged = tagged
 
 func _on_backtohome_pressed():
 	get_tree().paused = false
@@ -101,10 +112,9 @@ func _on_lion_lion_distance(distance):
 func _on_npc_2_npc_2_ally_tagged(tagged):
 	print_debug("Location: ", location)
 	if location == "pgp":
-		isAllyTagged = true
-
+		isAllyTagged = tagged
 
 func _on_tutorial_ally_tut_ally_tagged(tagged):
 	print_debug("Location: ", location)
-	if location == "tut":
-		isAllyTagged = true
+	if location == "tutorial":
+		isAllyTagged = tagged

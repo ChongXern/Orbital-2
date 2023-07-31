@@ -28,6 +28,8 @@ func _on_body_entered(body):
 
 
 func _on_body_exited(body):
+	if location == "clb":
+		ally_tagged.emit(false)
 	exit.emit()
 	print_debug("exit.emit()")
 

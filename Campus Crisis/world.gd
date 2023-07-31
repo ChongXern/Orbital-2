@@ -5,6 +5,7 @@ var save: SaveGame
 var torchcount = 0
 var horncount = 0
 var spraycount = 0
+var canUseWeapon: bool = true
 signal gameOver
 
 func _process(delta):
@@ -69,6 +70,17 @@ func _on_ally_exit():
 func _on_hud_message_disappear():
 	$hud/Cross.hide()
 
+func when_game_over():
+	$hud/ScoreTimer.stop()
+	$lion/AnimatedSprite2D.stop()
+	$player/AnimatedSprite2D.stop()
+	if ($hud/torchButton != null):
+		$hud/torchButton.queue_free()
+	if ($hud/sprayButton != null):
+		$hud/sprayButton.hide()
+	if ($hud/hornButton != null):
+		$hud/hornButton.hide()
+
 func _on_player_killed():
 	emit_signal("gameOver")
 	if not gameOverAudioPlayed:
@@ -77,17 +89,13 @@ func _on_player_killed():
 		$"audio/lion end roar".play()
 		gameOverAudioPlayed = true
 	get_tree().paused = false
-	$hud/ScoreTimer.stop()
-	$lion/AnimatedSprite2D.stop()
+	'''
 	$npcPaths/Path2D2/PathFollow2D/npc2/AnimatedSprite2D.stop()
 	$npcPaths/Path2D3/PathFollow2D/npc3/AnimatedSprite2D.stop()
 	$npcPaths/Path2D4/PathFollow2D/npc4/AnimatedSprite2D.stop()
-	$npcPaths/Path2D_ally/PathFollow2D/ally/AnimatedSprite2D.stop()
-	$player/AnimatedSprite2D.stop()
+	$npcPaths/Path2D_ally/PathFollow2D/ally/AnimatedSprite2D.stop()'''
+	when_game_over()
 	$hud/blackRect.show()
-	$hud/torchButton.hide()
-	$hud/sprayButton.hide()
-	$hud/hornButton.hide()
 	$hud/gameOverPanel.show()
 	#Global.current_location = "none"
 	#get_tree().change_scene_to_file("res://game_over.tscn")
@@ -97,12 +105,7 @@ func _on_hud_times_up():
 	emit_signal("gameOver")
 	gameOverAudioPlayed = true
 	get_tree().paused = true
-	$hud/ScoreTimer.stop()
-	$lion/AnimatedSprite2D.stop()
-	$player/AnimatedSprite2D.stop()
-	$hud/torchButton.hide()
-	$hud/sprayButton.hide()
-	$hud/hornButton.hide()
+	when_game_over()
 	#$hud/blackRect.show()
 	#$hud/gameOverPanel.show()
 	get_tree().paused = false
@@ -141,9 +144,10 @@ func organise_individual_weapon(index: int, weapon: String):
 		_button = $hud/sprayButton
 	else:
 		_button = $hud/hornButton
-	_button.position = buttonPos
-	_button.disabled = false
-	_button.visible = true
+	if _button != null:
+		_button.position = buttonPos
+		_button.disabled = false
+		_button.visible = true
 
 func organise_weapons():
 	if (first_weapon != "none"):
@@ -162,7 +166,7 @@ func print_weapons():
 #torch is picked up
 func _on_pick_up_torch_picked_up():
 	#item disappears and collision is disabled
-	get_node("weapons to pick up/pick up torch").hide()
+	get_node("weapons to pick up/pick up torch").queue_free()
 	#set as which weapon
 	index_weapons("torch")
 	#make weapons buttons appear
@@ -173,16 +177,15 @@ func _on_pick_up_torch_picked_up():
 	$hud/torchButton/Label.text = str(torchcount)
 
 func _on_pick_up_spray_picked_up():
-	get_node("weapons to pick up/pick up spray").hide()
+	get_node("weapons to pick up/pick up spray").queue_free()
 	index_weapons("spray")
 	organise_weapons()
 	Global.spray_collected = true
-	
 	spraycount += 1
 	$hud/sprayButton/Label.text = str(spraycount)
 	
 func _on_pick_up_horn_picked_up():
-	get_node("weapons to pick up/pick up horn").hide()
+	get_node("weapons to pick up/pick up horn").queue_free()
 	index_weapons("horn")
 	organise_weapons()
 	Global.horn_collected = true
@@ -193,7 +196,7 @@ func _on_torch_button_pressed():
 	torchcount -= 1
 	$hud/torchButton/Label.text = str(torchcount)
 	if  (torchcount == 0):
-		$hud/torchButton.hide()
+		$hud/torchButton.queue_free()
 		reorganise_weapons("torch")
 
 func _on_spray_button_pressed():
@@ -201,12 +204,12 @@ func _on_spray_button_pressed():
 	spraycount -= 1
 	$hud/sprayButton/Label.text = str(spraycount)
 	if (spraycount == 0):
-		$hud/sprayButton.hide()
+		$hud/sprayButton.queue_free()
 		reorganise_weapons("spray")
 
 func _on_horn_button_pressed():
 	horncount -= 1
 	$hud/hornButton/Label.text = str(horncount)
 	if (horncount == 0):
-		$hud/hornButton.hide()
+		$hud/hornButton.queue_free()
 		reorganise_weapons("horn")

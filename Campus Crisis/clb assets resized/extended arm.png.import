@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcw61b8gv342t"
-path="res://.godot/imported/pgp tilemap.png-ee3c9d9652331ae6162df889133e9405.ctex"
+uid="uid://y6hbdjx8cp5e"
+path="res://.godot/imported/extended arm.png-b11c9be90af1b34074733970cefa0dd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp tilemap.png"
-dest_files=["res://.godot/imported/pgp tilemap.png-ee3c9d9652331ae6162df889133e9405.ctex"]
+source_file="res://clb assets resized/extended arm.png"
+dest_files=["res://.godot/imported/extended arm.png-b11c9be90af1b34074733970cefa0dd0.ctex"]
 
 [params]
 

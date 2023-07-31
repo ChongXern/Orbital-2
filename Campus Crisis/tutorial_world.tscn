@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dpydeuxt7sduq"]
+[gd_scene load_steps=44 format=3 uid="uid://dpydeuxt7sduq"]
 
 [ext_resource type="PackedScene" uid="uid://cfqusdtmjtapf" path="res://player.tscn" id="1_hbtjg"]
 [ext_resource type="Script" path="res://tutorial_world.gd" id="1_jqhod"]
@@ -24,6 +24,11 @@
 [ext_resource type="PackedScene" uid="uid://btvwtfaobokv8" path="res://pick up weapons/pick_up_horn.tscn" id="18_edsua"]
 [ext_resource type="Texture2D" uid="uid://duv20rj5jax8h" path="res://sprite animations/npc 13/npc_13_ally.png" id="20_868vv"]
 [ext_resource type="PackedScene" uid="uid://1dwyt4rghb7h" path="res://tutorial_instructions.tscn" id="22_6xs4a"]
+[ext_resource type="AudioStream" uid="uid://chm0cocb6edyj" path="res://audio/gameplay music background.mp3" id="25_oxh1b"]
+[ext_resource type="AudioStream" uid="uid://c2h4v8xkh56o5" path="res://audio/game over loss.mp3" id="26_w64ms"]
+[ext_resource type="AudioStream" uid="uid://drybhst2ieaj5" path="res://audio/roar start.mp3" id="27_ud81g"]
+[ext_resource type="AudioStream" uid="uid://ogkw4d5nn86f" path="res://audio/roar end.mp3" id="28_sh7vr"]
+[ext_resource type="AudioStream" uid="uid://456do2t0ea3h" path="res://audio/shortened crowd.mp3" id="29_6ibi7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tc14j"]
 texture = ExtResource("2_g4wad")
@@ -12453,6 +12458,28 @@ scale = Vector2(2, 2.258)
 [node name="use weapons" parent="tutorial_instructions" index="8"]
 position = Vector2(6160, 2568)
 
+[node name="audio" type="Node2D" parent="."]
+
+[node name="background gameplay" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("25_oxh1b")
+volume_db = -10.0
+
+[node name="background game over" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("26_w64ms")
+volume_db = -10.0
+
+[node name="lion start roar" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("27_ud81g")
+volume_db = -10.0
+
+[node name="lion end roar" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("28_sh7vr")
+volume_db = -10.0
+
+[node name="crowd screaming" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("29_6ibi7")
+volume_db = -5.0
+
 [connection signal="gameOver" from="." to="player" method="_on_game_over"]
 [connection signal="gameOver" from="." to="lion" method="_on_game_over"]
 [connection signal="gameOver" from="." to="npc paths/Path2D/PathFollow2D/tutorial_ally" method="_on_tutorial_world_game_over"]
@@ -12462,11 +12489,12 @@ position = Vector2(6160, 2568)
 [connection signal="playerKilled" from="lion" to="." method="_on_player_killed"]
 [connection signal="x_distance" from="lion" to="player" method="_on_lion_x_distance"]
 [connection signal="exit" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_exit"]
-[connection signal="hit" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_hit"]
 [connection signal="hit" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_hit_2" flags=6]
+[connection signal="hit" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="." method="_on_ally_hit"]
 [connection signal="tut_ally_tagged" from="npc paths/Path2D/PathFollow2D/tutorial_ally" to="hud" method="_on_tutorial_ally_tut_ally_tagged"]
 [connection signal="message_disappear" from="hud" to="." method="_on_hud_message_disappear"]
 [connection signal="pressed_tag" from="hud" to="." method="_on_hud_pressed_tag"]
+[connection signal="times_up" from="hud" to="." method="_on_hud_times_up"]
 [connection signal="pressed" from="hud/gameOverPanel/home button" to="hud" method="_on_home_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="." method="_on_torch_button_pressed"]
 [connection signal="pressed" from="hud/torchButton" to="player" method="_on_torch_button_pressed"]
@@ -12479,6 +12507,7 @@ position = Vector2(6160, 2568)
 [connection signal="pressed" from="hud/sprayButton" to="lion" method="_on_spray_button_pressed"]
 [connection signal="picked_up" from="weapons to pick up/pick up torch" to="." method="_on_pick_up_torch_picked_up"]
 [connection signal="picked_up" from="weapons to pick up/pick up spray" to="." method="_on_pick_up_spray_picked_up"]
+[connection signal="tutorial_instruction" from="weapons to pick up/pick up spray" to="." method="_on_pick_up_spray_tutorial_instruction"]
 [connection signal="picked_up" from="weapons to pick up/pick up horn" to="." method="_on_pick_up_horn_picked_up"]
 
 [editable path="hud"]

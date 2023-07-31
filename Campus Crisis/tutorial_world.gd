@@ -1,5 +1,6 @@
 extends Node2D
 signal gameOver
+var gameOverAudioPlayed: bool = false
 #var score
 
 func _process(delta):
@@ -8,9 +9,12 @@ func _process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$"audio/background gameplay".play()
+	$"audio/lion start roar".play()
+	$"audio/crowd screaming".play()
 	Global.current_location = "tutorial"
 	Global.tutorial = true
-	Global.current_location = "tut"
+	Global.current_location = "tutorial"
 	$player/Camera2D.limit_left = -2143
 	$hud/TagButton.hide() 
 	$hud/Tick.hide()
@@ -40,15 +44,26 @@ func _on_hud_message_disappear():
 func _on_hud_pressed_tag():
 	$hud._on_tagged_button_pressed()
 
-func _on_player_killed():
-	emit_signal("gameOver")
-	get_tree().paused = true
+func when_game_over():
 	$hud/ScoreTimer.stop()
 	$lion/AnimatedSprite2D.stop()
 	$player/AnimatedSprite2D.stop()
-	$hud/torchButton.hide()
-	$hud/sprayButton.hide()
-	$hud/hornButton.hide()
+	if ($hud/torchButton != null):
+		$hud/torchButton.queue_free()
+	if ($hud/sprayButton != null):
+		$hud/sprayButton.hide()
+	if ($hud/hornButton != null):
+		$hud/hornButton.hide()
+
+func _on_player_killed():
+	emit_signal("gameOver")
+	if not gameOverAudioPlayed:
+		$"audio/background gameplay".stop()
+		$"audio/background game over".play()
+		$"audio/lion end roar".play()
+		gameOverAudioPlayed = true
+	get_tree().paused = true
+	when_game_over()
 	$hud/blackRect.show()
 	$hud/gameOverPanel.show()
 	get_tree().paused = false
@@ -58,12 +73,7 @@ func _on_player_killed():
 func _on_hud_times_up():
 	emit_signal("gameOver")
 	get_tree().paused = true
-	$hud/ScoreTimer.stop()
-	$lion/AnimatedSprite2D.stop()
-	$player/AnimatedSprite2D.stop()
-	$hud/torchButton.hide()
-	$hud/sprayButton.hide()
-	$hud/hornButton.hide()
+	when_game_over()
 	get_tree().paused = false
 
 var first_weapon = "none"

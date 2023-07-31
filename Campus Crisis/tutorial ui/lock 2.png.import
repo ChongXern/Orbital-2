@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcw61b8gv342t"
-path="res://.godot/imported/pgp tilemap.png-ee3c9d9652331ae6162df889133e9405.ctex"
+uid="uid://cos2ai357ygvj"
+path="res://.godot/imported/lock 2.png-a0025a2f3a50450166a6c17484e10c2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pgp tilemap.png"
-dest_files=["res://.godot/imported/pgp tilemap.png-ee3c9d9652331ae6162df889133e9405.ctex"]
+source_file="res://tutorial ui/lock 2.png"
+dest_files=["res://.godot/imported/lock 2.png-a0025a2f3a50450166a6c17484e10c2a.ctex"]
 
 [params]
 

@@ -4,7 +4,6 @@ extends Node
 var score = 60
 var count = 0
 
-
 var current_location = "none"
 var isPaused = false
 var isAllyTagged: bool = false
@@ -22,3 +21,5 @@ var torch_bought = false
 var horn_bought = false
 var spray_bought = false
 var level_unlocked:String = "tutorial"
+
+var doSaveFile: bool = false
